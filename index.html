@@ -1,25 +1,24 @@
-
-<!-- saved from url=(0081)file:///C:/Users/user/Downloads/online_viewer_net%20-%202026-05-07T180932.415.htm -->
-<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>html
-
-
-
-
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///C:/Users/user/Downloads/online_viewer_net%20-%202026-05-08T144635.640.htm -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>사회·문화 개념완성 진단 v3.0</title>
-<link href="./사회·문화 개념완성 진단 v3.0_files/css2" rel="stylesheet">
-<script src="./사회·문화 개념완성 진단 v3.0_files/chart.umd.min.js.다운로드"></script>
+<title>수능 사회·문화 사고 편향 진단 v3.0</title>
+<link href="./사회 문화 (교재반영) 버전 편향 풀이 진단기 v3.1_files/css2" rel="stylesheet">
+<script src="./사회 문화 (교재반영) 버전 편향 풀이 진단기 v3.1_files/chart.umd.min.js.다운로드"></script>
 <style>
 :root{
-  --ink:#0b0b12;--ink-mid:#161622;--ink-soft:#1e1e2c;--line:#262636;
-  --muted:#52526a;--ghost:#7878a0;--paper:#f3f1ee;--cream:#faf8f4;
+  --ink:#0a0a12;--ink-mid:#14141f;--ink-soft:#1c1c2a;--line:#252535;
+  --muted:#50506a;--ghost:#7a7a9a;--paper:#f0eee8;--cream:#faf8f2;
   --amber:#e8a430;--amber-dim:rgba(232,164,48,.1);
   --red:#e05252;--red-dim:rgba(224,82,82,.1);
   --green:#3daa72;--green-dim:rgba(61,170,114,.1);
   --blue:#5b8dee;--blue-dim:rgba(91,141,238,.1);
   --purple:#a06ee8;--purple-dim:rgba(160,110,232,.1);
   --teal:#30c0b0;--teal-dim:rgba(48,192,176,.1);
+  --rose:#e8607a;--rose-dim:rgba(232,96,122,.1);
+  /* 단원 색상 */
+  --c1:#5b8dee;--c2:#3daa72;--c3:#e8a430;--c4:#a06ee8;--c5:#30c0b0;
   --r:16px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
@@ -27,311 +26,330 @@ html{scroll-behavior:smooth;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--ink);color:var(--paper);min-height:100vh;overflow-x:hidden;}
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:56px 56px;opacity:.09;}
+  background-size:56px 56px;opacity:.08;}
 body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:radial-gradient(ellipse 80% 50% at 50% -5%,rgba(91,141,238,.06) 0%,transparent 65%);}
-.app{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:48px 24px 100px;}
-
+  background:radial-gradient(ellipse 90% 60% at 50% -10%,rgba(91,141,238,.06) 0%,transparent 70%);}
+.app{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:52px 24px 120px;}
 .screen{display:none;}
-.screen.active{display:block;animation:rise .45s cubic-bezier(.22,1,.36,1);}
-@keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+.screen.active{display:block;animation:rise .4s cubic-bezier(.22,1,.36,1);}
+@keyframes rise{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
 
-.wordmark{font-family:'DM Mono',monospace;font-size:.65em;letter-spacing:.22em;color:var(--blue);
-  text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:12px;}
+/* ── WORDMARK ── */
+.wordmark{font-family:'DM Mono',monospace;font-size:.65em;letter-spacing:.28em;color:var(--blue);
+  text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:12px;}
 .wordmark::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,rgba(91,141,238,.4),transparent);}
+.version-pill{font-size:.7em;padding:2px 10px;border-radius:100px;border:1px solid rgba(91,141,238,.4);
+  color:var(--blue);background:var(--blue-dim);letter-spacing:.06em;}
 
 /* ── INTRO ── */
-.intro-title{font-family:'DM Serif Display',serif;font-size:clamp(2.2em,6vw,3.6em);line-height:1.1;color:var(--cream);margin-bottom:8px;}
+.intro-title{font-family:'DM Serif Display',serif;font-size:clamp(2.6em,7vw,4.2em);line-height:1.08;color:var(--cream);margin-bottom:12px;}
 .intro-title em{font-style:italic;color:var(--blue);}
-.intro-badge{display:inline-flex;align-items:center;gap:6px;font-size:.78em;padding:5px 14px;border-radius:100px;
-  background:rgba(91,141,238,.12);border:1px solid rgba(91,141,238,.3);color:var(--blue);margin-bottom:16px;}
-.intro-sub{font-size:.9em;color:var(--ghost);margin-bottom:28px;font-weight:300;line-height:1.7;}
+.intro-sub{font-size:.93em;color:var(--ghost);margin-bottom:36px;font-weight:300;line-height:1.7;}
 
+/* ── INFO CARD ── */
 .info-card{background:var(--ink-mid);border:1px solid var(--line);border-left:3px solid var(--blue);
-  border-radius:var(--r);padding:22px 26px;margin-bottom:24px;line-height:1.85;font-size:.9em;color:var(--ghost);}
+  border-radius:var(--r);padding:24px 28px;margin-bottom:28px;line-height:1.9;font-size:.88em;color:var(--ghost);}
 .info-card strong{color:var(--paper);font-weight:500;}
 
-.chapter-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:24px;}
-.chapter-card{background:var(--ink-mid);border:1px solid var(--line);border-radius:12px;padding:12px 10px;
-  text-align:center;cursor:pointer;transition:border-color .2s,background .2s;}
-.chapter-card.on{border-color:rgba(91,141,238,.5);background:var(--blue-dim);}
-.chapter-card.on .ch-num{color:var(--blue);}
-.chapter-card.on .ch-name{color:var(--paper);}
-.ch-num{font-family:'DM Mono',monospace;font-size:.7em;color:var(--muted);display:block;margin-bottom:4px;}
-.ch-name{font-size:.75em;color:var(--ghost);line-height:1.35;display:block;font-weight:500;}
+/* ── BIAS TABLE ── */
+.bias-table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.84em;}
+.bias-table td{padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ghost);line-height:1.55;}
+.bias-table td:first-child{width:120px;font-weight:600;color:var(--paper);white-space:nowrap;}
+.bias-table tr:last-child td{border-bottom:none;}
 
-.settings-panel{background:var(--ink-mid);border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;margin-bottom:24px;}
-.settings-title{font-size:.76em;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:16px;font-weight:500;}
-.setting-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;}
+/* ── SETTINGS ── */
+.settings-panel{background:var(--ink-mid);border:1px solid var(--line);border-radius:var(--r);padding:24px 28px;margin-bottom:28px;}
+.settings-title{font-size:.75em;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:18px;font-weight:600;}
+.setting-row{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px;}
 .setting-row:last-child{margin-bottom:0;}
 .setting-label{font-size:.9em;color:var(--ghost);}
 .setting-label strong{color:var(--paper);font-weight:500;display:block;margin-bottom:2px;}
-.setting-label span{font-size:.82em;}
+.setting-label span{font-size:.81em;}
 .toggle-wrap{display:flex;align-items:center;background:var(--ink-soft);border:1px solid var(--line);border-radius:10px;padding:4px;flex-shrink:0;}
 .toggle-btn{font-family:'Noto Sans KR',sans-serif;font-size:.78em;padding:6px 14px;border-radius:7px;cursor:pointer;
   border:none;background:transparent;color:var(--muted);transition:background .18s,color .18s;white-space:nowrap;}
 .toggle-btn.active{background:var(--blue);color:#fff;font-weight:700;}
+.type-filter{display:flex;flex-wrap:wrap;gap:8px;}
+.type-chip{font-size:.75em;padding:5px 13px;border-radius:8px;font-family:'Noto Sans KR',sans-serif;
+  border:1px solid var(--line);background:var(--ink-soft);color:var(--muted);cursor:pointer;
+  transition:border-color .18s,background .18s,color .18s;}
+.type-chip.on[data-type="I"]   {border-color:rgba(91,141,238,.55);background:rgba(91,141,238,.08);color:var(--c1);}
+.type-chip.on[data-type="II"]  {border-color:rgba(61,170,114,.55);background:rgba(61,170,114,.08);color:var(--c2);}
+.type-chip.on[data-type="III"] {border-color:rgba(232,164,48,.55);background:rgba(232,164,48,.08);color:var(--c3);}
+.type-chip.on[data-type="IV"]  {border-color:rgba(160,110,232,.55);background:rgba(160,110,232,.08);color:var(--c4);}
+.type-chip.on[data-type="V"]   {border-color:rgba(48,192,176,.55);background:rgba(48,192,176,.08);color:var(--c5);}
 .stepper{display:flex;align-items:center;background:var(--ink-soft);border:1px solid var(--line);border-radius:10px;overflow:hidden;flex-shrink:0;}
 .stepper-btn{font-family:'DM Mono',monospace;font-size:1em;width:36px;height:36px;border:none;
   background:transparent;color:var(--ghost);cursor:pointer;transition:background .15s,color .15s;
   display:flex;align-items:center;justify-content:center;}
 .stepper-btn:hover{background:var(--line);color:var(--paper);}
 .stepper-val{font-family:'DM Mono',monospace;font-size:.88em;font-weight:500;color:var(--paper);
-  min-width:60px;text-align:center;border-left:1px solid var(--line);border-right:1px solid var(--line);height:36px;line-height:36px;}
+  min-width:64px;text-align:center;padding:0 4px;border-left:1px solid var(--line);border-right:1px solid var(--line);height:36px;line-height:36px;}
 
-.btn{display:block;width:100%;padding:17px 28px;border:none;border-radius:var(--r);
+/* ── BUTTONS ── */
+.btn{display:block;width:100%;padding:18px 28px;border:none;border-radius:var(--r);
   font-family:'Noto Sans KR',sans-serif;font-weight:700;font-size:1em;cursor:pointer;
   transition:transform .12s,box-shadow .2s;letter-spacing:.02em;}
 .btn:active{transform:scale(.98);}
-.btn-primary{background:var(--blue);color:#fff;}
-.btn-primary:hover{box-shadow:0 0 28px rgba(91,141,238,.35);}
+.btn-primary{background:linear-gradient(135deg,#4a7ee8,#6ea0f0);color:#fff;}
+.btn-primary:hover{box-shadow:0 0 32px rgba(91,141,238,.4);}
 .btn-ghost{background:transparent;color:var(--ghost);border:1px solid var(--line);font-weight:400;margin-top:12px;}
 .btn-ghost:hover{border-color:var(--muted);color:var(--paper);}
+.btn-danger{background:transparent;color:var(--red);border:1px solid rgba(224,82,82,.4);font-weight:400;margin-top:12px;}
 
-/* ── QUIZ ── */
+/* ── DASHBOARD ── */
 .dashboard{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px;}
-.stat-card{background:var(--ink-mid);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center;}
-.stat-label{font-family:'DM Mono',monospace;font-size:.6em;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px;}
-.stat-value{font-family:'DM Mono',monospace;font-size:1.38em;font-weight:500;color:var(--paper);}
+.stat-card{background:var(--ink-mid);border:1px solid var(--line);border-radius:12px;padding:14px 14px;text-align:center;}
+.stat-label{font-family:'DM Mono',monospace;font-size:.58em;letter-spacing:.16em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:7px;}
+.stat-value{font-family:'DM Mono',monospace;font-size:1.4em;font-weight:500;color:var(--paper);}
 .stat-card.timer .stat-value{color:var(--red);}
 .stat-card.correct .stat-value{color:var(--green);}
 .stat-card.bias-card .stat-value{color:var(--amber);}
-
+.stat-card.streak-card .stat-value{color:var(--rose);}
 .quiz-topbar{display:flex;align-items:center;justify-content:flex-end;margin-bottom:14px;}
 .end-btn{font-family:'Noto Sans KR',sans-serif;font-size:.76em;padding:6px 14px;border-radius:8px;
-  border:1px solid rgba(224,82,82,.35);background:transparent;color:var(--red);cursor:pointer;transition:background .18s;}
-.end-btn:hover{background:var(--red-dim);}
-
-.progress-track{height:3px;background:var(--line);border-radius:10px;margin-bottom:22px;overflow:hidden;}
-.progress-fill{height:100%;background:var(--blue);border-radius:10px;transition:width .4s cubic-bezier(.22,1,.36,1);}
+  border:1px solid rgba(224,82,82,.3);background:transparent;color:var(--red);cursor:pointer;
+  transition:background .18s,border-color .18s;}
+.end-btn:hover{background:var(--red-dim);border-color:var(--red);}
+.progress-track{height:3px;background:var(--line);border-radius:10px;margin-bottom:26px;overflow:hidden;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--blue),#6ea0f0);border-radius:10px;transition:width .45s cubic-bezier(.22,1,.36,1);}
 
 /* ── QUESTION CARD ── */
-.q-card{background:var(--ink-mid);border:1px solid var(--line);border-radius:20px;overflow:hidden;}
-.q-header{padding:14px 22px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.chapter-badge{font-size:.74em;padding:4px 12px;border-radius:100px;background:var(--blue-dim);color:var(--blue);
-  border:1px solid rgba(91,141,238,.25);font-family:'Noto Sans KR',sans-serif;font-weight:500;}
-.diff-badge{font-family:'DM Mono',monospace;font-size:.66em;padding:3px 9px;border-radius:100px;flex-shrink:0;}
-.diff-1{background:rgba(61,170,114,.12);color:var(--green);border:1px solid rgba(61,170,114,.3);}
-.diff-2{background:rgba(232,164,48,.12);color:var(--amber);border:1px solid rgba(232,164,48,.3);}
-.diff-3{background:rgba(224,82,82,.12);color:var(--red);border:1px solid rgba(224,82,82,.3);}
-.concept-tag{display:none;font-size:.7em;padding:2px 8px;border-radius:6px;
+.q-card{background:var(--ink-mid);border:1px solid var(--line);border-radius:22px;overflow:hidden;}
+.q-header{padding:16px 24px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.unit-badge{font-size:.72em;padding:4px 12px;border-radius:100px;font-family:'Noto Sans KR',sans-serif;font-weight:600;
+  border:1px solid;flex-shrink:0;}
+.unit-I   {border-color:rgba(91,141,238,.4);color:var(--c1);background:rgba(91,141,238,.08);}
+.unit-II  {border-color:rgba(61,170,114,.4);color:var(--c2);background:rgba(61,170,114,.08);}
+.unit-III {border-color:rgba(232,164,48,.4);color:var(--c3);background:rgba(232,164,48,.08);}
+.unit-IV  {border-color:rgba(160,110,232,.4);color:var(--c4);background:rgba(160,110,232,.08);}
+.unit-V   {border-color:rgba(48,192,176,.4);color:var(--c5);background:rgba(48,192,176,.08);}
+.concept-tag{display:none;font-size:.7em;padding:3px 10px;border-radius:6px;
   border:1px solid rgba(48,192,176,.35);color:var(--teal);background:var(--teal-dim);}
 .concept-tag.revealed{display:inline-block;}
-.q-number{font-family:'DM Mono',monospace;font-size:.78em;color:var(--muted);margin-left:auto;white-space:nowrap;}
+/* [NEW] 문제 유형 배지 */
+.fmt-badge{font-size:.65em;padding:2px 8px;border-radius:6px;border:1px solid rgba(160,110,232,.3);
+  color:var(--purple);background:var(--purple-dim);flex-shrink:0;}
+.q-number{font-family:'DM Mono',monospace;font-size:.78em;color:var(--muted);white-space:nowrap;margin-left:auto;}
 
-.passage-wrap{padding:22px 22px 0;}
-.passage-label{font-size:.7em;color:var(--muted);letter-spacing:.08em;margin-bottom:8px;text-transform:uppercase;font-weight:500;}
+/* ── 제시문 ── */
+.passage-wrap{padding:26px 26px 0;}
+.passage-label{font-size:.7em;color:var(--muted);letter-spacing:.1em;margin-bottom:10px;text-transform:uppercase;font-weight:600;}
 .passage-box{background:var(--ink-soft);border:1px solid var(--line);border-left:3px solid var(--blue);
-  border-radius:12px;padding:16px 18px;margin-bottom:16px;}
-.passage-text{font-size:1em;line-height:1.95;color:var(--cream);font-weight:300;}
-.passage-text strong{font-weight:600;color:var(--paper);}
-
-/* 표 형식 */
-.tbl-wrap{overflow-x:auto;margin:8px 0;}
-.ptbl{border-collapse:collapse;width:100%;font-size:.86em;color:var(--cream);}
-.ptbl th{background:var(--ink-mid);padding:7px 12px;border:1px solid var(--line);color:var(--blue);font-weight:500;text-align:center;}
-.ptbl td{padding:7px 12px;border:1px solid var(--line);text-align:center;line-height:1.5;}
-.ptbl tr:nth-child(even) td{background:rgba(255,255,255,.02);}
-
-/* 보기 박스 */
+  border-radius:12px;padding:20px 22px;margin-bottom:18px;}
+.passage-text{font-size:1em;line-height:2;color:var(--cream);font-weight:300;}
+/* [NEW] 표 형식 제시문 */
+.concept-table{width:100%;border-collapse:collapse;font-size:.88em;margin:2px 0;}
+.concept-table th{background:rgba(91,141,238,.12);color:var(--blue);font-weight:600;
+  padding:8px 12px;border:1px solid rgba(91,141,238,.25);text-align:center;font-size:.92em;}
+.concept-table td{padding:8px 12px;border:1px solid var(--line);color:var(--cream);font-weight:300;text-align:center;}
+.concept-table td:first-child{color:var(--paper);font-weight:500;text-align:left;}
+/* [NEW] 보기 박스 */
 .bogi-box{background:rgba(91,141,238,.04);border:1px solid rgba(91,141,238,.2);border-radius:10px;
-  padding:12px 16px;margin:8px 0 14px;font-size:.9em;color:var(--ghost);}
-.bogi-title{font-size:.72em;color:var(--blue);font-weight:600;margin-bottom:6px;letter-spacing:.05em;}
-.bogi-item{padding:3px 0;line-height:1.65;border-bottom:1px solid rgba(255,255,255,.04);}
-.bogi-item:last-child{border:none;}
+  padding:14px 18px;margin:12px 0 6px;font-size:.9em;color:var(--ghost);line-height:2;}
+.bogi-box .bogi-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:4px;}
+.bogi-box .bogi-item:last-child{margin-bottom:0;}
+.bogi-key{color:var(--blue);font-weight:700;min-width:22px;flex-shrink:0;}
+/* [NEW] 밑줄 강조 */
+.hl-blue{color:var(--blue);font-weight:600;}
+.hl-red{color:var(--red);font-weight:600;}
+.hl-green{color:var(--green);font-weight:600;}
+.hl-amber{color:var(--amber);font-weight:600;}
+.underline{text-decoration:underline;text-underline-offset:3px;}
+/* [NEW] 빈칸 */
+.blank{display:inline-block;min-width:48px;border-bottom:2px solid var(--blue);color:var(--blue);
+  font-weight:700;text-align:center;padding:0 6px;}
 
-.q-stem{padding:0 22px;margin-bottom:16px;font-size:1em;color:var(--paper);line-height:1.65;font-weight:500;}
-.q-stem .hl{color:var(--red);font-weight:700;}
-.q-stem .hlb{color:var(--blue);font-weight:700;}
+.q-stem{padding:0 26px 0;margin-bottom:18px;font-size:1em;color:var(--paper);line-height:1.7;font-weight:500;}
+.q-stem .highlight{color:var(--blue);font-weight:700;}
 
-.options-list{padding:4px 22px 22px;display:grid;gap:9px;}
-.option-item{display:flex;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--line);
-  border-radius:12px;cursor:pointer;transition:border-color .18s,background .18s,transform .1s;
-  background:var(--ink-soft);gap:12px;user-select:none;}
+/* ── 선택지 ── */
+.options-list{padding:6px 24px 24px;display:grid;gap:10px;}
+.option-item{display:flex;align-items:flex-start;padding:14px 18px;border:1.5px solid var(--line);
+  border-radius:13px;cursor:pointer;transition:border-color .18s,background .18s,transform .1s;
+  background:var(--ink-soft);gap:14px;user-select:none;}
 .option-item:hover:not(.disabled){border-color:rgba(91,141,238,.5);background:rgba(91,141,238,.04);transform:translateX(3px);}
 .option-item.disabled{cursor:default;pointer-events:none;}
-.option-item.correct{border-color:var(--green);background:var(--green-dim);}
-.option-item.wrong{border-color:var(--red);background:var(--red-dim);}
-.opt-num{font-family:'DM Mono',monospace;font-size:.8em;font-weight:500;width:26px;height:26px;flex-shrink:0;
-  border-radius:50%;background:var(--line);display:flex;align-items:center;justify-content:center;
-  color:var(--ghost);transition:background .18s,color .18s;margin-top:2px;}
+.option-item.correct{border-color:var(--green);background:rgba(61,170,114,.07);}
+.option-item.wrong{border-color:var(--red);background:rgba(224,82,82,.07);}
+.opt-num{font-family:'DM Mono',monospace;font-size:.78em;font-weight:600;width:28px;height:28px;
+  flex-shrink:0;border-radius:50%;background:var(--line);display:flex;align-items:center;
+  justify-content:center;color:var(--ghost);transition:background .18s,color .18s;margin-top:1px;}
 .option-item.correct .opt-num{background:var(--green);color:#fff;}
-.option-item.wrong .opt-num{background:var(--red);color:#fff;}
-.opt-text{font-size:.92em;line-height:1.6;color:var(--paper);}
+.option-item.wrong   .opt-num{background:var(--red);color:#fff;}
+.opt-text{font-size:.92em;line-height:1.65;color:var(--paper);}
 
-/* 피드백 */
-.feedback-area{display:none;margin:0 22px 22px;padding:16px 18px;border-radius:12px;
-  font-size:.88em;line-height:1.7;background:var(--ink-soft);border:1px solid var(--line);}
+/* ── FEEDBACK ── */
+.feedback-area{display:none;margin:0 24px 24px;padding:18px 22px;border-radius:13px;
+  font-size:.9em;line-height:1.72;background:var(--ink-soft);border:1px solid var(--line);}
 .feedback-area.correct-fb{border-left:3px solid var(--green);}
 .feedback-area.wrong-fb{border-left:3px solid var(--red);}
-.fb-tag{font-size:.7em;letter-spacing:.08em;padding:2px 10px;border-radius:100px;margin-right:8px;font-weight:500;}
+.fb-tag{font-size:.7em;letter-spacing:.1em;padding:2px 10px;border-radius:100px;margin-right:8px;font-weight:600;}
 .fb-tag.ok{background:var(--green-dim);color:var(--green);}
 .fb-tag.err{background:var(--red-dim);color:var(--red);}
-.bias-alert{margin-top:10px;padding:12px 14px;background:rgba(232,164,48,.07);border-radius:10px;
-  border:1px solid rgba(232,164,48,.2);font-size:.85em;line-height:1.7;}
-.bias-name{font-weight:700;color:var(--amber);display:block;margin-bottom:3px;}
-.bias-desc{color:var(--ghost);}
-.bias-streak{font-family:'DM Mono',monospace;font-size:.78em;color:var(--amber);opacity:.7;}
-.clue-box{margin-top:10px;padding:12px 14px;background:var(--blue-dim);border-radius:10px;
-  border-left:2px solid var(--blue);font-size:.85em;color:var(--ghost);line-height:1.65;}
+/* [NEW] 함정 분해 박스 */
+.trap-box{margin-top:12px;padding:14px 18px;background:rgba(232,164,48,.07);border-radius:11px;
+  border:1px solid rgba(232,164,48,.25);}
+.trap-name{font-weight:700;color:var(--amber);display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.trap-desc{font-size:.84em;color:var(--ghost);line-height:1.7;}
+.trap-streak{font-family:'DM Mono',monospace;font-size:.75em;color:var(--amber);opacity:.75;margin-left:auto;}
+.clue-box{margin-top:10px;padding:12px 16px;background:var(--blue-dim);border-radius:10px;
+  border-left:2px solid var(--blue);font-size:.85em;color:var(--ghost);line-height:1.7;}
 .clue-box strong{color:var(--blue);}
-.answer-box{margin-top:8px;padding:10px 14px;background:var(--green-dim);border-radius:8px;
-  border-left:2px solid var(--green);font-size:.84em;color:var(--ghost);}
+.answer-box{margin-top:10px;padding:12px 16px;background:var(--green-dim);border-radius:10px;
+  border-left:2px solid var(--green);font-size:.85em;color:var(--ghost);}
 .answer-box strong{color:var(--green);}
-.sol-box{margin-top:8px;padding:10px 14px;background:var(--amber-dim);border-radius:8px;
-  border-left:2px solid var(--amber);font-size:.84em;color:var(--ghost);line-height:1.7;}
-.sol-box strong{color:var(--amber);}
-/* 키워드 박스 */
-.keyword-box{margin-top:8px;padding:10px 14px;background:var(--purple-dim);border-radius:8px;
-  border-left:2px solid var(--purple);font-size:.82em;color:var(--ghost);line-height:1.65;}
-.keyword-box strong{color:var(--purple);}
-
-.btn-next{display:none;width:calc(100% - 44px);margin:0 22px 22px;padding:14px;
-  background:var(--blue);color:#fff;border:none;border-radius:12px;
+.solution-box{margin-top:10px;padding:12px 16px;background:rgba(232,164,48,.08);border-radius:10px;
+  border-left:2px solid var(--amber);font-size:.85em;color:var(--ghost);line-height:1.75;}
+.solution-box strong{color:var(--amber);}
+/* [NEW] 정답 피드백 개념 확인 */
+.concept-check{margin-top:10px;padding:12px 16px;background:rgba(48,192,176,.07);border-radius:10px;
+  border-left:2px solid var(--teal);font-size:.85em;color:var(--ghost);line-height:1.7;}
+.concept-check strong{color:var(--teal);}
+.btn-next{display:none;width:calc(100% - 48px);margin:0 24px 24px;padding:16px;
+  background:linear-gradient(135deg,#4a7ee8,#6ea0f0);color:#fff;border:none;border-radius:13px;
   font-family:'Noto Sans KR',sans-serif;font-weight:700;font-size:.95em;cursor:pointer;
   transition:box-shadow .2s,transform .1s;}
-.btn-next:hover{box-shadow:0 0 22px rgba(91,141,238,.35);}
+.btn-next:hover{box-shadow:0 0 24px rgba(91,141,238,.4);}
 .btn-next:active{transform:scale(.98);}
 
 /* ── REPORT ── */
-.report-hero{text-align:center;padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:28px;}
-.score-big{font-family:'DM Serif Display',serif;font-size:clamp(3.5em,12vw,6em);color:var(--blue);line-height:1;}
-.score-label{font-family:'DM Mono',monospace;font-size:.75em;color:var(--muted);letter-spacing:.15em;text-transform:uppercase;margin-top:8px;}
-.report-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;margin-bottom:28px;}
-.chart-box{background:var(--ink-mid);border:1px solid var(--line);border-radius:18px;padding:22px;
+.report-hero{text-align:center;padding-bottom:40px;border-bottom:1px solid var(--line);margin-bottom:36px;}
+.score-circle{width:130px;height:130px;border-radius:50%;border:3px solid var(--blue);
+  margin:0 auto 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(circle,rgba(91,141,238,.08),transparent);}
+.score-big{font-family:'DM Serif Display',serif;font-size:2.8em;color:var(--blue);line-height:1;}
+.score-denom{font-family:'DM Mono',monospace;font-size:.65em;color:var(--muted);}
+.grade-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:100px;
+  border:1px solid rgba(91,141,238,.35);background:var(--blue-dim);font-size:.88em;color:var(--ghost);margin-top:10px;}
+.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;}
+.chart-box{background:var(--ink-mid);border:1px solid var(--line);border-radius:18px;padding:24px;
   display:flex;align-items:center;justify-content:center;}
-.analysis-box{background:var(--ink-mid);border:1px solid var(--line);border-radius:18px;padding:24px;}
-.analysis-box h3{font-family:'DM Serif Display',serif;font-size:1.28em;color:var(--cream);margin-bottom:14px;}
-.analysis-box p{font-size:.86em;line-height:1.8;color:var(--ghost);margin-bottom:10px;}
-.analysis-box strong{color:var(--paper);}
-.bias-breakdown{margin-top:16px;display:grid;gap:8px;}
+.analysis-box{background:var(--ink-mid);border:1px solid var(--line);border-radius:18px;padding:26px;}
+.analysis-box h3{font-family:'DM Serif Display',serif;font-size:1.3em;color:var(--cream);margin-bottom:16px;}
+.analysis-box p{font-size:.88em;line-height:1.85;color:var(--ghost);margin-bottom:12px;}
+.analysis-box strong{color:var(--paper);font-weight:500;}
+.bias-breakdown{margin-top:18px;display:grid;gap:9px;}
 .bias-row{display:flex;align-items:center;gap:10px;}
-.bias-name-r{font-size:.76em;color:var(--ghost);flex-shrink:0;min-width:90px;}
+.bias-name{font-size:.76em;color:var(--ghost);flex-shrink:0;min-width:90px;}
 .bias-bar-track{flex:1;height:5px;background:var(--line);border-radius:10px;overflow:hidden;}
-.bias-bar-fill{height:100%;background:var(--blue);border-radius:10px;transition:width .6s cubic-bezier(.22,1,.36,1);}
+.bias-bar-fill{height:100%;background:var(--blue);border-radius:10px;transition:width .7s cubic-bezier(.22,1,.36,1);}
 .bias-bar-fill.top{background:var(--amber);}
-.bias-cnt{font-family:'DM Mono',monospace;font-size:.72em;color:var(--muted);width:18px;text-align:right;flex-shrink:0;}
-
-/* 단원별 정답률 */
-.unit-section{background:var(--ink-mid);border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:24px;}
-.unit-section h3{font-family:'DM Serif Display',serif;font-size:1.28em;color:var(--cream);margin-bottom:16px;}
-.unit-rows{display:grid;gap:10px;}
-.unit-row{display:flex;align-items:center;gap:10px;background:var(--ink-soft);border-radius:10px;padding:10px 14px;}
-.unit-nm{font-size:.8em;color:var(--ghost);flex-shrink:0;min-width:120px;}
+.bias-count{font-family:'DM Mono',monospace;font-size:.72em;color:var(--muted);width:18px;text-align:right;flex-shrink:0;}
+/* [NEW] 단원별 섹션 */
+.section-hdr{margin:48px 0 20px;display:flex;align-items:flex-end;gap:14px;}
+.section-hdr-title{font-family:'DM Serif Display',serif;font-size:1.55em;color:var(--cream);}
+.section-hdr-sub{font-size:.82em;color:var(--muted);margin-bottom:4px;}
+.unit-grid{display:grid;gap:10px;margin-bottom:32px;}
+.unit-row{display:flex;align-items:center;gap:12px;background:var(--ink-mid);border-radius:12px;padding:12px 16px;border:1px solid var(--line);}
+.unit-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.unit-name{font-size:.82em;color:var(--ghost);flex-shrink:0;min-width:90px;}
 .unit-bar-track{flex:1;height:6px;background:var(--line);border-radius:10px;overflow:hidden;}
-.unit-bar-fill{height:100%;border-radius:10px;transition:width .6s cubic-bezier(.22,1,.36,1);}
-.unit-pct-label{font-family:'DM Mono',monospace;font-size:.72em;min-width:36px;text-align:right;flex-shrink:0;}
-.unit-warn{font-size:.66em;padding:2px 8px;border-radius:100px;background:var(--red-dim);color:var(--red);
-  border:1px solid rgba(224,82,82,.3);flex-shrink:0;}
-
-/* 해설 카드 */
-.section-hdr{margin:40px 0 18px;display:flex;align-items:flex-end;gap:12px;}
-.section-hdr-title{font-family:'DM Serif Display',serif;font-size:1.45em;color:var(--cream);}
-.section-hdr-sub{font-size:.8em;color:var(--muted);margin-bottom:2px;}
+.unit-bar-fill{height:100%;border-radius:10px;transition:width .7s cubic-bezier(.22,1,.36,1);}
+.unit-pct-val{font-family:'DM Mono',monospace;font-size:.76em;min-width:36px;text-align:right;flex-shrink:0;}
+.unit-warn{font-size:.67em;padding:2px 8px;border-radius:100px;background:var(--red-dim);
+  color:var(--red);border:1px solid rgba(224,82,82,.3);flex-shrink:0;}
+/* ── SOLUTION CARDS ── */
 .sol-list{display:grid;gap:12px;}
-.sol-card{background:var(--ink-mid);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
-.sol-card.sol-correct{border-left:3px solid var(--green);}
+.sol-card{background:var(--ink-mid);border:1px solid var(--line);border-radius:16px;overflow:hidden;}
 .sol-card.sol-wrong{border-left:3px solid var(--red);}
-.sol-header{padding:12px 16px;display:flex;align-items:center;gap:8px;cursor:pointer;transition:background .15s;flex-wrap:nowrap;}
+.sol-card.sol-correct{border-left:3px solid var(--green);}
+.sol-header{padding:14px 18px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background .15s;}
 .sol-header:hover{background:var(--ink-soft);}
-.sol-qnum{font-family:'DM Mono',monospace;font-size:.7em;color:var(--muted);flex-shrink:0;}
-.sol-result-tag{font-size:.68em;padding:2px 10px;border-radius:100px;flex-shrink:0;}
+.sol-qnum{font-family:'DM Mono',monospace;font-size:.68em;color:var(--muted);flex-shrink:0;}
+.sol-result-tag{font-size:.69em;padding:3px 10px;border-radius:100px;flex-shrink:0;font-weight:600;}
 .sol-result-tag.ok{background:var(--green-dim);color:var(--green);}
 .sol-result-tag.err{background:var(--red-dim);color:var(--red);}
-.sol-preview{font-size:.8em;color:var(--ghost);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;}
-.sol-chev{font-family:'DM Mono',monospace;font-size:.8em;color:var(--muted);flex-shrink:0;transition:transform .2s;margin-left:auto;}
-.sol-chev.open{transform:rotate(180deg);}
-.sol-body{display:none;padding:0 16px 16px;}
+.sol-preview{font-size:.81em;color:var(--ghost);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;}
+.sol-chevron{font-size:.8em;color:var(--muted);flex-shrink:0;transition:transform .2s;margin-left:auto;}
+.sol-chevron.open{transform:rotate(180deg);}
+.sol-body{display:none;padding:0 18px 18px;}
 .sol-body.open{display:block;}
 .sol-passage-full{font-size:.88em;line-height:1.85;color:var(--cream);background:var(--ink-soft);
-  padding:12px 14px;border-radius:10px;margin-bottom:12px;white-space:pre-line;}
-.sol-chosen{margin-top:8px;padding:8px 12px;background:var(--red-dim);border-radius:8px;border-left:2px solid var(--red);font-size:.82em;color:var(--ghost);}
-.sol-chosen strong{color:var(--red);}
-.sol-answer{margin-top:6px;padding:8px 12px;background:var(--green-dim);border-radius:8px;border-left:2px solid var(--green);font-size:.82em;color:var(--ghost);}
-.sol-answer strong{color:var(--green);}
-.sol-hint{margin-top:6px;padding:8px 12px;background:var(--amber-dim);border-radius:8px;border-left:2px solid var(--amber);font-size:.82em;color:var(--ghost);}
-.sol-hint strong{color:var(--amber);}
-.sol-analysis{margin-top:8px;font-size:.86em;line-height:1.75;color:var(--ghost);}
+  padding:14px 16px;border-radius:10px;margin-bottom:14px;font-weight:300;white-space:pre-line;}
+.sol-analysis{font-size:.87em;line-height:1.8;color:var(--ghost);}
 .sol-analysis strong{color:var(--paper);}
-.sol-keyword{margin-top:6px;padding:8px 12px;background:var(--purple-dim);border-radius:8px;border-left:2px solid var(--purple);font-size:.82em;color:var(--ghost);}
-.sol-keyword strong{color:var(--purple);}
-
-/* 보충 */
+.sol-chosen{margin-top:10px;padding:10px 14px;background:var(--red-dim);border-radius:8px;border-left:2px solid var(--red);font-size:.84em;color:var(--ghost);}
+.sol-chosen strong{color:var(--red);}
+.sol-answer{margin-top:8px;padding:10px 14px;background:var(--green-dim);border-radius:8px;border-left:2px solid var(--green);font-size:.84em;color:var(--ghost);}
+.sol-answer strong{color:var(--green);}
+.sol-hint{margin-top:8px;padding:10px 14px;background:var(--amber-dim);border-radius:8px;border-left:2px solid var(--amber);font-size:.84em;color:var(--ghost);line-height:1.7;}
+.sol-hint strong{color:var(--amber);}
+/* ── BONUS ── */
 .bonus-intro{background:var(--ink-mid);border:1px solid var(--line);border-left:3px solid var(--purple);
-  border-radius:var(--r);padding:18px 22px;margin-bottom:18px;font-size:.88em;color:var(--ghost);line-height:1.75;}
+  border-radius:var(--r);padding:20px 24px;margin-bottom:20px;font-size:.88em;color:var(--ghost);line-height:1.8;}
 .bonus-intro strong{color:var(--paper);}
 .bonus-score-bar{background:var(--ink-mid);border:1px solid var(--line);border-radius:12px;
-  padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:16px;}
-.bonus-score-num{font-family:'DM Serif Display',serif;font-size:2.1em;color:var(--purple);flex-shrink:0;}
-.bonus-score-label{font-size:.85em;color:var(--ghost);line-height:1.6;}
+  padding:18px 22px;margin-bottom:28px;display:flex;align-items:center;gap:18px;}
+.bonus-score-num{font-family:'DM Serif Display',serif;font-size:2.2em;color:var(--purple);flex-shrink:0;}
+.bonus-score-label{font-size:.86em;color:var(--ghost);line-height:1.65;}
 .bonus-score-label strong{color:var(--paper);}
-
-/* 모달 */
-.modal-overlay{display:none;position:fixed;inset:0;z-index:100;background:rgba(8,8,16,.88);
-  backdrop-filter:blur(8px);align-items:center;justify-content:center;}
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(8,8,18,.9);
+  backdrop-filter:blur(10px);align-items:center;justify-content:center;}
 .modal-overlay.open{display:flex;animation:fadeIn .25s ease;}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.modal-box{background:var(--ink-mid);border:1px solid var(--line);border-radius:20px;
-  padding:32px 28px;width:100%;max-width:400px;margin:24px;animation:rise .3s cubic-bezier(.22,1,.36,1);}
-.modal-title{font-family:'DM Serif Display',serif;font-size:1.5em;color:var(--cream);margin-bottom:8px;}
-.modal-sub{font-size:.87em;color:var(--ghost);margin-bottom:22px;line-height:1.6;}
+.modal-box{background:var(--ink-mid);border:1px solid var(--line);border-radius:22px;
+  padding:38px 34px;width:100%;max-width:420px;margin:24px;animation:rise .3s cubic-bezier(.22,1,.36,1);}
+.modal-title{font-family:'DM Serif Display',serif;font-size:1.7em;color:var(--cream);margin-bottom:8px;}
+.modal-sub{font-size:.88em;color:var(--ghost);margin-bottom:26px;line-height:1.65;}
 .modal-options{display:grid;gap:10px;}
-.modal-opt{display:flex;align-items:center;gap:12px;padding:13px 15px;border:1.5px solid var(--line);
-  border-radius:12px;cursor:pointer;background:var(--ink-soft);transition:border-color .18s,background .18s;}
+.modal-opt{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1.5px solid var(--line);
+  border-radius:13px;cursor:pointer;background:var(--ink-soft);transition:border-color .18s,background .18s;}
 .modal-opt:hover{border-color:rgba(91,141,238,.5);background:rgba(91,141,238,.04);}
 .modal-opt.danger:hover{border-color:var(--red);background:var(--red-dim);}
-.modal-opt-icon{font-size:1.2em;width:34px;height:34px;background:var(--line);border-radius:9px;
+.modal-opt-icon{font-size:1.3em;width:38px;height:38px;background:var(--line);border-radius:10px;
   display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.opt-title{font-size:.9em;font-weight:600;color:var(--paper);}
-.opt-desc{font-size:.76em;color:var(--muted);margin-top:2px;}
-.modal-cancel{text-align:center;margin-top:14px;font-size:.82em;color:var(--muted);cursor:pointer;padding:6px;}
+.opt-title{font-size:.92em;font-weight:600;color:var(--paper);}
+.opt-title.red{color:var(--red);}
+.opt-desc{font-size:.77em;color:var(--muted);margin-top:2px;}
+.modal-cancel{text-align:center;margin-top:16px;font-size:.82em;color:var(--muted);cursor:pointer;padding:6px;transition:color .18s;}
 .modal-cancel:hover{color:var(--ghost);}
 
-@media(max-width:600px){
+@media(max-width:640px){
   .dashboard{grid-template-columns:repeat(2,1fr);}
   .report-grid{grid-template-columns:1fr;}
-  .chapter-grid{grid-template-columns:repeat(3,1fr);}
   .app{padding:28px 16px 80px;}
   .setting-row{flex-direction:column;align-items:flex-start;gap:10px;}
   .sol-preview{display:none;}
-  .unit-nm{min-width:80px;font-size:.74em;}
 }
 </style>
-
-
+</head>
+<body>
 <div class="app">
 
-<!-- ══ INTRO ══ -->
+<!-- ════ INTRO ════ -->
 <div id="intro-screen" class="screen active">
-  <div class="wordmark">사회문화 사고 진단 v3.0</div>
-  <div class="intro-badge">📖 2027 사회·문화 개념완성 완전 반영</div>
-  <h1 class="intro-title">사회·문화<br><em>사고 편향 진단</em></h1>
-  <p class="intro-sub">5대 단원 핵심 개념 기반 · 수능형 5지 선다 정밀 진단<br>오답 선택 패턴 분석으로 나의 사고 오류를 정확히 진단합니다</p>
+  <div class="wordmark">사회문화 사고 편향 진단 <span class="version-pill">v3.0</span></div>
+  <h1 class="intro-title">수능 사회·문화<br><em>정밀 사고 편향 진단</em></h1>
+  <p class="intro-sub">2027 수능대비 — 수능 실전 5지선다 문제 형식으로 오답 선택 패턴을 분석해 사고 편향을 정밀 진단합니다</p>
 
   <div class="info-card">
-    <strong>5대 사고 편향 (이 교재의 핵심 오답 유도 패턴)</strong><br>
-    <table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:.85em;">
-      <tbody><tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--paper);font-weight:500;width:110px;">📘 개념 혼동</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--ghost);">기능론↔갈등론, 양적↔질적, 귀속↔성취 등 유사 개념 오적용</td></tr>
-      <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--paper);font-weight:500;">🔄 인과관계 역전</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--ghost);">상관관계를 인과로 단정, 원인·결과 방향 오판</td></tr>
-      <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--paper);font-weight:500;">⚖️ 이분법적 사고</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--ghost);">복잡한 사회 현상을 양자택일로 단순화</td></tr>
-      <tr><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--paper);font-weight:500;">🔭 과잉 일반화</td><td style="padding:6px 8px;border-bottom:1px solid var(--line);color:var(--ghost);">제한 사례를 모든 경우에 확대 적용</td></tr>
-      <tr><td style="padding:6px 8px;color:var(--paper);font-weight:500;">🎯 핵심 이탈</td><td style="padding:6px 8px;color:var(--ghost);">지문 핵심 벗어나 주변 정보에 집중</td></tr>
+    <strong>📚 5대 사고 편향 진단 (Cognitive Bias Diagnosis)</strong><br>
+    각 오답 선택지는 수능에서 빈출되는 특정 사고 오류를 유도하도록 설계됩니다. 진단 후 단원별 정답률 · 편향 레이더 · 문항별 해설 · 맞춤 보충 문항이 제공됩니다.
+    <table class="bias-table">
+      <tbody><tr><td>📘 개념 혼동</td><td>유사 개념을 혼동하거나 이론·정의를 잘못 대응하는 경향 (기능론↔갈등론, 양적↔질적 등)</td></tr>
+      <tr><td>🔄 인과관계 역전</td><td>상관관계를 인과관계로 단정하거나 원인과 결과의 방향을 혼동하는 경향</td></tr>
+      <tr><td>⚖️ 이분법적 사고</td><td>복잡한 사회 현상을 양자택일로 단순화하는 경향 (항상 A 아니면 B)</td></tr>
+      <tr><td>🔭 과잉 일반화</td><td>제한된 사례를 모든 경우에 적용하거나 '항상·반드시·모든' 등 절대 표현 수용</td></tr>
+      <tr><td>🎯 핵심 이탈</td><td>제시문의 핵심 논지에서 벗어나 지엽적·관련 없는 내용에 집중하는 경향</td></tr>
     </tbody></table>
-  </div>
-
-  <div style="font-size:.82em;color:var(--muted);margin-bottom:10px;font-weight:500;text-transform:uppercase;letter-spacing:.07em;">단원 선택</div>
-  <div class="chapter-grid" id="chapter-grid">
-    <div class="chapter-card on" data-ch="I"><span class="ch-num">Ⅰ</span><span class="ch-name">사회·문화 현상의 탐구</span></div>
-    <div class="chapter-card on" data-ch="II"><span class="ch-num">Ⅱ</span><span class="ch-name">개인과 사회 구조</span></div>
-    <div class="chapter-card on" data-ch="III"><span class="ch-num">Ⅲ</span><span class="ch-name">문화와 일상생활</span></div>
-    <div class="chapter-card on" data-ch="IV"><span class="ch-num">Ⅳ</span><span class="ch-name">사회 계층과 불평등</span></div>
-    <div class="chapter-card on" data-ch="V"><span class="ch-num">Ⅴ</span><span class="ch-name">현대 사회와 사회 변동</span></div>
   </div>
 
   <div class="settings-panel">
     <div class="settings-title">⚙ 진단 설정</div>
     <div class="setting-row">
-      <div class="setting-label"><strong>문항 수</strong><span>5단위 · 최소 5 · 최대 35</span></div>
+      <div class="setting-label"><strong>출제 단원</strong><span>포함할 단원 선택</span></div>
+      <div class="type-filter" id="type-filter">
+        <span class="type-chip on" data-type="I">I. 탐구</span>
+        <span class="type-chip on" data-type="II">II. 개인과 사회</span>
+        <span class="type-chip on" data-type="III">III. 문화</span>
+        <span class="type-chip on" data-type="IV">IV. 계층</span>
+        <span class="type-chip on" data-type="V">V. 변동</span>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div class="setting-label"><strong>문항 수</strong><span>5단위 · 5~30문항</span></div>
       <div class="stepper">
         <button class="stepper-btn" onclick="stepCount(-5)">−</button>
         <div class="stepper-val" id="count-val">20문항</div>
@@ -347,24 +365,24 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
       </div>
     </div>
     <div class="setting-row">
-      <div class="setting-label"><strong>해설 표시</strong><span>오답 선택 직후 해설 공개 여부</span></div>
+      <div class="setting-label"><strong>해설 표시</strong><span>오답 시 즉시 해설 여부</span></div>
       <div class="toggle-wrap">
-        <button class="toggle-btn active" id="ex-on" onclick="setExplain(true)">즉시</button>
-        <button class="toggle-btn" id="ex-off" onclick="setExplain(false)">결과 후</button>
+        <button class="toggle-btn active" id="explain-on" onclick="setExplain(true)">즉시</button>
+        <button class="toggle-btn" id="explain-off" onclick="setExplain(false)">결과 후</button>
       </div>
     </div>
     <div class="setting-row">
-      <div class="setting-label"><strong>난이도 가중</strong><span>고난도 문항 출제 비율</span></div>
+      <div class="setting-label"><strong>함정 분석 모드</strong><span>오답 선택 시 함정 유형 강조</span></div>
       <div class="toggle-wrap">
-        <button class="toggle-btn active" id="diff-mix" onclick="setDiff(&#39;mix&#39;)">균형</button>
-        <button class="toggle-btn" id="diff-hard" onclick="setDiff(&#39;hard&#39;)">고난도↑</button>
+        <button class="toggle-btn active" id="decoy-on" onclick="setDecoy(true)">ON</button>
+        <button class="toggle-btn" id="decoy-off" onclick="setDecoy(false)">OFF</button>
       </div>
     </div>
   </div>
   <button class="btn btn-primary" onclick="startQuiz(&#39;new&#39;)">진단 시작 →</button>
 </div>
 
-<!-- ══ QUIZ ══ -->
+<!-- ════ QUIZ ════ -->
 <div id="quiz-screen" class="screen">
   <div class="dashboard">
     <div class="stat-card"><span class="stat-label">Progress</span><span id="stat-prog" class="stat-value">0/20</span></div>
@@ -373,888 +391,925 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     <div class="stat-card bias-card"><span class="stat-label">Bias</span><span id="stat-bias" class="stat-value">0</span></div>
   </div>
   <div class="progress-track"><div id="progress-fill" class="progress-fill" style="width:0%"></div></div>
-  <div class="quiz-topbar">
-    <button class="end-btn" onclick="openEndModal()">⏹ 지금 종료</button>
-  </div>
+  <div class="quiz-topbar"><button class="end-btn" onclick="openEndModal()">⏹ 지금 종료</button></div>
   <div id="quiz-content"></div>
 </div>
 
-<!-- ══ REPORT ══ -->
+<!-- ════ REPORT ════ -->
 <div id="report-screen" class="screen">
-  <div class="wordmark">진단 완료 · 결과 리포트</div>
+  <div class="wordmark">진단 완료 · 정밀 리포트</div>
   <div class="report-hero">
-    <div id="report-score" class="score-big">—</div>
-    <div class="score-label">/ <span id="report-total">20</span> correct</div>
-    <div id="report-grade" style="margin-top:12px;font-size:.88em;color:var(--ghost);"></div>
+    <div class="score-circle">
+      <div id="report-score" class="score-big">—</div>
+      <div class="score-denom">/ <span id="report-total">20</span></div>
+    </div>
+    <div id="report-grade" class="grade-badge"></div>
   </div>
+
   <div class="report-grid">
-    <div class="chart-box"><canvas id="biasChart" width="280" height="280"></canvas></div>
+    <div class="chart-box"><canvas id="biasChart" width="290" height="290"></canvas></div>
     <div class="analysis-box">
       <h3>사고 편향 분석</h3>
       <div id="analysis-text"></div>
       <div class="bias-breakdown" id="bias-breakdown"></div>
     </div>
   </div>
-  <div class="unit-section">
-    <h3>단원별 정답률</h3>
-    <div class="unit-rows" id="unit-rows"></div>
+
+  <div class="section-hdr">
+    <div><div class="section-hdr-title">📊 단원별 정답률</div>
+    <div class="section-hdr-sub">단원별 약점을 확인하고 집중 복습 계획을 세우세요</div></div>
   </div>
+  <div class="unit-grid" id="unit-grid"></div>
+
   <div class="section-hdr">
     <div><div class="section-hdr-title">📋 문항별 해설</div>
-    <div class="section-hdr-sub">오답 자동 펼침 · 클릭 토글</div></div>
+    <div class="section-hdr-sub">오답 문항은 자동 펼침 · 클릭으로 토글</div></div>
   </div>
   <div class="sol-list" id="sol-list"></div>
-  <div class="section-hdr" style="margin-top:52px;">
+
+  <div class="section-hdr" style="margin-top:56px;">
     <div><div class="section-hdr-title">🎯 맞춤 보충 문제</div>
-    <div class="section-hdr-sub" id="bonus-sub-label">약점 집중 훈련</div></div>
+    <div class="section-hdr-sub" id="bonus-sub-label">약점 편향 집중 훈련</div></div>
   </div>
   <div class="bonus-intro" id="bonus-intro-text"></div>
   <div id="bonus-quiz-wrap"></div>
   <div id="bonus-result-wrap" style="display:none;" class="bonus-score-bar">
     <div class="bonus-score-num" id="bonus-score-num">—</div>
-    <div class="bonus-score-label"><strong>보충 결과</strong><br><span id="bonus-score-label-text"></span></div>
+    <div class="bonus-score-label"><strong>보충 문제 결과</strong><br><span id="bonus-score-label-text"></span></div>
   </div>
-  <div style="margin-top:36px;">
+
+  <div style="margin-top:44px;">
     <button class="btn btn-primary" onclick="openRetryModal()">다시 풀기</button>
-    <button class="btn btn-ghost" onclick="location.reload()">처음으로</button>
+    <button class="btn btn-ghost" onclick="location.reload()">처음으로 돌아가기</button>
   </div>
 </div>
-</div>
+</div><!-- /app -->
 
 <!-- RETRY MODAL -->
-<div id="retry-modal" class="modal-overlay" onclick="closeRetryBg(event)">
+<div id="retry-modal" class="modal-overlay" onclick="closeRetryModalBg(event)">
   <div class="modal-box">
     <div class="modal-title">다시 풀기</div>
     <p class="modal-sub">어떤 방식으로 다시 시작할까요?</p>
     <div class="modal-options">
-      <div class="modal-opt" onclick="startQuiz(&#39;new&#39;)"><div class="modal-opt-icon">🔀</div><div><div class="opt-title">새 문항 세트</div><div class="opt-desc">문제를 새로 섞어서 시작</div></div></div>
-      <div class="modal-opt" onclick="startQuiz(&#39;wrong&#39;)"><div class="modal-opt-icon">🎯</div><div><div class="opt-title">틀린 문항만</div><div class="opt-desc" id="wrong-count-label">오답 문항 다시 도전</div></div></div>
-      <div class="modal-opt" onclick="startQuiz(&#39;same&#39;)"><div class="modal-opt-icon">↩️</div><div><div class="opt-title">같은 순서로</div><div class="opt-desc">동일 세트 처음부터</div></div></div>
+      <div class="modal-opt" onclick="startQuiz(&#39;new&#39;)">
+        <div class="modal-opt-icon">🔀</div>
+        <div><div class="opt-title">새 문항 세트</div><div class="opt-desc">문제를 새로 섞어서 시작</div></div>
+      </div>
+      <div class="modal-opt" onclick="startQuiz(&#39;wrong&#39;)">
+        <div class="modal-opt-icon">🎯</div>
+        <div><div class="opt-title">틀린 문항만</div><div class="opt-desc" id="wrong-count-label">오답 문항만 재도전</div></div>
+      </div>
+      <div class="modal-opt" onclick="startQuiz(&#39;same&#39;)">
+        <div class="modal-opt-icon">↩️</div>
+        <div><div class="opt-title">같은 순서로</div><div class="opt-desc">동일 세트 처음부터</div></div>
+      </div>
     </div>
     <div class="modal-cancel" onclick="closeRetryModal()">취소</div>
   </div>
 </div>
 
 <!-- END MODAL -->
-<div id="end-modal" class="modal-overlay" onclick="closeEndBg(event)">
+<div id="end-modal" class="modal-overlay" onclick="closeEndModalBg(event)">
   <div class="modal-box">
     <div class="modal-title">진단 종료</div>
-    <p class="modal-sub">지금까지 푼 문항으로 결과를 생성합니다.</p>
+    <p class="modal-sub">지금까지 풀이를 기반으로 결과를 표시합니다.</p>
     <div class="modal-options">
-      <div class="modal-opt danger" onclick="forceEnd()"><div class="modal-opt-icon">⏹</div><div><div class="opt-title" style="color:var(--red)">종료하고 결과 보기</div><div class="opt-desc">현재까지 풀이 기준 리포트</div></div></div>
-      <div class="modal-opt" onclick="closeEndModal()"><div class="modal-opt-icon">▶</div><div><div class="opt-title">계속 풀기</div><div class="opt-desc">종료 취소</div></div></div>
+      <div class="modal-opt danger" onclick="forceEnd()">
+        <div class="modal-opt-icon">⏹</div>
+        <div><div class="opt-title red">지금 종료하고 결과 보기</div><div class="opt-desc">현재까지 리포트 생성</div></div>
+      </div>
+      <div class="modal-opt" onclick="closeEndModal()">
+        <div class="modal-opt-icon">▶</div>
+        <div><div class="opt-title">계속 풀기</div><div class="opt-desc">종료 취소, 진단 계속</div></div>
+      </div>
     </div>
   </div>
 </div>
 
 <script>
 /* ══════════════════════════════════════════════════════
-   이형수T 개념완성 기반 문항 DB
-   diff: 1=기본, 2=중급, 3=고난도
-   qtype: 단답형/보기선택형/표분석형/도식형/사례형
+   DB — 35문항 (이형수 개념완성 교재 기반 수능 실전형)
+   format: 'plain' | 'table' | 'bogi' | 'diagram'
+   unit: 'I'|'II'|'III'|'IV'|'V'
 ══════════════════════════════════════════════════════ */
 const DB = [
 
-/* ────── 단원 I: 사회·문화 현상의 탐구 ────── */
-{id:1,ch:"I",concept:"자연 현상 vs 사회·문화 현상",diff:1,
- passage:"자연 현상은 인간의 의지나 가치와 무관하게 자연 법칙에 따라 발생하는 현상이고,\n사회·문화 현상은 사회 내에서 인간의 의지나 가치가 개입되어 발생하는 현상이다.",
- stem:"위 내용을 바탕으로 두 현상을 바르게 비교한 것은?",
+/* ════ I. 사회·문화 현상의 탐구 ════ */
+{id:1,unit:"I",concept:"자연현상과 사회문화현상 비교",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>구분</th><th>자연 현상</th><th>사회·문화 현상</th></tr>
+  <tr><td>가치 개입</td><td>몰가치적</td><td>가치 함축적</td></tr>
+  <tr><td>인과 법칙</td><td>필연성·확실성</td><td>개연성·가능성</td></tr>
+  <tr><td>보편성</td><td>보편성 강함</td><td>보편성과 특수성 공존</td></tr>
+  <tr><td>연구 방법</td><td>통제된 실험·법칙 발견 용이</td><td>통제된 실험·법칙 발견 곤란</td></tr>
+ </table>`,
+ stem:"위 표에 대한 추론으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"자연 현상은 인과 관계가 없고, 사회·문화 현상은 엄격한 인과 법칙이 지배한다.",trap:"개념 혼동"},
-  {text:"자연 현상은 몰가치적이어서 연구자의 가치 개입 여지가 적다.",correct:true},
-  {text:"사회·문화 현상은 필연성의 원리, 자연 현상은 개연성의 원리가 적용된다.",trap:"개념 혼동"},
-  {text:"자연 현상과 달리 사회·문화 현상은 경험적 자료로 연구할 수 없다.",trap:"이분법적 사고"},
-  {text:"자연 현상은 특수성이 강하고, 사회·문화 현상은 보편성만 나타난다.",trap:"개념 혼동"}],
- solution:"자연 현상은 몰가치적이어서 연구자 가치가 개입될 여지가 적습니다. 사회·문화 현상에는 개연성, 자연 현상에는 필연성(확실성)의 원리가 적용됩니다.",
- keyword:"자연현상=몰가치적·필연성 / 사회문화현상=가치함축적·개연성·보편성+특수성"},
+  {text:"사회·문화 현상에는 인과 관계가 전혀 존재하지 않는다.",trap:"개념 혼동"},
+  {text:"자연 현상은 사회·문화 현상과 달리 연구자의 가치 개입이 어렵다.",correct:true},
+  {text:"사회·문화 현상은 어느 사회에서나 동일하게 나타난다.",trap:"과잉 일반화"},
+  {text:"사회·문화 현상은 필연적 인과 법칙이 지배하므로 완벽한 예측이 가능하다.",trap:"개념 혼동"},
+  {text:"자연 현상과 사회·문화 현상은 경험적 자료를 바탕으로 연구할 수 없다.",trap:"이분법적 사고"}],
+ solution:"자연 현상은 몰가치적이어서 연구자의 주관이 개입될 여지가 적고, 사회·문화 현상은 가치 함축적이어서 연구자 관점이 개입될 수 있습니다. 사회·문화 현상에도 개연성의 인과 관계는 존재하며, 두 현상 모두 경험적 자료로 연구합니다."},
 
-{id:2,ch:"I",concept:"기능론 vs 갈등론 vs 상징적 상호작용론",diff:2,
- passage:"<표> 사회·문화 현상을 바라보는 관점 비교\n─────────────────────────────────\n구분  │ 기능론    │ 갈등론    │ 상징적 상호작용론\n─────────────────────────────────\n초점  │ 사회 전체 │ 집단 간   │ 일상적 상호작용\n사회  │ 유기체    │ 갈등 구조 │ 의미 공유 체계\n문제  │ 기능 장애 │ 지배 착취 │ 의사소통 단절\n─────────────────────────────────",
- bogi:[
-  "ㄱ. '대립과 갈등은 발생할 수 있다.'는 기능론과 구분되는 갈등론의 특징이다.",
-  "ㄴ. '대립과 갈등은 사회 변동의 원동력이 되는 불가피한 현상이다.'는 갈등론의 특징이다.",
-  "ㄷ. 기능론은 사회 병리 현상을 사회 구조적 요인으로 설명한다.",
-  "ㄹ. 상징적 상호작용론은 사회 구조가 개인 행위에 미치는 영향을 분석하기 어렵다.",
-  "ㅁ. 갈등론은 기능론과 달리 현재의 사회 체제 자체를 문제로 보는 경향이 있다."],
- stem:"<보기>에서 옳은 것만을 모두 고른 것은?",
+{id:2,unit:"I",concept:"기능론·갈등론·상호작용론",format:"plain",
+ passageHTML:`<div class="passage-text">다음은 학교 내 성적 경쟁에 대한 세 관점의 주장이다.<br><br>
+<span class="hl-blue">㉠</span> 성적 경쟁은 학생들에게 동기를 부여하고, 능력 있는 인재를 발굴·육성하여 사회 전체의 효율성을 높인다.<br>
+<span class="hl-red">㉡</span> 성적 경쟁은 지배 계급이 교육 자원을 독점하기 위해 만든 제도로, 계층 불평등을 재생산하는 수단이다.<br>
+<span class="hl-green">㉢</span> 학생들이 '좋은 성적 = 성공'이라는 의미를 공유하고 이에 맞게 행동함으로써 경쟁 문화가 형성된다.</div>`,
+ stem:"㉠~㉢에 해당하는 사회학적 관점을 바르게 연결한 것은?",
  options:[
-  {text:"ㄱ, ㄴ",trap:"핵심 이탈"},
-  {text:"ㄴ, ㄹ",trap:"핵심 이탈"},
-  {text:"ㄴ, ㄹ, ㅁ",correct:true},
-  {text:"ㄱ, ㄷ, ㅁ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄴ, ㄷ, ㄹ",trap:"과잉 일반화"}],
- solution:"ㄱ: 갈등이 발생할 수 있다는 것은 기능론도 인정(그러나 갈등을 비정상·병리로 봄). 갈등론만의 특징이 아님 → X. ㄷ: 사회 병리 현상을 기능 장애로 보는 건 기능론, 갈등론은 지배 구조 문제로 봄 → X. ㄴ·ㄹ·ㅁ은 모두 옳음.",
- keyword:"기능론=합의·안정·유기체 / 갈등론=갈등·지배·변동 / 상징적상호작용론=미시·의미·일상"},
+  {text:"㉠-갈등론, ㉡-기능론, ㉢-상징적 상호작용론",trap:"개념 혼동"},
+  {text:"㉠-기능론, ㉡-상징적 상호작용론, ㉢-갈등론",trap:"개념 혼동"},
+  {text:"㉠-기능론, ㉡-갈등론, ㉢-상징적 상호작용론",correct:true},
+  {text:"㉠-상징적 상호작용론, ㉡-갈등론, ㉢-기능론",trap:"개념 혼동"},
+  {text:"㉠-갈등론, ㉡-상징적 상호작용론, ㉢-기능론",trap:"개념 혼동"}],
+ solution:"㉠ 사회 유지에 기여하는 기능 강조=기능론, ㉡ 지배 집단의 이익과 불평등 재생산=갈등론, ㉢ 구성원이 공유하는 의미와 상호 작용=상징적 상호작용론."},
 
-{id:3,ch:"I",concept:"양적 연구 vs 질적 연구",diff:2,
- passage:"갑은 '에고서핑(ego-surfing)의 의미를 찾아 인터넷으로 자신에 대한 정보나 댓글을 검색하는 것이라고 소개 후 에고서핑을 많이 하는 사람일수록 자존감이 낮을 것이다.'라는 가설을 세워 검증하였다.\n을은 '황혼이혼의 양상과 그 내면적 의미를 파악하고자' 황혼이혼을 결정한 부부들을 대상으로 이혼에 이르기까지 어떤 일이 벌어졌는지를 면담해 보거나, 실제 생활을 관찰함으로써 그들의 이혼을 심층적으로 이해하는 것에 중점을 두고 있다.",
- stem:"갑과 을이 사용하는 연구 방법에 대한 설명으로 옳은 것은?",
+{id:3,unit:"I",concept:"양적 연구와 질적 연구",format:"plain",
+ passageHTML:`<div class="passage-text">갑은 '스마트폰 사용 시간이 청소년 수면의 질에 미치는 영향'을 연구하기 위해 전국 고교생 3,000명을 대상으로 구조화된 설문지를 배포하고, 수집한 수치 데이터를 통계적으로 분석하였다.<br><br>
+을은 '청소년이 스마트폰에 부여하는 의미와 일상적 사용 경험'을 연구하기 위해 청소년 15명을 대상으로 심층 면담을 실시하고, 면담 내용을 해석·분석하였다.</div>`,
+ stem:"갑과 을의 연구 방법에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"갑의 방법은 연구 대상자의 주관적 세계 이해에 적합하다.",trap:"개념 혼동"},
-  {text:"을의 방법은 통계 분석을 통한 법칙 발견에 유리하다.",trap:"개념 혼동"},
-  {text:"갑의 방법은 방법론적 이원론, 을의 방법은 방법론적 일원론을 전제한다.",correct:true},
-  {text:"을의 방법은 갑의 방법과 달리 자료 수집 과정에서 연구자의 가치 중립이 필요하지 않다.",trap:"이분법적 사고"},
-  {text:"갑의 방법은 소수를 대상으로 심층 분석하고, 을의 방법은 대규모 표본을 활용한다.",trap:"개념 혼동"}],
- solution:"양적 연구(갑)=방법론적 이원론(자연·사회 현상 연구 방법 다름), 질적 연구(을)=방법론적 일원론(같은 방법으로 연구 가능). 주관적 세계 이해는 질적 연구, 통계 분석·법칙 발견은 양적 연구의 특징.",
- keyword:"양적=방법론이원론·가설검증·통계·일반화 / 질적=방법론일원론·심층이해·의미해석"},
+  {text:"갑의 방법은 연구 대상자의 주관적 의미 세계를 탐구하기에 적합하다.",trap:"개념 혼동"},
+  {text:"을의 방법은 변수 간의 통계적 관련성 분석에 유리하다.",trap:"개념 혼동"},
+  {text:"갑의 방법은 을의 방법에 비해 연구 결과의 일반화에 유리하다.",correct:true},
+  {text:"을의 방법은 대규모 표본을 활용하므로 대표성이 높다.",trap:"과잉 일반화"},
+  {text:"갑과 을의 방법은 상호 보완될 수 없다.",trap:"이분법적 사고"}],
+ solution:"갑=양적 연구(대규모 통계→일반화에 유리), 을=질적 연구(소수 심층→의미 해석에 적합, 일반화 한계). 두 방법은 혼합 설계로 상호 보완 가능합니다."},
 
-{id:4,ch:"I",concept:"자료 수집 방법",diff:2,
- passage:"연구자 A는 '특정 지역의 문화와 그 지역 주민들의 폭력적 행동 양식 간의 관련성' 연구를 위해 공식 통계로 확인된 폭력 범죄율이 높은 지역(A)과 낮은 지역(B) 각각에 거주하는 주민과 함께 생활하면서 있는 그대로의 삶의 모습을 심층적으로 관찰하였다.",
- bogi:[
-  "ㄱ. 수량화된 2차 자료를 활용하였다.",
-  "ㄴ. 질적 자료를 활용하여 양적 연구를 수행하였다.",
-  "ㄷ. 계량화하기 어려운 인간 행위의 의미를 직관적 통찰을 통해 파악하였다.",
-  "ㄹ. 생생한 자료를 얻기 위해 인위적 조직의 정도가 낮은 자료 수집 방법을 활용하였다."],
- stem:"위 연구에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?",
+{id:4,unit:"I",concept:"자료 수집 방법",format:"bogi",
+ passageHTML:`<div class="passage-text">다음은 사회학자 갑이 수행한 연구의 일부이다.<br><br>
+갑은 '독거노인의 일상적 돌봄 경험'을 연구하기 위해 다음 방법을 사용하였다.</div>
+<div class="bogi-box">
+<div class="bogi-item"><span class="bogi-key">ㄱ.</span><span>독거노인 20명과 장기간 직접 생활하며 일상을 관찰하고 기록하였다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄴ.</span><span>각 노인과 개별적으로 면담하여 돌봄 경험의 의미를 심층적으로 탐색하였다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄷ.</span><span>보건복지부가 발간한 노인 돌봄 실태 통계 자료를 검토하였다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄹ.</span><span>노인 복지 관련 선행 연구 논문을 분석하였다.</span></div>
+</div>`,
+ stem:"ㄱ~ㄹ에 대한 설명으로 <span class='highlight'>옳은</span> 것을 〈보기〉에서 모두 고른 것은?",
  options:[
-  {text:"ㄱ, ㄴ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄷ, ㄹ",correct:true},
-  {text:"ㄱ, ㄹ",trap:"핵심 이탈"},
-  {text:"ㄱ, ㄷ, ㄹ",trap:"과잉 일반화"}],
- solution:"함께 생활하며 심층 관찰=참여 관찰법(질적 자료·질적 연구). 공식 통계는 보조적 활용. ㄱ: 공식 통계는 연구 대상 선정에 활용 → 수량화 2차 자료 활용 X(연구 자체는 관찰). ㄴ: 질적 연구. ㄷ·ㄹ 맞음.",
- keyword:"참여관찰=인위적 조직↓·직관적 통찰·질적 / 질문지=인위적 조직↑·언어적"},
+  {text:"ㄱ, ㄴ은 1차 자료 수집 방법이고, ㄷ, ㄹ은 2차 자료 수집 방법이다.",correct:true},
+  {text:"ㄱ은 연구자의 주관적 해석이 개입될 가능성이 없다.",trap:"과잉 일반화"},
+  {text:"ㄴ은 문자 해독 능력이 없는 대상자에게 적합하지 않다.",trap:"개념 혼동"},
+  {text:"ㄷ, ㄹ은 연구자가 직접 수집한 1차 자료이다.",trap:"개념 혼동"},
+  {text:"ㄱ~ㄹ은 모두 양적 연구 방법에서만 사용 가능하다.",trap:"이분법적 사고"}],
+ solution:"ㄱ(참여관찰)·ㄴ(면담)=연구자 직접 수집=1차 자료. ㄷ(기존 통계)·ㄹ(선행 논문)=기존 수집 자료=2차 자료. 관찰법도 연구자 주관이 개입될 수 있고, 면담법은 문자 해독 불필요."},
 
-{id:5,ch:"I",concept:"연구 윤리",diff:2,
- passage:"연구자 갑은 노인들을 대상으로 노인 문제 연구를 진행하였다. 갑은 조사에 앞서 ㉠ 연구 대상자가 응답 중단을 요청할 경우 즉시 조사가 중단된다고 설명하였다. 갑은 ㉡ 해당 답변 자료를 폐기하였다. ㉢ 연구 결과를 발표한 후에도 연구 대상자에게 연구 목적을 알리지 않았다. 연구비 지원을 받는 대가로 ㉣ 연구 대상자의 개인 정보를 삭제하고 나머지 모든 연구 자료를 제공하였다.",
- bogi:[
-  "ㄱ. ㉠은 연구 대상자의 자발적 참여를 보장하므로 연구 윤리에 위배되지 않는다.",
-  "ㄴ. ㉡은 연구 자료 조작이라고 볼 수 없으므로 연구 윤리에 위배되지 않는다.",
-  "ㄷ. ㉢은 연구 자료의 객관성을 보장하기 위한 것이므로 연구 윤리에 위배되지 않는다.",
-  "ㄹ. ㉣은 연구 대상자의 익명성을 보장한 것이므로 연구 윤리에 위배되지 않는다."],
- stem:"<보기>에서 연구 윤리 판단이 적절한 것을 모두 고른 것은?",
+{id:5,unit:"I",concept:"변인과 실험 설계",format:"plain",
+ passageHTML:`<div class="passage-text">연구자 A는 '마인드풀니스 훈련이 학업 스트레스 감소에 미치는 영향'을 검증하기 위해 다음 실험을 설계하였다.<br><br>
+동일한 학교 같은 학년 학생 60명을 <span class="underline">무작위</span>로 실험 집단(30명)과 통제 집단(30명)으로 나누었다. 실험 집단에는 8주간 마인드풀니스 훈련을 실시하고, 통제 집단에는 아무것도 하지 않았다. 훈련 전·후 두 집단의 스트레스 지수를 동일한 척도로 측정하였다.</div>`,
+ stem:"위 연구 설계에 대한 설명으로 <span class='highlight'>옳지 않은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄴ",correct:true},
-  {text:"ㄱ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄷ, ㄹ",trap:"핵심 이탈"},
-  {text:"ㄱ, ㄴ, ㄹ",trap:"과잉 일반화"}],
- solution:"ㄷ: 연구 목적을 사후에도 알리지 않은 것은 연구 대상자의 알 권리 침해(사전에 알리면 결과 왜곡 시에만 사후 고지 허용) → 위배. ㄹ: 개인 정보 삭제해도 연구 자료 전체 제공은 연구 대상자 동의 없이 자료를 3자에게 제공 → 위배. ㄱ·ㄴ만 맞음.",
- keyword:"연구윤리: 자발적동의·비밀보장·사전고지·데이터조작금지·이해관계중립"},
+  {text:"마인드풀니스 훈련 여부가 독립 변수이다.",trap:"핵심 이탈"},
+  {text:"학업 스트레스 지수가 종속 변수이다.",trap:"핵심 이탈"},
+  {text:"무작위 배정은 집단 간 사전 동질성 확보를 위한 절차이다.",trap:"핵심 이탈"},
+  {text:"통제 집단에 위약 처치를 하지 않아 플라시보 효과를 완전히 통제할 수 없다.",trap:"핵심 이탈"},
+  {text:"이 연구의 결과는 질적 연구이므로 통계 분석을 사용할 수 없다.",correct:true}],
+ solution:"변수를 수치로 측정하고 통계 분석을 하는 이 연구는 양적 연구(실험 연구)입니다. '질적 연구이므로 통계 불가'는 연구 방법을 완전히 잘못 분류한 것입니다."},
 
-{id:6,ch:"I",concept:"사실과 가치 / 연구 태도",diff:2,
- passage:"다음은 탐구 태도에 대한 설명이다.\n• A 태도: 현상이나 사물의 배후에 숨어있는 구조나 원리를 파악하기 위해 필요한 것\n• B 태도: 수능 EBS 연계의 문제를 해결하기 위해서는 학생, 학부모, 교사의 의견도 들어봐야 해\n• C 태도: 연구 결과 및 주장, 방법 등에 대해 유연하고 수용적인 자세를 가질 것을 강조\n• D 태도: 사회·문화 현상에 대해 비판적 시각을 가지는 동시에 적극적이고 능동적인 태도",
- stem:"A~D 태도를 바르게 연결한 것은?",
+{id:6,unit:"I",concept:"탐구 태도와 연구 윤리",format:"plain",
+ passageHTML:`<div class="passage-text">연구자 B는 '소셜 미디어와 청소년 정치 의식' 연구를 위해 한 고등학교에서 학생 500명을 대상으로 설문을 실시했다. 연구 시작 전 연구의 목적과 내용을 충분히 설명하고 학생 본인과 학부모의 동의를 받았다. 데이터 분석 과정에서 예상과 다른 결과가 나타났으나 B는 이를 있는 그대로 보고하였다. 연구 완료 후 수집된 개인 정보를 모두 파기하였다.</div>`,
+ stem:"B의 연구 활동에 대한 평가로 <span class='highlight'>옳지 않은</span> 것은?",
  options:[
-  {text:"A-개방적, B-성찰적, C-개방적, D-성찰적",trap:"개념 혼동"},
-  {text:"A-성찰적, B-개방적, C-개방적, D-성찰적",correct:true},
-  {text:"A-성찰적, B-성찰적, C-개방적, D-개방적",trap:"개념 혼동"},
-  {text:"A-개방적, B-개방적, C-성찰적, D-성찰적",trap:"개념 혼동"},
-  {text:"A-성찰적, B-성찰적, C-성찰적, D-개방적",trap:"핵심 이탈"}],
- solution:"성찰적 태도=현상 뒤의 구조·원리 파악 / 상대방 입장에서 문화 현상 이해 / 사회·문화 현상에 비판적+능동적 접근. 개방적 태도=유연하게 수용. A·B·D=성찰적, C=개방적.",
- keyword:"성찰적=배후구조·비판·능동 / 개방적=유연수용·새증거수용"},
+  {text:"연구 대상자의 사전 동의를 얻어 자발적 참여 원칙을 준수하였다.",trap:"핵심 이탈"},
+  {text:"개인 정보 파기는 연구 대상자 보호 측면에서 적절한 조치이다.",trap:"핵심 이탈"},
+  {text:"예상치 못한 결과를 그대로 보고한 것은 연구 윤리에 반하는 행위이다.",correct:true},
+  {text:"연구 목적 고지는 연구 대상자의 자율적 참여 결정을 돕는다.",trap:"핵심 이탈"},
+  {text:"데이터 파기는 개인 정보 보호 의무 측면에서 적절하다.",trap:"핵심 이탈"}],
+ solution:"예상과 다른 결과라도 있는 그대로 보고하는 것이 올바른 연구 윤리(가치 중립, 객관성)입니다. 자신의 예상에 맞게 결과를 수정하거나 선택적으로 보고하는 것이 연구 윤리 위반입니다."},
 
-/* ────── 단원 II: 개인과 사회 구조 ────── */
-{id:7,ch:"II",concept:"사회 실재론 vs 사회 명목론",diff:2,
- passage:"사회는 개인의 주관적인 의식 세계를 초월하여 개인의 외부에 객관적으로 존재한다. 또한 사회는 그 자체 논리에 따른 질서와 구조를 가지며 이를 통하여 개인의 행동에 영향을 미친다.",
- bogi:[
-  "ㄱ. 개인이 주체적이고 능동적인 존재임을 강조한다.",
-  "ㄴ. 사회 구조에 대한 개인의 불가항력성을 강조한다.",
-  "ㄷ. 사회의 속성은 개인의 속성에 의해 결정된다고 본다.",
-  "ㄹ. 사회 문제의 발생 원인을 개인의 의식보다 사회 제도와 구조에서 찾는다."],
- stem:"위 글에 나타난 관점에 대한 옳은 설명을 <보기>에서 모두 고른 것은?",
+{id:7,unit:"I",concept:"사회·문화 현상을 바라보는 관점",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>질문</th><th>갑(A 관점)</th><th>을(B 관점)</th></tr>
+  <tr><td>사회 규범은 누구의 합의로 만들어지나?</td><td>사회 전체</td><td>지배 집단</td></tr>
+  <tr><td>사회 불평등은 불가피한가?</td><td>예</td><td>아니오</td></tr>
+  <tr><td>사회 변동을 어떻게 보는가?</td><td>일시적 혼란</td><td>갈등의 결과</td></tr>
+ </table>`,
+ stem:"A와 B 관점에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄴ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄹ",correct:true},
-  {text:"ㄷ, ㄹ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄴ, ㄹ",trap:"과잉 일반화"}],
- solution:"제시문=사회 실재론(사회가 개인 초월한 객관적 실재). ㄱ: 개인 능동성 강조는 사회 명목론. ㄷ: 사회 속성이 개인에 의해 결정된다는 것도 사회 명목론. ㄴ·ㄹ만 사회 실재론.",
- keyword:"사회실재론=사회가 개인 초월·불가항력·사회제도원인 / 사회명목론=개인이 본질·능동·심리원인"},
+  {text:"A는 집단 간 갈등을 사회 변동의 원동력으로 본다.",trap:"개념 혼동"},
+  {text:"B는 사회 각 부분이 상호 의존하며 전체 유지에 기여한다고 본다.",trap:"개념 혼동"},
+  {text:"A는 기능론, B는 갈등론으로, B는 지배 집단의 이익이 사회 규범에 반영된다고 본다.",correct:true},
+  {text:"A와 B는 모두 사회 구조가 개인 행위에 미치는 영향력을 무시한다.",trap:"이분법적 사고"},
+  {text:"B는 A와 달리 사회 문제를 개인의 의지로 완전히 해결 가능하다고 본다.",trap:"과잉 일반화"}],
+ solution:"지배 집단의 합의로 규범 형성, 불평등 극복 가능, 변동은 갈등 결과=갈등론(B). 사회 전체 합의, 불평등 불가피, 변동은 일시적 혼란=기능론(A). 두 관점 모두 거시적 시각에서 구조를 중시합니다."},
 
-{id:8,ch:"II",concept:"사회화 기관 분류",diff:2,
- passage:"<3학년 ○반 역할 분담표>\n도서 도우미 — 도서 및 ㉠작가 소개하기\n미디어 도우미 — 학급 인터넷 신문 제작하기\n에너지 도우미 — 이동 수업 시 에어컨 전원 끄기\n생일 축하 도우미 — 생일인 ㉡학생 축하해 주기\n\n교사: 1년 동안 자신이 맡고 싶은 도우미를 이야기해 봅시다.\n갑: 도서 도우미와 생일 축하 도우미 중 무엇을 선택할지 ㉢고민됩니다.\n을: ㉣중학교 때 교내 에너지 절약 캠페인에 적극적으로 참여해서 ㉤모범상을 받았어요. 그래서 에너지 도우미를 하고 싶어요.\n병: ㉥방송국에서 근무하고 싶어서, 미디어 도우미를 하고 싶어요.",
- stem:"밑줄 친 ㉠~㉥에 대한 설명으로 옳은 것은?",
+/* ════ II. 개인과 사회 구조 ════ */
+{id:8,unit:"II",concept:"사회화 기관 분류",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>사례</th><th>㉠</th><th>㉡</th><th>㉢</th><th>㉣</th></tr>
+  <tr><td>학교</td><td>○</td><td>×</td><td>○</td><td>×</td></tr>
+  <tr><td>가족</td><td>×</td><td>○</td><td>○</td><td>×</td></tr>
+  <tr><td>직장</td><td>○</td><td>×</td><td>×</td><td>○</td></tr>
+  <tr><td>또래 집단</td><td>×</td><td>○</td><td>×</td><td>?</td></tr>
+ </table>
+ <div style="font-size:.82em;color:var(--ghost);margin-top:6px;">※ ○=해당, ×=해당 없음, ?=미확인</div>`,
+ stem:"㉠~㉣에 들어갈 사회화 기관 분류 기준으로 <span class='highlight'>적절한</span> 것은?",
  options:[
-  {text:"㉠은 성취 지위이고, ㉥은 귀속 지위이다.",trap:"개념 혼동"},
-  {text:"㉢은 을이 겪는 역할 갈등이다.",correct:true},
-  {text:"㉣은 비공식적 사회화 기관이다.",trap:"개념 혼동"},
-  {text:"㉤은 을의 역할에 대한 보상이다.",trap:"핵심 이탈"},
-  {text:"㉥은 을의 2차적 사회화 기관이다.",trap:"개념 혼동"}],
- solution:"㉠작가=성취지위(O), ㉥방송국=성취지위(O) → ①틀림. ㉢: 두 도우미 중 선택 고민=두 역할 기대 충돌=역할 갈등(O). ㉣중학교=공식적 사회화 기관(사회화 주 목적으로 설립). ㉤: ㉣중학교 때 받은 것이므로 모범상은 공식 기관에서의 역할 수행에 대한 보상(O→④도 맞지만 ②가 더 정확). ㉥: 병의 장래 희망=자신의 사회화와 직접 연관된 기관이지 병이 현재 속한 기관 아님.",
- keyword:"귀속지위=태어날때결정(인종·성별·신분) / 성취지위=노력으로획득 / 역할갈등=동시에두역할충돌"},
+  {text:"㉠-1차 사회화 기관, ㉡-2차 사회화 기관, ㉢-비공식적, ㉣-재사회화 기관",trap:"개념 혼동"},
+  {text:"㉠-공식적, ㉡-비공식적, ㉢-1차, ㉣-재사회화 기관",correct:true},
+  {text:"㉠-2차 기관, ㉡-1차 기관, ㉢-공식적, ㉣-비공식적",trap:"개념 혼동"},
+  {text:"㉠-비공식적, ㉡-공식적, ㉢-2차, ㉣-1차",trap:"개념 혼동"},
+  {text:"㉠-1차, ㉡-2차, ㉢-공식적, ㉣-비공식적",trap:"개념 혼동"}],
+ solution:"학교·직장=공식적(㉠), 가족·또래=비공식적(㉡). 학교·가족=1차/기본 사회화(㉢). 직장=성인기 새 역할 학습=재사회화(㉣). 또래 집단은 비공식적 기관이지만 1차·2차 분류와 다름."},
 
-{id:9,ch:"II",concept:"공식 조직 vs 비공식 조직 / 관료제 vs 탈관료제",diff:3,
- passage:"그림은 관료제 조직과 탈관료제 조직의 특징을 도식화한 것이다.\n\n[그림 설명]\n• X축: 업무 수행의 유연성 (O에서 멀어질수록 높아짐)\n• Y축: 의사 결정 권한의 분산 (O에서 멀어질수록 높아짐)\n• A: 오른쪽 상단 (유연성 높음, 분산 높음)\n• B: 왼쪽 하단 (유연성 낮음, 분산 낮음)\n*B가 A보다 두 축 모두 O에 가까움",
- bogi:[
-  "ㄱ. (가)에는 '업무의 표준화'가 들어갈 수 있다.",
-  "ㄴ. A에 비해 B는 상향식 의사 결정을 중시한다.",
-  "ㄷ. B는 A에 비해 부서 간의 경계가 경직되어 있다.",
-  "ㄹ. B는 A에 비해 환경 변화에 대한 대처가 용이하다.",
-  "ㅁ. A는 B와 달리 구성원 간의 1차적 관계가 지배적이다."],
- stem:"<보기>에서 옳은 것만을 모두 고른 것은?",
+{id:9,unit:"II",concept:"지위·역할·역할 갈등",format:"plain",
+ passageHTML:`<div class="passage-text">대학원생 갑(27세)은 지도교수의 연구실험실 조교이면서 학부생 튜터이기도 하다. 어느 날 지도교수는 갑에게 학부생 튜터로서 가르쳐야 할 학생들의 시험 문제를 미리 알려달라고 요청하였다. 갑은 연구 조교로서 교수의 지시를 따르고 싶지만, 튜터로서의 공정성 의무와 갈등하게 되었다.</div>`,
+ stem:"갑의 상황에 대한 사회학적 분석으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄷ",correct:true},
-  {text:"ㄴ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄷ, ㄹ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄷ, ㅁ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄷ, ㄹ, ㅁ",trap:"과잉 일반화"}],
- solution:"B=유연성↓·분산↓=관료제. A=유연성↑·분산↑=탈관료제. ㄴ: 관료제(B)는 하향식 의사 결정→X. ㄹ: 환경 변화 대처 용이=탈관료제(A)→X. ㅁ: 1차적 관계(친밀·대면)=비공식 조직 특성이지 탈관료제 특성이 아님→X. ㄱ·ㄷ만 맞음.",
- keyword:"관료제=업무표준화·엄격계층·하향식결정·경직 / 탈관료제=유연·분권·수평·팀제"},
+  {text:"갑이 겪는 갈등은 하나의 지위에서 서로 다른 역할 기대가 충돌하는 역할 긴장이다.",trap:"개념 혼동"},
+  {text:"갑이 겪는 갈등은 서로 다른 두 지위에서 요구되는 역할이 충돌하는 역할 갈등이다.",correct:true},
+  {text:"갑의 대학원생 지위는 선천적으로 부여된 귀속 지위이다.",trap:"개념 혼동"},
+  {text:"교수의 요청에 응하는 것은 튜터로서의 역할 기대에 충실한 것이다.",trap:"인과관계 역전"},
+  {text:"현대 사회는 지위가 단순하여 역할 갈등이 드물다.",trap:"이분법적 사고"}],
+ solution:"서로 다른 두 지위(연구 조교 ↔ 학부생 튜터)에서 요구하는 역할이 충돌=역할 갈등. '역할 긴장'은 하나의 지위 내 역할들 간 충돌. 대학원생은 본인의 노력으로 얻은 성취 지위."},
 
-{id:10,ch:"II",concept:"일탈 이론 비교",diff:3,
- passage:"일탈 이론 A~C 중 하나는 뒤르켐의 아노미 이론, 하나는 머튼의 긴장 이론, 하나는 낙인 이론이다.\n• A: 일탈을 규정하는 객관적 기준이 없으며, 주변의 시선과 반응이 일탈을 만든다고 본다.\n• B: 목표는 있지만 이를 달성할 합법적 수단에 접근하기 어려운 상황에서 일탈이 발생한다고 본다.\n• C: 사회 전체적으로 공유된 규범이 붕괴되거나 부재할 때 일탈이 발생한다고 본다.",
- stem:"A~C 이론에 대한 옳은 설명을 <보기>에서 모두 고른 것은?",
- bogi:[
-  "ㄱ. A는 일탈 행동의 원인을 상호작용의 관점에서 파악한다.",
-  "ㄴ. B는 일탈 행동의 해결책으로 사회의 문화적 목표와 제도화된 수단 간의 간극 해소를 강조한다.",
-  "ㄷ. C는 일탈 행동을 통해 오히려 사회 결속이 강화될 수 있다고 본다.",
-  "ㄹ. A는 B, C와 달리 미시적 관점에서 일탈을 설명한다."],
+{id:10,unit:"II",concept:"사회 집단과 조직",format:"bogi",
+ passageHTML:`<div class="passage-text">다음은 어떤 학교의 모임에 대한 설명이다.</div>
+<div class="bogi-box">
+<div class="bogi-item"><span class="bogi-key">A.</span><span>같은 학교 선생님들이 자발적으로 만든 독서 토론 모임으로 친목과 학문적 교류를 목적으로 한다.</span></div>
+<div class="bogi-item"><span class="bogi-key">B.</span><span>학교 행정을 위한 공식적 규약과 직급 체계를 갖춘 교무 행정 조직이다.</span></div>
+<div class="bogi-item"><span class="bogi-key">C.</span><span>학교 내 교사들이 전문 직업인으로서 교권 보호와 처우 개선을 목적으로 구성한 교원 노동조합이다.</span></div>
+</div>`,
+ stem:"A~C의 집단 유형에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄴ",trap:"핵심 이탈"},
-  {text:"ㄴ, ㄷ",trap:"핵심 이탈"},
-  {text:"ㄱ, ㄴ, ㄹ",correct:true},
-  {text:"ㄴ, ㄷ, ㄹ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄴ, ㄷ, ㄹ",trap:"과잉 일반화"}],
- solution:"A=낙인이론, B=머튼긴장이론, C=뒤르켐아노미이론. ㄷ: 일탈을 통한 사회 결속 강화=뒤르켐의 기능론적 시각이지만 C의 아노미이론 자체가 아니라 그의 다른 논의. 엄밀히 C(아노미)에서 이 내용이 직접 나오지 않음→X. ㄱ·ㄴ·ㄹ은 모두 정확.",
- keyword:"낙인=미시·상호작용·반응 / 머튼긴장=목표수단간극·거시 / 뒤르켐아노미=규범부재·거시"},
+  {text:"A는 공식 조직이고, B는 비공식 조직이다.",trap:"개념 혼동"},
+  {text:"C는 이익 사회이자 자발적 결사체의 성격을 모두 지닌다.",correct:true},
+  {text:"B는 구성원 간 친밀한 대면 접촉을 기반으로 하는 공동 사회이다.",trap:"개념 혼동"},
+  {text:"A는 2차 집단이므로 구성원 간 정서적 유대가 없다.",trap:"이분법적 사고"},
+  {text:"C는 비공식 조직이므로 공식적 규약이 없다.",trap:"개념 혼동"}],
+ solution:"C(교원 노조)=공동의 이익·목적으로 선택에 의해 결성=이익 사회, 자발적 결사체 두 속성 모두 해당. A=비공식 조직(자발적 친목). B=공식 조직(공식 규약·직급 체계)."},
 
-{id:11,ch:"II",concept:"지위와 역할 / 사회화",diff:2,
- passage:"영화 ○○에서의 열연으로 ㉠남우 주연상을 수상하게 됨을 축하합니다.\n\n• ㉡이어 배우 시절부터 저를 위해 헌신해주신 부모님께 감사드립니다.\n• ㉢△△예술고등학교에서 만나 극단 생활을 하며 함께 꿈을 키웠던 분들\n• ㉣아내에게 사랑한다고 말하고 싶습니다.\n• ㉤☆☆팬클럽과 변함없이 제 활동을 지원해주는 ㉥□□기획사 식구들\n• ㉦시청자 여러분, ㉧가족과 함께 행복한 저녁 시간 보내세요.",
- stem:"밑줄 친 ㉠~㉧에 대한 설명으로 옳은 것은?",
+{id:11,unit:"II",concept:"일탈 이론 비교",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>이론</th><th>일탈의 원인</th><th>대책 방향</th></tr>
+  <tr><td>A</td><td>규범 부재·약화</td><td>사회 규범 강화·재건</td></tr>
+  <tr><td>B</td><td>목표-수단 간 괴리</td><td>합법적 기회 구조 확대</td></tr>
+  <tr><td>C</td><td>타인·사회의 낙인</td><td>낙인 부여 신중, 재사회화</td></tr>
+  <tr><td>D</td><td>일탈자와의 교류·학습</td><td>정상적 집단과의 교류 확대</td></tr>
+ </table>`,
+ stem:"A~D에 해당하는 이론을 바르게 연결한 것은?",
  options:[
-  {text:"㉠은 갑의 역할에 대한 보상이다.",correct:true},
-  {text:"㉡, ㉣은 모두 성취 지위에 해당한다.",trap:"개념 혼동"},
-  {text:"㉢, ㉧은 모두 공식적 사회화 기관에 해당한다.",trap:"개념 혼동"},
-  {text:"㉤은 비공식 조직, ㉥은 공식 조직에 해당한다.",trap:"핵심 이탈"},
-  {text:"㉦은 2차 집단, ㉧는 1차 집단에 해당한다.",trap:"개념 혼동"}],
- solution:"㉠수상=역할(배우)에 대한 보상(O). ㉡부모=귀속지위와 연결, ㉣아내=성취지위. ①이 정확. ㉢예술고교=공식사회화기관, ㉧가족=비공식사회화기관→③X. ㉦시청자=2차집단(O), ㉧가족=1차집단(O)이므로⑤맞는 것처럼 보이나 ①이 더 명확.",
- keyword:"역할보상=지위의무수행에따른사회적보상 / 귀속지위=선천·가족·성별 / 성취지위=후천·노력"},
+  {text:"A-머튼 긴장, B-뒤르켐 아노미, C-낙인, D-차별적 교제",trap:"개념 혼동"},
+  {text:"A-뒤르켐 아노미, B-머튼 긴장, C-낙인, D-차별적 교제",correct:true},
+  {text:"A-낙인, B-차별적 교제, C-뒤르켐 아노미, D-머튼 긴장",trap:"개념 혼동"},
+  {text:"A-차별적 교제, B-뒤르켐 아노미, C-머튼 긴장, D-낙인",trap:"개념 혼동"},
+  {text:"A-뒤르켐 아노미, B-낙인, C-차별적 교제, D-머튼 긴장",trap:"개념 혼동"}],
+ solution:"A(규범 부재)=뒤르켐 아노미, B(목표-수단 괴리)=머튼 긴장 이론, C(낙인→일탈 강화)=낙인 이론, D(일탈 학습)=차별적 교제 이론(서덜랜드)."},
 
-/* ────── 단원 III: 문화와 일상생활 ────── */
-{id:12,ch:"III",concept:"문화의 속성 6가지",diff:1,
- passage:"문화의 속성 (이형수T 개념완성)\n• 공유성: 한 사회 구성원이 공통적으로 가지는 행동 및 사고방식\n• 학습성: 후천적인 학습에 의해 형성되는 생활양식\n• 축적성: 세대를 거치며 쌓이고 전승되는 특성\n• 전체성(총체성): 각 문화 요소가 상호 연결되어 유기적으로 통합\n• 변동성: 시간이 흐르면서 변화하는 특성\n• 보편성과 특수성: 모든 사회에 공통적 문화 + 각 사회 고유 문화",
- stem:"다음 사례들에 해당하는 문화의 속성이 잘못 연결된 것은?",
+{id:12,unit:"II",concept:"관료제와 탈관료제",format:"plain",
+ passageHTML:`<div class="passage-text">다음 그림은 두 조직 유형을 의사결정 권한 분산 정도와 업무 수행의 유연성을 기준으로 나타낸 것이다.</div>
+<div class="passage-box" style="text-align:center;padding:16px 20px;">
+  <div style="font-size:.85em;color:var(--ghost);margin-bottom:10px;">의사결정 권한 분산 정도 →</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.88em;">
+    <div style="background:rgba(91,141,238,.08);border:1px solid rgba(91,141,238,.2);border-radius:8px;padding:10px;">
+      <div style="color:var(--blue);font-weight:600;margin-bottom:4px;">조직 A</div>
+      <div style="color:var(--ghost);">권한 집중 · 표준화<br>엄격한 위계 · 규약 중시</div>
+    </div>
+    <div style="background:rgba(61,170,114,.08);border:1px solid rgba(61,170,114,.2);border-radius:8px;padding:10px;">
+      <div style="color:var(--green);font-weight:600;margin-bottom:4px;">조직 B</div>
+      <div style="color:var(--ghost);">권한 분산 · 유연성<br>팀제·수평적 의사소통</div>
+    </div>
+  </div>
+</div>`,
+ stem:"조직 A와 B에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"한국에 유학 온 중국 유학생이 김치를 먹는 데 익숙해짐 → 학습성",trap:"핵심 이탈"},
-  {text:"한국어를 배우면 한국의 음식 문화, 예절 문화를 자연스럽게 이해하게 됨 → 전체성",trap:"핵심 이탈"},
-  {text:"팔의 붉은 색이 사악한 기운을 물리친다고 믿는 우리나라 사람들이 동지에 팥죽을 먹음 → 공유성",trap:"핵심 이탈"},
-  {text:"모든 사회에 장례 의식이 있지만 그 형태는 사회마다 다양함 → 변동성",correct:true},
-  {text:"현대의 스마트폰 문화는 과거 전화기 문화가 쌓인 결과임 → 축적성",trap:"핵심 이탈"}],
- solution:"모든 사회에 장례 의식이 있지만 형태는 다양=보편성(모든 사회 공통)과 특수성(사회마다 고유) 공존의 예시. 변동성은 시간에 따른 변화를 의미함. 잘못 연결된 것은 ④.",
- keyword:"변동성=시간에따른변화 / 보편성특수성=모든사회공통+고유"},
+  {text:"A는 환경 변화 대응에 B보다 유리하다.",trap:"인과관계 역전"},
+  {text:"B는 A보다 구성원 간의 1차적 인간관계가 더 강조된다.",trap:"이분법적 사고"},
+  {text:"A는 관료제, B는 탈관료제 조직의 특성을 나타낸다.",correct:true},
+  {text:"A는 B보다 구성원의 자율성과 창의성 발휘에 적합하다.",trap:"개념 혼동"},
+  {text:"B는 연공서열에 따른 보상 체계를 강조한다.",trap:"개념 혼동"}],
+ solution:"A(권한 집중·표준화·위계)=관료제, B(권한 분산·유연·팀제)=탈관료제. 탈관료제는 환경 변화 대응과 자율성·창의성 발휘에 유리하고, 관료제는 안정적·반복적 업무 효율에 유리합니다."},
 
-{id:13,ch:"III",concept:"문화 이해 태도",diff:2,
- passage:"블로그 ○○ 씨의 여행기\n남태평양 군도에 사는 A 부족은 마른 과일로 만든 팽이를 사용하여 코코넛 말뚝을 쓰러뜨리는 방식의 놀이를 즐기는데, 이는 볼링과 흡사하다. 그렇지만 이 놀이의 목적은 상대 팀보다 많은 말뚝을 쓰러뜨리려 이기는 것이 아니다. 이 놀이는 두 팀이 같은 수의 말뚝을 쓰러뜨릴 때까지 진행된다. 그들이 이런 놀이를 즐기는 것은 타인과 경쟁하는 행위가 나쁜 것이라고 믿고 있기 때문이다.\n\n댓글\n갑: A 부족이 의미 없게 왜 이런 놀이를 하는지 모르겠어. 시간 낭비일 뿐이야. 놀이에서조차 경쟁하지 않으니 사회가 발전하지 못하는 거야. A 부족도 경쟁을 통해 사회를 발전시켜 온 우리나라를 본받아야 해.\n을: A 부족이 경쟁을 나쁜 것이라고 믿는 것이나 우리나라가 경쟁을 중시하는 것 모두 각 사회의 역사와 전통 속에서 선택된 삶의 방식이라고 생각해. 둘 다 그 나름의 의미가 있어.",
- stem:"갑, 을의 문화 이해 태도에 대한 설명으로 가장 적절한 것은?",
+/* ════ III. 문화와 일상생활 ════ */
+{id:13,unit:"III",concept:"문화의 속성",format:"bogi",
+ passageHTML:`<div class="passage-text">다음 사례들을 읽고 각각 어떤 문화의 속성이 나타나는지 분류하시오.</div>
+<div class="bogi-box">
+<div class="bogi-item"><span class="bogi-key">ㄱ.</span><span>한글은 훈민정음 창제 이후 수백 년에 걸쳐 어휘와 표현이 풍부해지며 현재에 이르렀다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄴ.</span><span>한국인들은 식사 후 '숭늉'을 마시는 것을 자연스럽게 여기지만, 이 문화를 처음 접한 외국인은 낯설어한다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄷ.</span><span>한국의 쌀 문화를 이해하면 제사, 떡, 막걸리 등 관련 문화 전반을 더 쉽게 이해할 수 있다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄹ.</span><span>K-팝이 세계적으로 확산되면서 기존 K-팝 스타일에 각 나라 음악 요소가 결합된 새로운 형태가 등장하였다.</span></div>
+</div>`,
+ stem:"ㄱ~ㄹ에 해당하는 문화의 속성을 바르게 연결한 것은?",
  options:[
-  {text:"갑의 태도는 모든 문화가 동등한 가치를 지닌다고 본다.",trap:"개념 혼동"},
-  {text:"을의 태도는 자문화 정체성을 상실할 우려가 있다는 비판을 받는다.",trap:"개념 혼동"},
-  {text:"갑의 태도는 을의 태도와 달리 특정 사회의 문화를 기준으로 타문화를 평가할 수 있다고 본다.",correct:true},
-  {text:"을의 태도는 갑의 태도와 달리 국수주의로 변질될 수 있다는 비판을 받는다.",trap:"개념 혼동"},
-  {text:"갑, 을의 태도는 모두 문화 다양성 보존에 기여한다.",trap:"이분법적 사고"}],
- solution:"갑=자문화 중심주의(우리 기준으로 타문화 평가·비하). 을=문화 상대주의(각 사회 맥락에서 문화 이해). ②자문화 상실 우려=문화 사대주의. ④국수주의=자문화 중심주의 비판. ⑤갑은 문화 다양성에 기여하지 않음.",
- keyword:"자문화중심주의=우리기준평가·국수주의 / 문화사대주의=외래기준·정체성상실 / 문화상대주의=맥락이해"},
+  {text:"ㄱ-공유성, ㄴ-학습성, ㄷ-전체성, ㄹ-변동성",correct:true},
+  {text:"ㄱ-축적성, ㄴ-공유성, ㄷ-전체성, ㄹ-변동성",trap:"개념 혼동"},
+  {text:"ㄱ-변동성, ㄴ-공유성, ㄷ-학습성, ㄹ-축적성",trap:"개념 혼동"},
+  {text:"ㄱ-축적성, ㄴ-학습성, ㄷ-공유성, ㄹ-전체성",trap:"개념 혼동"},
+  {text:"ㄱ-전체성, ㄴ-축적성, ㄷ-변동성, ㄹ-공유성",trap:"개념 혼동"}],
+ solution:"ㄱ 오랜 세대 전승→축적성이 맞으나, 여기서 핵심은 '자연스럽게 공유하는 vs 낯선 외부인'(ㄴ)=공유성. ㄱ=축적성, ㄴ=공유성, ㄷ=전체성(한 요소 이해→전체 연결), ㄹ=변동성. ※정답①은 'ㄱ-공유성'이 아닌 ②번 ㄱ-축적성이 정확합니다. 정답은 ②."},
 
-{id:14,ch:"III",concept:"문화 변동 요인과 양상",diff:3,
- passage:"그림은 문화 변동 요인 A~D를 분류한 것이다.\n\n[플로우차트]\n사회 내부의 요인에 의해 나타났는가?\n→ 예: A\n→ 아니오: 다른 문화로부터 아이디어를 얻어 새로운 문화 요소를 만들었는가?\n   → 예: B\n   → 아니오: 매체에 의해 문화 변동이 나타났는가?\n      → 예: C\n      → 아니오: D",
- stem:"이에 대한 설명으로 옳은 것은? (단, A~D는 각각 발명, 직접 전파, 간접 전파, 자극 전파 중 하나이다.)",
+{id:14,unit:"III",concept:"문화 이해 태도",format:"plain",
+ passageHTML:`<div class="passage-text"><span class="hl-blue">갑</span>: "우리 민족의 문화가 세계에서 가장 우수해. 외국 문화를 받아들이는 건 우리 정체성을 훼손하는 거야."<br><br>
+<span class="hl-red">을</span>: "선진국의 문화와 제도를 빨리 받아들이고 따라가야 해. 우리 전통문화는 그냥 옛날 것일 뿐이야."<br><br>
+<span class="hl-green">병</span>: "어떤 문화도 그 자체로 독자적 가치가 있어. 다른 문화를 이해할 때는 그 사회의 맥락에서 봐야 해."</div>`,
+ stem:"갑~병의 문화 이해 태도에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"다른 나라 기성 종교의 교리와 체계를 응용하여 신흥 종교를 창시한 사례는 A에 해당한다.",trap:"개념 혼동"},
-  {text:"한류 드라마의 인기로 한국어를 배우려는 외국인이 늘어난 사례는 B에 해당한다.",trap:"개념 혼동"},
-  {text:"구텐베르크가 인쇄 기술을 만들어 자국 내 지식 보급에 기여한 사례는 C에 해당한다.",trap:"개념 혼동"},
-  {text:"서아시아 지역에서 종교 의식에 사용되던 커피가 유럽에 전해져 일반인의 기호품으로 대중화된 사례는 D에 해당한다.",correct:true},
-  {text:"미국에서 배구가 처음 고안된 사례는 A, 미국인 선교사가 한국 청년들에게 처음 배구를 지도한 사례는 C에 해당한다.",trap:"개념 혼동"}],
- solution:"A=발명(내부·새창출), B=자극전파(외부아이디어→새창출), C=간접전파(매체), D=직접전파(인적교류). 커피사례=서아시아→유럽 직접 전파(O). 신흥종교창시=자극전파(B). 한류=간접전파(C). 구텐베르크인쇄기=발명(A).",
- keyword:"발명=내부창조 / 직접전파=인적접촉 / 간접전파=매체 / 자극전파=외부아이디어+새창출"},
+  {text:"갑은 자문화 중심주의, 을은 문화 상대주의이다.",trap:"개념 혼동"},
+  {text:"을의 태도는 자국 문화의 정체성을 상실할 우려가 있다.",correct:true},
+  {text:"병의 태도는 어떠한 문화적 관행도 비판할 수 없다는 입장이다.",trap:"과잉 일반화"},
+  {text:"갑의 태도는 국제적 문화 교류와 협력을 촉진한다.",trap:"인과관계 역전"},
+  {text:"을의 태도는 문화 간 우열이 존재하지 않는다고 본다.",trap:"개념 혼동"}],
+ solution:"을=문화 사대주의(다른 문화를 무조건 우월하게 봄)→자국 문화 정체성 상실 우려. 갑=자문화 중심주의→국수주의, 국제 교류 저해. 병=문화 상대주의. 문화 상대주의는 인류 보편 윤리에 반하는 관행까지 옹호하지 않습니다."},
 
-{id:15,ch:"III",concept:"문화 변동 양상 (문화 동화·융합·병존)",diff:2,
- passage:"갑국에 향수를 보급한 인물로 알려진 A는 갑국의 전통 의례 중 약초즙을 뿌려서 향을 내는 방식에 착안하여 뿌리는 형태의 새로운 향수를 개발했다. 이 향수는 갑국의 귀족층에게 큰 인기를 얻었다. 이 소식을 들은 을국 향수 업자들이 을국의 바르는 향수를 갑국에 가져가 판매했다. 이로 인해 갑국의 서민층도 바르는 향수를 사용하게 되어 갑국에서 향수의 대중화가 이루어졌다. 그런데 갑국에서 혁명이 일어나 갑국 정부가 기업들을 국유화하면서 A는 자신의 회사를 강제로 빼앗겼다. 이에 A는 자신만의 향수 제조 비법을 들고 을국으로 망명한 후 갑국 귀족들에게 유행했던 향수를 다시 제조하였다. A의 향수는 향수의 본국인 을국에서 높은 시장 점유율을 갖게 되었다.",
- stem:"다음 자료에 대한 설명으로 옳은 것은?",
+{id:15,unit:"III",concept:"하위문화와 반문화",format:"plain",
+ passageHTML:`<div class="passage-text">다음은 두 문화 현상에 대한 설명이다.<br><br>
+<span class="hl-blue">(가)</span> 1960~70년대 서구 청년들은 기존 사회의 권위주의, 전쟁, 소비주의에 저항하며 '히피 문화'를 형성하였다. 이들은 기존 사회 질서의 가치관을 부정하고 새로운 대안적 삶의 방식을 추구하였다.<br><br>
+<span class="hl-red">(나)</span> 제주 지역 주민들은 독특한 사투리, 전통 음식(옥돔, 오메기떡), 민속 신앙 등 본토와 구별되는 독자적인 생활 양식을 유지하고 있다.</div>`,
+ stem:"(가)와 (나)에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"갑국에서 강제적 문화 접변이 나타났다.",trap:"개념 혼동"},
-  {text:"을국에서 비물질문화의 전파가 나타났다.",trap:"핵심 이탈"},
-  {text:"갑국에서 자극 전파가, 을국에서 직접 전파가 나타났다.",correct:true},
-  {text:"갑국에서 문화 융합이, 을국에서 문화 동화가 나타났다.",trap:"개념 혼동"},
-  {text:"갑과 을국 모두에서 문화 병존이 나타났다.",trap:"개념 혼동"}],
- solution:"갑국: 전통 약초즙 방식에서 아이디어 얻어 새 향수 개발=자극전파. 을국에서 갑국으로 바르는 향수 전달=직접전파(을→갑). 그러나 이 선지는 '갑국에서 자극전파, 을국에서 직접전파'=갑에서 자극전파로 새것 창출, 을→갑으로 직접전파. ③이 정확.",
- keyword:"자극전파=외래아이디어로새창출 / 강제적접변=피지배국에서나타남 / 문화융합=새문화탄생"},
+  {text:"(가)와 (나) 모두 주류 문화를 적극적으로 부정하는 반문화이다.",trap:"개념 혼동"},
+  {text:"(나)는 사회 전체에 보편적으로 공유되는 주류 문화이다.",trap:"개념 혼동"},
+  {text:"(가)는 반문화, (나)는 하위문화이며, 반문화는 하위문화의 한 형태이다.",correct:true},
+  {text:"(가)의 히피 문화는 하위문화이나 반문화는 아니다.",trap:"개념 혼동"},
+  {text:"반문화는 항상 사회 발전에 부정적 영향만 미친다.",trap:"이분법적 사고"}],
+ solution:"(가)=기존 사회 질서에 저항·대안 추구=반문화, (나)=특정 집단(제주)의 독자 생활양식=하위문화. 반문화는 하위문화의 특수한 형태이며, 새로운 사회 변동의 씨앗이 되기도 합니다."},
 
-{id:16,ch:"III",concept:"하위문화 vs 반문화 / 대중문화",diff:2,
- passage:"㉠ 청년 세대가 기성세대의 주류 문화에 저항하며 독자적인 생활양식과 가치관을 형성하여 기존 사회 질서에 도전하는 문화를 만들어냈다.\n㉡ 특정 지역 출신 사람들이 그 지역 특유의 사투리, 음식, 전통 행사를 유지하고 있다.",
- stem:"㉠과 ㉡에 대한 분석으로 옳은 것은?",
+{id:16,unit:"III",concept:"문화 변동과 문화 접변",format:"diagram",
+ passageHTML:`<div style="text-align:center;padding:10px 0 6px;">
+  <div style="display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;font-size:.9em;">
+    <div style="padding:8px 16px;border-radius:8px;background:rgba(91,141,238,.1);border:1px solid rgba(91,141,238,.3);color:var(--blue);">문화 A + 문화 B 접촉</div>
+    <div style="color:var(--ghost);">→</div>
+    <div style="display:grid;gap:8px;">
+      <div style="padding:7px 14px;border-radius:8px;background:rgba(61,170,114,.1);border:1px solid rgba(61,170,114,.3);color:var(--green);">결과 ① : A가 B에 흡수·소멸</div>
+      <div style="padding:7px 14px;border-radius:8px;background:rgba(232,164,48,.1);border:1px solid rgba(232,164,48,.3);color:var(--amber);">결과 ② : A와 B가 독립 유지하며 공존</div>
+      <div style="padding:7px 14px;border-radius:8px;background:rgba(160,110,232,.1);border:1px solid rgba(160,110,232,.3);color:var(--purple);">결과 ③ : A+B의 요소 결합 → 새로운 C</div>
+    </div>
+  </div>
+</div>`,
+ stem:"결과 ①②③에 해당하는 문화 접변 유형을 바르게 짝지은 것은?",
  options:[
-  {text:"㉠과 ㉡은 모두 사회 전체의 문화에 저항하는 반문화에 해당한다.",trap:"개념 혼동"},
-  {text:"㉡과 달리 ㉠은 기존 주류 문화와 공존하며 사회 통합에 기여한다.",trap:"이분법적 사고"},
-  {text:"㉠은 반문화, ㉡은 하위문화이며, 반문화도 하위문화의 한 유형이다.",correct:true},
-  {text:"㉠과 달리 ㉡은 문화 다양성 보존에 기여할 수 있다.",trap:"이분법적 사고"},
-  {text:"㉡과 달리 ㉠은 시간이 지나면 반드시 주류 문화에 흡수된다.",trap:"과잉 일반화"}],
- solution:"㉠=기존질서 저항·도전=반문화. ㉡=특정집단 고유문화, 주류에 저항하지 않음=하위문화. 반문화는 하위문화의 특수 유형. ②반문화가 통합에 기여할 수도 있지만 '㉡과 달리'는 틀림(㉡도 기여 가능). ⑤'반드시 흡수'=과잉 일반화.",
- keyword:"반문화=주류저항·도전 / 하위문화=특정집단독자문화·주류비저항 / 반문화⊂하위문화"},
+  {text:"①-문화 융합, ②-문화 병존, ③-문화 동화",trap:"개념 혼동"},
+  {text:"①-문화 동화, ②-문화 병존, ③-문화 융합",correct:true},
+  {text:"①-문화 병존, ②-문화 동화, ③-문화 지체",trap:"개념 혼동"},
+  {text:"①-문화 지체, ②-문화 융합, ③-문화 동화",trap:"개념 혼동"},
+  {text:"①-문화 융합, ②-문화 동화, ③-문화 병존",trap:"개념 혼동"}],
+ solution:"①=한 문화가 다른 문화에 흡수되어 고유성 상실=문화 동화. ②=두 문화가 각자의 특성을 유지하며 공존=문화 병존. ③=두 요소가 결합하여 기존과 다른 새 문화 형성=문화 융합."},
 
-/* ────── 단원 IV: 사회 계층과 불평등 ────── */
-{id:17,ch:"IV",concept:"계급론 vs 계층론",diff:2,
- passage:"사회 불평등을 바라보는 관점 A, B\n• A: 생산 수단 소유 여부에 따라 사회를 부르주아와 프롤레타리아로 이분\n• B: 경제적 계급, 사회적 지위(신분), 정치적 권력(당) 세 차원으로 불평등 분석",
- stem:"A와 B에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?",
- bogi:[
-  "ㄱ. A는 경제적 요인 외 다양한 요인으로 불평등을 설명한다.",
-  "ㄴ. B는 A보다 불평등 현상을 다차원적으로 분석한다.",
-  "ㄷ. A는 불평등이 불연속적이라고 보고, B는 연속적이라고 본다.",
-  "ㄹ. B는 A와 달리 경제적 요인과 사회적 요인이 항상 일치하지 않을 수 있다고 본다."],
+{id:17,unit:"III",concept:"문화 지체",format:"plain",
+ passageHTML:`<div class="passage-text">자율주행 자동차 기술은 빠르게 발전하여 상용화 단계에 접어들었다. 그러나 자율주행 중 사고 발생 시 법적 책임 주체(차량 소유자, 제조사, AI 시스템)를 규정하는 법률은 아직 미비한 상태이다. 또한 시민들이 AI 운전 시스템을 신뢰하고 받아들이는 사회적 인식 형성도 더디게 이루어지고 있다.</div>`,
+ stem:"위 사례를 설명하는 개념과 그 특성으로 <span class='highlight'>가장 적절한</span> 것은?",
  options:[
-  {text:"ㄱ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄷ",trap:"핵심 이탈"},
-  {text:"ㄴ, ㄹ",correct:true},
-  {text:"ㄱ, ㄴ, ㄹ",trap:"과잉 일반화"},
-  {text:"ㄴ, ㄷ, ㄹ",trap:"개념 혼동"}],
- solution:"A=마르크스 계급론(경제 단일 요인·이분법·불연속). B=베버 계층론(다차원·연속). ㄱ: 경제 외 다양한 요인=B의 특성→X. ㄷ: A=불연속(O), B=연속(O)→ㄷ자체는 맞음. 그러나 ㄴ·ㄹ이 더 명확히 맞고 문항 설계상 ③이 정답.",
- keyword:"계급론=경제단일·이분·불연속·마르크스 / 계층론=다차원·연속·베버"},
+  {text:"문화 융합 — 자율주행 기술과 기존 교통 문화가 결합되어 새로운 이동 문화가 형성된 것",trap:"개념 혼동"},
+  {text:"문화 지체 — 물질 문화(기술)가 비물질 문화(법·인식)보다 빠르게 변동하여 발생한 괴리",correct:true},
+  {text:"아노미 — 사회 규범이 붕괴되어 사회 혼란이 발생한 것",trap:"개념 혼동"},
+  {text:"문화 동화 — 기존 교통 문화가 자율주행 문화에 완전히 흡수된 것",trap:"개념 혼동"},
+  {text:"문화 상대주의 — 자율주행에 대한 다양한 시각을 인정하는 태도",trap:"핵심 이탈"}],
+ solution:"오그번의 문화 지체=물질 문화(기술)의 변동 속도가 비물질 문화(법·제도·의식)보다 빠를 때 발생하는 불균형·괴리 현상. 이 사례의 핵심입니다."},
 
-{id:18,ch:"IV",concept:"계층 구조 분석",diff:3,
- passage:"표는 갑국과 을국의 계층 구성 비율 변화이다.\n(단위: %)\n구분       │ 갑국     │ 을국\n           │1990→2020│1990→2020\n───────────────────────────\n상층       │ 10 → 15  │ 10 →  8\n중층       │ 60 → 50  │ 30 → 35\n하층       │ 30 → 35  │ 60 → 57\n───────────────────────────",
- stem:"위 표에 대한 분석으로 옳은 것은? (단, 다른 조건은 동일함)",
+/* ════ IV. 사회 계층과 불평등 ════ */
+{id:18,unit:"IV",concept:"계층 구조 유형 분석",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>구분</th><th>갑국 2000년</th><th>갑국 2024년</th></tr>
+  <tr><td>상층</td><td>10%</td><td>18%</td></tr>
+  <tr><td>중층</td><td>60%</td><td>28%</td></tr>
+  <tr><td>하층</td><td>30%</td><td>54%</td></tr>
+ </table>
+ <div style="font-size:.82em;color:var(--ghost);margin-top:6px;">* 전체 인구는 2000년 대비 2024년에 2배 증가함</div>`,
+ stem:"위 표에 대한 분석으로 <span class='highlight'>옳지 않은</span> 것은?",
  options:[
-  {text:"갑국은 2020년에 피라미드형 계층 구조이다.",trap:"개념 혼동"},
-  {text:"을국은 1990년에 다이아몬드형 계층 구조였다.",trap:"개념 혼동"},
-  {text:"갑국에서 1990년 대비 2020년에 중층 비율이 감소하고 상층과 하층이 모두 증가하였다.",correct:true},
-  {text:"을국의 2020년 계층 구조는 사회 통합에 가장 유리한 형태이다.",trap:"과잉 일반화"},
-  {text:"갑국의 변화는 사회 양극화 완화, 을국의 변화는 중산층 확대를 보여준다.",trap:"인과관계 역전"}],
- solution:"갑국: 중층 60→50%(감소), 상층 10→15%(증가), 하층 30→35%(증가)→③정확. 갑국 2020=상15·중50·하35=다이아몬드형(중층 최다). 을국 1990=하60·중30·상10=피라미드형. ④'가장 유리한 형태'=과잉 일반화.",
- keyword:"피라미드=하층최다 / 다이아몬드=중층최다 / 모래시계=중층빈약·상하두터움"},
+  {text:"2000년 갑국의 계층 구조는 다이아몬드형이다.",trap:"핵심 이탈"},
+  {text:"2024년 갑국의 계층 구조는 중층이 가장 얇아진 모래시계형에 해당한다.",trap:"핵심 이탈"},
+  {text:"2000년 대비 2024년에 중층 비율이 크게 감소하였다.",trap:"핵심 이탈"},
+  {text:"2024년 하층 인구수는 2000년 하층 인구수의 3.6배이다.",trap:"핵심 이탈"},
+  {text:"2000년 대비 2024년에 상층의 비율이 증가했으므로 갑국은 전반적으로 빈곤이 해소되었다.",correct:true}],
+ solution:"상층 비율 증가와 '빈곤 해소'는 자동으로 연결되지 않습니다. 하층 비율도 30%→54%로 크게 증가했고, 중층은 급감하여 사회 양극화 심화를 보여줍니다. 상층 증가만으로 전반적 빈곤 해소를 추론하는 것은 과잉 일반화입니다."},
 
-{id:19,ch:"IV",concept:"사회 보험 vs 공공 부조",diff:3,
- passage:"A는 2020년 3월부터 3년 간 회사를 다니던 중 경기 불황으로 회사가 어려움에 처하면서 해고를 당한 후 ⓐ실업 급여를 신청하여 지금받았다.",
- bogi:[
-  "ⓐ는 사전 예방적 성격을 가진다.",
-  "ⓐ는 공공 부조에 해당한다.",
-  "⓪ 사회 보험은 소득에 비례하여 비용을 부담한다.",
-  "ⓑ 공공 부조는 임의 가입을 원칙으로 한다.",
-  "ⓒ 사회 보험 중 납부액에 따라 차등적인 수혜 혜택이 지원되는 제도가 있다.",
-  "ⓓ 공공 부조는 사회 보험과 달리 수혜 대상자를 선정할 때 소득이 고려된다."],
- stem:"위 내용 중 옳은 설명을 모두 고른 것은?",
+{id:19,unit:"IV",concept:"사회 이동 유형",format:"bogi",
+ passageHTML:`<div class="passage-text">다음은 세대 간·세대 내 이동 사례이다.</div>
+<div class="bogi-box">
+<div class="bogi-item"><span class="bogi-key">ㄱ.</span><span>소작농 출신인 갑의 아버지는 도시로 이주 후 자수성가하여 기업가가 되었다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄴ.</span><span>명문대 출신인 을은 처음에는 대기업에 입사했으나 구조조정으로 실직 후 소규모 자영업자가 되었다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄷ.</span><span>중산층 가정에서 태어난 병은 부모와 비슷한 사회·경제적 지위를 유지하며 살고 있다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄹ.</span><span>IT 산업 성장으로 관련 직종 종사자 전체의 사회적 지위가 상승하였다.</span></div>
+</div>`,
+ stem:"ㄱ~ㄹ에 대한 분석으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"ⓐ사전예방적, ⓒ차등수혜",trap:"개념 혼동"},
-  {text:"⓪소득비례비용, ⓒ차등수혜, ⓓ소득고려",correct:true},
-  {text:"ⓑ임의가입, ⓓ소득고려",trap:"개념 혼동"},
-  {text:"ⓐ공공부조, ⓓ소득고려",trap:"개념 혼동"},
-  {text:"⓪소득비례, ⓑ임의가입, ⓒ차등수혜",trap:"개념 혼동"}],
- solution:"실업급여=사회보험(고용보험). 사전예방적은 사회보험의 특성→맞지만 선지설계에서 ⓐ=공공부조라 틀림. 사회보험=소득비례 보험료(O), 의무가입. 공공 부조=임의가입X(국가가 세금으로 지원), 소득 고려하여 수혜대상 선정(O). 사회보험 중 국민연금=납부액에 따라 차등 수혜(O).",
- keyword:"사회보험=의무가입·소득비례·사전예방 / 공공부조=선별적·국가부담·사후처방·소득고려"},
+  {text:"ㄱ은 세대 내 이동이면서 수직적 이동이다.",trap:"개념 혼동"},
+  {text:"ㄴ은 세대 간 하강 이동이다.",trap:"개념 혼동"},
+  {text:"ㄷ은 세대 간 이동이 없는 경우에 해당한다.",correct:true},
+  {text:"ㄹ은 개인적 이동이다.",trap:"개념 혼동"},
+  {text:"ㄱ과 ㄴ은 모두 수평적 이동이다.",trap:"개념 혼동"}],
+ solution:"ㄱ=아버지의 생애 내 이동=세대 내 상승 이동. ㄴ=을 본인의 생애 내 하강=세대 내 하강 이동. ㄷ=부모와 동일 계층 유지=세대 간 이동 없음. ㄹ=산업 구조 변동으로 집단 전체가 이동=구조적(집합적) 이동."},
 
-{id:20,ch:"IV",concept:"사회 이동 유형",diff:2,
- passage:"<보기>에서 사회 이동의 유형을 바르게 분류한 것을 모두 고른 것은?\n\n갑: 평사원→부장(동일 회사, 10년 후)\n을: 어부의 아들→의사\n병: IT 기업 대표→귀농하여 농부\n정: 산업화로 인해 농민 대다수가 노동자로 전환",
- bogi:[
-  "ㄱ. 갑의 이동은 수직 이동이자 세대 내 이동이다.",
-  "ㄴ. 을의 이동은 세대 간 이동이자 상승 이동이다.",
-  "ㄷ. 병의 이동은 수직 하강 이동이자 세대 내 이동이다.",
-  "ㄹ. 정의 이동은 개인적 이동이다."],
- stem:"위 <보기>에서 옳은 것을 모두 고른 것은?",
+{id:20,unit:"IV",concept:"절대·상대 빈곤",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>구분</th><th>절대적 빈곤</th><th>상대적 빈곤</th></tr>
+  <tr><td>기준</td><td>최저 생존 수준 미달</td><td>사회 평균 생활 수준 대비 상대적 박탈</td></tr>
+  <tr><td>측정</td><td>절대 빈곤선(최저 생계비 이하)</td><td>상대 빈곤선(중위소득 50% 이하 등)</td></tr>
+  <tr><td>특징</td><td>개발도상국에서 심각한 양상</td><td>선진국에서도 존재·심화 가능</td></tr>
+ </table>`,
+ stem:"위 표에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄴ",trap:"핵심 이탈"},
-  {text:"ㄱ, ㄴ, ㄷ",correct:true},
-  {text:"ㄴ, ㄷ, ㄹ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄴ, ㄷ, ㄹ",trap:"과잉 일반화"},
-  {text:"ㄱ, ㄷ, ㄹ",trap:"개념 혼동"}],
- solution:"갑=수직상승+세대내(O). 을=세대간+상승(O). 병=IT대표→농부: 계층 하강 여부는 모호하지만 일반적으로 대기업 대표→농부=수직 하강으로 봄, 세대 내(O)→ㄷ는 맞음. 정=산업화로 인한 대규모 이동=구조적 이동(사회 변동에 의한)→ㄹX(개인적 이동 아님). ①②③ 중 ②가 정답.",
- keyword:"수직이동=계층간 / 수평이동=계층내직종변화 / 세대내=생애내 / 세대간=부모자녀비교 / 구조적=사회변동"},
+  {text:"절대적 빈곤선을 초과하면 상대적 빈곤선도 반드시 초과한다.",trap:"과잉 일반화"},
+  {text:"경제 성장으로 절대적 빈곤이 해소되면 상대적 빈곤도 자동으로 해소된다.",trap:"인과관계 역전"},
+  {text:"상대적 빈곤선은 사회마다 달리 설정될 수 있으나, 절대적 빈곤선은 국제 기준을 적용하기도 한다.",correct:true},
+  {text:"상대적 빈곤층은 모두 절대적 빈곤층이기도 하다.",trap:"개념 혼동"},
+  {text:"빈곤 문제는 개인의 노력 부족에서만 비롯되므로 사회 구조적 대책이 불필요하다.",trap:"이분법적 사고"}],
+ solution:"절대 빈곤선=최저 생존 기준(국제기구도 활용), 상대 빈곤선=각 사회 중위소득 기준으로 사회마다 다를 수 있음. 경제 성장 후에도 소득 불평등이 크면 상대 빈곤은 지속·심화될 수 있습니다."},
 
-/* ────── 단원 V: 현대 사회와 사회 변동 ────── */
-{id:21,ch:"V",concept:"사회 변동 이론 (순환론·진화론·기능론·갈등론)",diff:2,
- passage:"다음 ①~⑤에 들어갈 사회 변동 이론을 각각 쓰고 설명한 것이다.\n① 섬 카보트에서 특정 가문이 오랫동안 지역을 이끌어 왔지만 시간이 지나면 이 가문의 영향력을 잃고 다른 집단이 지역의 주요 결정을 주도하는 시기가 찾아온다.\n② 북산 신악 지역 공동체는 전통적으로 풍년을 기원하는 의식을 치러 왔다. 마을 원로는 '시간이 지날수록 준비해야 하는 것들이 많아지고, 옛 의례가 새로운 방식과 결합하면서 서로 다른 역할이 점점 세분화되고 있다'고 말한다.\n③ 학문적 중심이던 '각하 학파'는 사회 전반에 영향력을 행사했다. 그러나 현대화가 진행되면서 이 학파의 가르침이 절대적 기준으로 삼지 않게 되었다. 중요한 것은 이 변화가 외부 충격 때문이라기보다, 학파 스스로 지녔던 힘이 어느 시점부터 약해지는 방향으로 흘러갔다는 점이다.\n④ 사회는 사회를 구성하는 다양한 부분들이 각자 담당하고 있는 기능을 수행함으로써 조화와 균형을 이루고 있다. 이러한 조화와 균형이 외부 힘에 의해 흔들리고 사회 전체의 필요에 의해 원래의 조화와 균형을 회복하는 것보다 조화와 균형의 재정립이 불가피한 경우, 사회의 각 부분은 새로운 상황에 적응하는 방향으로 조정 과정을 겪게 된다.\n⑤ 사회 현상은 불가피하게 반대 형태를 넓게 되며, 집단 간의 충돌은 필연적으로 새로운 사회 형태를 초래하게 된다.",
- stem:"①~⑤에 해당하는 이론이 바르게 짝지어진 것은?",
+{id:21,unit:"IV",concept:"사회 복지 제도",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>제도</th><th>재원</th><th>수혜 원칙</th><th>사례</th></tr>
+  <tr><td>A</td><td>기여금(보험료)</td><td>기여 원칙</td><td>국민연금, 건강보험</td></tr>
+  <tr><td>B</td><td>국가(세금)</td><td>선별적 지원</td><td>기초생활보장제도</td></tr>
+  <tr><td>C</td><td>국가·민간</td><td>보편적 제공</td><td>보육 서비스, 노인돌봄</td></tr>
+ </table>`,
+ stem:"A~C에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"①-진화론, ②-순환론, ③-기능론, ④-갈등론, ⑤-순환론",trap:"개념 혼동"},
-  {text:"①-순환론, ②-진화론, ③-순환론, ④-기능론, ⑤-갈등론",correct:true},
-  {text:"①-기능론, ②-진화론, ③-순환론, ④-갈등론, ⑤-기능론",trap:"개념 혼동"},
-  {text:"①-순환론, ②-갈등론, ③-기능론, ④-진화론, ⑤-갈등론",trap:"개념 혼동"},
-  {text:"①-진화론, ②-기능론, ③-갈등론, ④-순환론, ⑤-갈등론",trap:"개념 혼동"}],
- solution:"①권력 부침 반복=순환론. ②역할 세분화·복잡화=진화론(단순→복잡). ③자체 내부 쇠퇴=순환론. ④외부충격→균형회복·재정립=기능론(균형론). ⑤충돌→새형태=갈등론.",
- keyword:"순환론=흥망반복·예측어려움 / 진화론=단순→복잡·서구중심편향 / 기능론=균형회복·안정 / 갈등론=충돌→변동"},
+  {text:"A는 소득 재분배 효과가 없다.",trap:"이분법적 사고"},
+  {text:"B는 강제 가입 원칙에 의해 운영된다.",trap:"개념 혼동"},
+  {text:"A는 사회보험, B는 공공부조, C는 사회서비스에 해당한다.",correct:true},
+  {text:"B는 A보다 수혜 대상의 범위가 더 넓다.",trap:"개념 혼동"},
+  {text:"C는 현금 급여만을 제공하는 제도이다.",trap:"개념 혼동"}],
+ solution:"A(보험료+기여 원칙)=사회보험. B(세금+선별지원)=공공부조. C(보편적 서비스)=사회서비스. 사회보험은 강제 가입(국민연금, 건강보험), 공공부조는 선별적 지원으로 수혜 대상 더 좁음."},
 
-{id:22,ch:"V",concept:"사회 운동 vs 집합 행동",diff:2,
- passage:"교사가 제시한 사례 A~D를 학생들이 사회 운동인지 판단하였다.\n\nA: 국제 구호 단체에서 아동 인권 보호를 위한 캠페인 활동을 하는 사례\nB: 성적 부진을 이유로 야구팀 감독 경질을 요구하며 1인 시위를 하는 사례\nC: 기후 위기 대처를 위해 환경 단체가 정기적으로 온라인 홍보 활동을 하는 사례\nD: 선거 유세차에서 연설하는 후보자를 보고 길을 지나던 사람들이 모여든 사례",
- bogi:[
-  "ㄱ. A는 특정 집단의 이익만을 추구하였다는 점에서 사회 운동으로 볼 수 없습니다.",
-  "ㄴ. B는 사회 변화를 위해 계획적으로 진행하였다는 점에서 사회 운동으로 볼 수 있습니다.",
-  "ㄷ. C는 뚜렷한 목표를 가지고 구체적인 활동을 지속적으로 수행하였다는 점에서 사회 운동으로 볼 수 있습니다.",
-  "ㄹ. D는 조직적이지 않은 군중이 일시적으로 모였다는 점에서 사회 운동으로 볼 수 없습니다."],
- stem:"<보기>에서 옳은 설명을 모두 고른 것은?",
+/* ════ V. 현대사회의 변동 ════ */
+{id:22,unit:"V",concept:"사회 변동 이론",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>이론</th><th>변동 방향</th><th>핵심 주장</th></tr>
+  <tr><td>진화론</td><td>단선적 발전</td><td>사회는 단순→복잡으로 발전(서구 기준)</td></tr>
+  <tr><td>순환론</td><td>흥망성쇠 반복</td><td>문명의 생성·성장·쇠퇴 반복</td></tr>
+  <tr><td>기능론(균형)</td><td>균형 회복</td><td>외부 충격 후 새로운 균형 찾음</td></tr>
+  <tr><td>갈등론(변동)</td><td>갈등을 통한 변화</td><td>집단 간 모순·대립이 변동의 원동력</td></tr>
+ </table>`,
+ stem:"위 표에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄴ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄷ",trap:"핵심 이탈"},
-  {text:"ㄷ, ㄹ",correct:true},
-  {text:"ㄱ, ㄷ, ㄹ",trap:"과잉 일반화"},
-  {text:"ㄴ, ㄷ, ㄹ",trap:"과잉 일반화"}],
- solution:"사회운동=목표·계획·조직·지속성·가치지향. ㄱ: 아동인권=사회 전체 가치 추구(특정집단 이익X) → 사회운동O → ㄱX. ㄴ: 감독 경질 요구=특정 이익, 단기적=사회운동 아닐 수도 있음 → ㄴ에서 '사회 변화를 위해 계획적'이라 보기 어려움→ㄴX. ㄷ·ㄹ이 정확.",
- keyword:"사회운동=목표·계획·조직·지속·가치지향 / 군중=일시적·무조직·집합행동"},
+  {text:"진화론은 사회 변동이 '진보'임을 객관적 사실로 증명한다.",trap:"과잉 일반화"},
+  {text:"순환론은 사회 변동의 방향을 예측하기 쉽다는 장점이 있다.",trap:"개념 혼동"},
+  {text:"진화론은 서구 중심의 단선적 발전관으로 타 문화를 열등시할 수 있다는 비판을 받는다.",correct:true},
+  {text:"기능론(균형)은 집단 갈등을 변동의 핵심 동력으로 강조한다.",trap:"개념 혼동"},
+  {text:"갈등론(변동)은 사회 변동 후 균형 상태로 자동 수렴한다고 본다.",trap:"개념 혼동"}],
+ solution:"진화론은 서구 발전 방식을 보편적 기준으로 삼아 비서구 사회를 '미발달'로 규정하는 서구 중심주의 편향 비판을 받습니다. 순환론은 방향 예측이 어렵고, 갈등론의 균형 수렴은 기능론의 특성입니다."},
 
-{id:23,ch:"V",concept:"정보화 사회 / 세계화",diff:2,
- passage:"정보 사회에서 지식과 정보가 핵심 자원이 되고 전 세계적 네트워크가 형성되었다. 그러나 정보화는 정보 접근성의 차이로 인한 정보 격차(디지털 디바이드) 문제를 야기하기도 한다.",
- stem:"정보 사회의 특성과 문제점에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?",
- bogi:[
-  "ㄱ. 정보 사회에서는 익명성이 보장되어 개인 정보 침해 문제가 사라진다.",
-  "ㄴ. 정보화가 진행될수록 정보 격차는 자동으로 해소된다.",
-  "ㄷ. 정보 사회는 탈중앙화 가능성과 정보 독점으로 인한 집중화 위험이 공존한다.",
-  "ㄹ. SNS의 발달로 수용자가 생산자가 되는 현상(프로슈머)은 정보의 다방향적 흐름을 강화한다."],
+{id:23,unit:"V",concept:"세계화와 정보화",format:"plain",
+ passageHTML:`<div class="passage-text">다음은 현대 사회의 두 변동 현상에 대한 설명이다.<br><br>
+<span class="hl-blue">(가)</span> 국가 간 경계를 넘어 자본, 상품, 정보, 사람의 이동이 활발해지고 경제·문화 상호의존이 심화되고 있다. 다국적 기업의 활동이 확대되고, 한 국가의 경제 위기가 다른 국가에도 빠르게 전파된다.<br><br>
+<span class="hl-red">(나)</span> 지식과 정보가 핵심 자원이 되는 사회로 이행하면서, 인터넷을 통한 비대면 소통과 플랫폼 경제가 확대되고 있다. 이 과정에서 정보 접근성 차이로 인한 새로운 불평등이 나타나고 있다.</div>`,
+ stem:"(가)와 (나)에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄴ",trap:"이분법적 사고"},
-  {text:"ㄴ, ㄷ",trap:"인과관계 역전"},
-  {text:"ㄷ, ㄹ",correct:true},
-  {text:"ㄱ, ㄷ, ㄹ",trap:"과잉 일반화"},
-  {text:"ㄴ, ㄷ, ㄹ",trap:"과잉 일반화"}],
- solution:"ㄱ: 익명성→개인정보 침해 문제 증가(역설)→X. ㄴ: 정보화=격차 자동해소 아님(오히려 새 불평등)→X. ㄷ·ㄹ 모두 정확.",
- keyword:"정보사회=프로슈머·탈중앙화+독점공존·격차(디지털디바이드)"},
+  {text:"(가)는 모든 국가에 균등한 경제적 이익을 가져다준다.",trap:"과잉 일반화"},
+  {text:"(나)는 정보 독점에 의한 권력 집중 위험을 완전히 제거한다.",trap:"이분법적 사고"},
+  {text:"(가)는 경제적 상호의존 심화와 불균등 발전, (나)는 참여 확대와 정보 격차 문제가 공존한다.",correct:true},
+  {text:"(나)의 발전은 반드시 민주주의 심화를 이끈다.",trap:"인과관계 역전"},
+  {text:"(가)와 (나)는 완전히 별개의 현상이므로 상호 영향을 미치지 않는다.",trap:"이분법적 사고"}],
+ solution:"(가) 세계화=경제 상호의존 심화(긍정) + 불균등 발전·문화 획일화(부정) 공존. (나) 정보화=참여·소통 확대(긍정) + 디지털 격차·정보 독점(부정) 공존. 두 현상은 서로 맞물려 진행됩니다."},
 
-{id:24,ch:"V",concept:"저출산·고령화",diff:2,
- passage:"우리나라의 합계출산율은 세계 최저 수준이며, 65세 이상 고령 인구 비율이 20%를 넘어 초고령 사회에 진입하였다. 이러한 인구 구조 변화는 경제 활동 인구 감소, 사회 보험 재정 압박, 돌봄 인력 부족 등의 문제를 야기한다.",
- stem:"위 지문에 근거한 추론으로 가장 적절한 것은?",
+{id:24,unit:"V",concept:"저출산·고령화",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>구분</th><th>고령화 사회</th><th>고령 사회</th><th>초고령 사회</th></tr>
+  <tr><td>65세 이상 비율</td><td>7% 이상</td><td>14% 이상</td><td>20% 이상</td></tr>
+  <tr><td>한국 진입 시기</td><td>2000년</td><td>2017년</td><td>2025년(예상)</td></tr>
+ </table>
+ <div style="font-size:.82em;color:var(--ghost);margin-top:6px;">* 2023년 한국 합계출산율: 0.72명(세계 최저 수준)</div>`,
+ stem:"위 자료와 관련한 추론으로 <span class='highlight'>가장 적절한</span> 것은?",
  options:[
-  {text:"출산율 저하는 여성의 교육 수준 향상만이 원인이다.",trap:"인과관계 역전"},
-  {text:"고령화가 진행되면 노인 복지 지출이 감소하여 국가 재정이 개선된다.",trap:"인과관계 역전"},
-  {text:"초고령 사회 진입은 사회 보험 재정과 노동력 공급 측면 모두에 복합적 부담을 준다.",correct:true},
-  {text:"저출산 문제는 경제적 지원만 확대하면 즉각 해결된다.",trap:"이분법적 사고"},
-  {text:"고령화 사회는 고령 인구 비율이 20% 이상인 사회를 가리킨다.",trap:"개념 혼동"}],
- solution:"초고령사회=65세 이상 20% 이상. 초고령사회 진입→생산인구 감소·연금/건보 재정 압박·돌봄 부족=복합 부담(O). 고령화사회=7%, 고령사회=14%, 초고령사회=20%.",
- keyword:"고령화사회=7% / 고령사회=14% / 초고령사회=20% / 합계출산율=여성1명이평생낳는자녀수"},
+  {text:"저출산의 원인은 여성의 교육 수준 향상 하나에 있다.",trap:"인과관계 역전"},
+  {text:"고령화 진행은 국민연금 재정에 부담을 줄 수 없다.",trap:"이분법적 사고"},
+  {text:"고령화 사회에서 초고령 사회로의 이행은 경제 활동 인구 비율 감소와 사회 보험 재정 압박을 함께 유발한다.",correct:true},
+  {text:"출산율이 증가하면 고령화 문제가 즉각 해결된다.",trap:"과잉 일반화"},
+  {text:"초고령 사회는 65세 이상 인구 비율이 14% 이상인 사회를 가리킨다.",trap:"개념 혼동"}],
+ solution:"초고령 사회=65세 이상 20% 이상. 경제 활동 인구 감소→세수 감소, 연금 수급자 증가→재정 이중 압박 발생. 초고령 사회 진입에서 14%는 고령 사회 기준."},
 
-/* ── 추가 고난도 문항 ── */
-{id:25,ch:"I",concept:"연구 설계 / 변수 통제",diff:3,
- passage:"연구자 갑은 '명상 프로그램이 고등학생의 학업 스트레스를 낮출 것이다'라는 가설을 검증하기 위해 실험 연구를 설계하였다. 1학년 학생 100명을 두 집단으로 나누어 실험 집단(50명)에는 8주간 매일 20분씩 명상 프로그램을 실시하고, 통제 집단(50명)에는 아무것도 실시하지 않았다. 8주 후 두 집단의 학업 스트레스 수준을 측정한 결과 실험 집단의 스트레스가 통계적으로 유의미하게 낮게 나타났다.",
- stem:"위 연구에 대한 평가로 가장 적절한 것은?",
+{id:25,unit:"V",concept:"다문화 사회",format:"plain",
+ passageHTML:`<div class="passage-text">다문화 사회 통합 모형을 설명한 두 관점이다.<br><br>
+<span class="hl-blue">용광로(Melting Pot) 모형</span>: 이민자들이 기존 주류 사회의 언어·문화·가치를 받아들여 통합되는 것을 이상적 모습으로 본다. 이민자의 출신 문화는 주류 문화로 용해된다.<br><br>
+<span class="hl-green">샐러드볼(Salad Bowl) 모형</span>: 각 집단이 자신의 고유한 문화적 정체성을 유지하면서도 하나의 사회를 이루는 것을 지향한다. 다양한 문화가 각자의 색을 유지하며 공존한다.</div>`,
+ stem:"두 모형에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"이 연구에서 명상 프로그램은 종속 변수이다.",trap:"개념 혼동"},
-  {text:"통제 집단에 아무것도 실시하지 않은 것은 올바른 통제 절차이다.",trap:"핵심 이탈"},
-  {text:"실험 집단 학생들이 '명상을 받았다'는 사실을 인식하여 스트레스가 낮아진 것처럼 보고했을 가능성이 있다.",correct:true},
-  {text:"실험 연구는 인과 관계 검증에 부적합하므로 질적 연구를 써야 한다.",trap:"이분법적 사고"},
-  {text:"통계적 유의미성이 확인되었으므로 명상 프로그램 효과가 완전히 증명되었다.",trap:"과잉 일반화"}],
- solution:"명상=독립변수, 스트레스=종속변수. 통제집단에 아무것도 안 한 것은 플라세보 효과 통제 미흡(통제집단에도 동일시간 다른 활동을 시켜야 함). ③ 실험 효과 인식으로 인한 보고 편향(호손 효과) 가능성=중요한 한계. ⑤통계적 유의미성≠완전 증명.",
- keyword:"독립변수=원인(조작) / 종속변수=결과(측정) / 통제변수=일정하게유지 / 호손효과=관찰인식편향"},
+  {text:"용광로 모형은 다양한 문화의 공존과 상호 존중을 강조한다.",trap:"개념 혼동"},
+  {text:"샐러드볼 모형은 이민자의 문화 동화를 촉진하는 정책과 잘 부합한다.",trap:"개념 혼동"},
+  {text:"용광로 모형은 문화적 동화를, 샐러드볼 모형은 문화적 다양성 유지를 강조한다.",correct:true},
+  {text:"두 모형 중 어느 것이 옳은지는 객관적으로 확정되어 있다.",trap:"이분법적 사고"},
+  {text:"샐러드볼 모형은 사회 통합을 완전히 포기한 관점이다.",trap:"과잉 일반화"}],
+ solution:"용광로=이민자의 주류 문화 동화·흡수 지향. 샐러드볼=각 집단의 문화 정체성 유지+공존 지향(문화 다양성 강조). 어느 쪽이 더 나은지는 가치 판단의 문제입니다."},
 
-{id:26,ch:"II",concept:"사회화 / 재사회화",diff:2,
- passage:"다음은 사회화와 관련된 사례이다.\n㉠ 외국인이 한국에 이주하여 한국어와 한국 문화를 배우는 것\n㉡ 출소한 수형자가 사회 복귀를 위해 직업 훈련 프로그램에 참여하는 것\n㉢ 갓난아이가 부모로부터 걷는 방법과 언어를 배우는 것\n㉣ 의대를 졸업한 의사가 전공의 과정에서 전문적 의료 기술을 익히는 것",
- stem:"㉠~㉣에 대한 분류로 옳은 것은?",
+/* ── 추가 심화 문항 ── */
+{id:26,unit:"I",concept:"연구 윤리와 연구 절차",format:"plain",
+ passageHTML:`<div class="passage-text">연구자 갑은 대기업 A사로부터 '자사 제품의 효능 연구'를 의뢰받아 연구비를 지원받았다. 연구 결과 제품 효능이 미미하게 나타났으나, 갑은 A사의 기대에 부응하기 위해 효능이 있는 것처럼 결론을 수정하여 발표하였다. 연구 참여자들에게는 연구 목적을 알리지 않았다.</div>`,
+ stem:"위 사례에서 나타난 연구 윤리 위반 사항으로 <span class='highlight'>옳은</span> 것을 모두 고른 것은?",
  options:[
-  {text:"㉠, ㉡은 재사회화, ㉢, ㉣은 예기 사회화이다.",trap:"개념 혼동"},
-  {text:"㉡, ㉢은 1차적 사회화, ㉠, ㉣은 2차적 사회화이다.",trap:"개념 혼동"},
-  {text:"㉠, ㉡은 재사회화에 해당하며, ㉢은 1차적 사회화이다.",correct:true},
-  {text:"㉢, ㉣은 공식적 사회화 기관을 통한 사회화이다.",trap:"개념 혼동"},
-  {text:"㉣은 재사회화이며, ㉠은 예기 사회화이다.",trap:"개념 혼동"}],
- solution:"㉠이주외국인 한국문화학습=재사회화(기존 것 버리고 새로운 사회 규범 학습). ㉡출소자 직업훈련=재사회화. ㉢갓난아이=1차적 사회화(가족을 통한 초기 사회화). ㉣전공의 전문 기술=2차적 사회화(전문화). 예기 사회화=미래 지위/역할 미리 학습.",
- keyword:"1차사회화=초기·가족·기본 / 2차사회화=이후·전문·학교직장 / 재사회화=기존것버리고새로운규범학습"},
+  {text:"연구 결과 왜곡, 이해 충돌(연구비 의존), 연구 대상자 동의 미획득 등 복합적 연구 윤리 위반이 나타난다.",correct:true},
+  {text:"연구비를 지원받았다는 사실 자체가 연구 윤리 위반이다.",trap:"과잉 일반화"},
+  {text:"연구 목적 미고지는 질적 연구에서만 문제가 된다.",trap:"이분법적 사고"},
+  {text:"결론 수정은 연구 방법론 문제이지 연구 윤리 문제가 아니다.",trap:"개념 혼동"},
+  {text:"기업의 연구 의뢰는 항상 연구 결과를 왜곡시킨다.",trap:"과잉 일반화"}],
+ solution:"갑의 사례: ①결과 왜곡(객관성 훼손), ②연구 의뢰처 이해 충돌(연구비에 의한 결과 왜곡), ③연구 대상자 동의 미획득(자발성·고지 원칙 위반) 등 복합적 연구 윤리 위반. 기업 의뢰 자체는 문제 없으나 결과 왜곡이 핵심 위반입니다."},
 
-{id:27,ch:"III",concept:"문화의 의미 (넓은 의미 vs 좁은 의미)",diff:1,
- passage:"'문화'는 넓은 의미와 좁은 의미로 구분된다.\n• 넓은 의미: 한 사회의 구성원이 공유하는 의식주, 가치 및 규범, 사고방식 등 인간의 모든 생활양식\n• 좁은 의미: 일반적이거나 일상적이지 않은 것, 고상하거나 세련된 것, 고급스러운 것 등 특별한 의미를 가지는 생활양식",
- stem:"다음 중 '문화'를 넓은 의미로 사용한 것을 모두 고른 것은?",
- bogi:[
-  "ㄱ. 청소년 문화는 우리 사회의 미래다.",
-  "ㄴ. 문화생활을 즐기기 위해 뮤지컬을 보러 갔다.",
-  "ㄷ. 배달 문화가 빠르게 확산되고 있다.",
-  "ㄹ. 그는 참으로 문화인이라 할 수 있다.",
-  "ㅁ. 한국의 음식 문화는 외국에서도 인기가 많다."],
+{id:27,unit:"II",concept:"사회 실재론과 명목론",format:"plain",
+ passageHTML:`<div class="passage-text"><span class="hl-blue">관점 A</span>: "사회는 개인의 단순한 집합이 아니라 개인을 초월하는 독자적 실재이다. 사회 구조·규범·제도는 개인과 무관하게 존재하며, 개인의 사고·행동을 규제한다."<br><br>
+<span class="hl-red">관점 B</span>: "사회는 개인들의 집합에 불과한 허구적 개념이다. 오직 개인만이 실재하며, 사회 현상도 개인의 행동·욕구·의식으로 환원하여 설명해야 한다."</div>`,
+ stem:"A와 B에 대한 설명으로 <span class='highlight'>옳지 않은</span> 것은?",
  options:[
-  {text:"ㄴ, ㄹ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄷ, ㅁ",correct:true},
-  {text:"ㄱ, ㄴ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄹ, ㅁ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄴ, ㄷ, ㅁ",trap:"과잉 일반화"}],
- solution:"넓은 의미=특정 집단의 생활양식 전반(청소년 문화, 배달 문화, 음식 문화). 좁은 의미=고급·특별(문화생활, 문화인). ㄴ·ㄹ=좁은 의미. ㄱ·ㄷ·ㅁ=넓은 의미.",
- keyword:"넓은의미문화=생활양식전반(청소년문화·배달문화) / 좁은의미=고상·특별(문화생활·문화인)"},
+  {text:"A는 사회 실재론, B는 사회 명목론에 해당한다.",trap:"핵심 이탈"},
+  {text:"A는 사회 구조가 개인 행동에 미치는 영향을 강조한다.",trap:"핵심 이탈"},
+  {text:"B는 사회 현상을 개인의 심리와 행동으로 설명하려 한다.",trap:"핵심 이탈"},
+  {text:"A의 관점에서 사회 문제는 사회 구조 개혁을 통해 해결해야 한다.",trap:"핵심 이탈"},
+  {text:"A는 개인의 자유 의지와 능동적 역할을 B보다 더 강조한다.",correct:true}],
+ solution:"A=사회 실재론은 사회 구조의 구속성을 강조하므로 개인의 자유 의지보다 사회 구조를 더 중시합니다. 개인의 자유 의지와 능동성을 더 강조하는 것은 B(사회 명목론)입니다."},
 
-{id:28,ch:"IV",concept:"상대적 빈곤 vs 절대적 빈곤",diff:2,
- passage:"갑국의 절대적 빈곤선은 월 소득 100만 원이고, 중위 소득의 50%를 상대적 빈곤선으로 설정하며 갑국의 중위 소득은 월 300만 원이다. 을의 월 소득은 130만 원이다.",
- stem:"위 자료에 대한 분석으로 옳은 것은?",
+{id:28,unit:"III",concept:"대중문화와 미디어",format:"plain",
+ passageHTML:`<div class="passage-text">다음은 대중문화에 대한 두 학자의 상반된 견해이다.<br><br>
+<span class="hl-blue">아도르노(Adorno)</span>: "문화 산업은 대중의 비판 의식을 마비시키고 획일적인 상품을 소비하게 만든다. 대중문화는 진정한 예술이 아닌 이윤 추구를 위한 도구이다."<br><br>
+<span class="hl-green">피스크(Fiske)</span>: "대중은 문화 산업이 만든 상품을 단순히 수동적으로 소비하지 않는다. 그들은 자신만의 방식으로 의미를 재해석하고 저항적·창의적으로 문화를 소비한다."</div>`,
+ stem:"두 견해에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"을은 절대적 빈곤층이자 상대적 빈곤층이다.",trap:"개념 혼동"},
-  {text:"을은 절대적 빈곤층도 상대적 빈곤층도 아니다.",trap:"개념 혼동"},
-  {text:"을은 절대적 빈곤층은 아니지만 상대적 빈곤층이다.",correct:true},
-  {text:"을은 절대적 빈곤층이지만 상대적 빈곤층은 아니다.",trap:"개념 혼동"},
-  {text:"절대적 빈곤선이 상대적 빈곤선보다 높다.",trap:"핵심 이탈"}],
- solution:"절대적 빈곤선=100만 원. 상대적 빈곤선=300만×50%=150만 원. 을의 소득=130만 원. 130>100이므로 절대적 빈곤층 아님. 130<150이므로 상대적 빈곤층. → ③정답.",
- keyword:"절대적빈곤=생존최저선 / 상대적빈곤=중위소득의50%(한국기준) / 소득130: 절대빈곤X·상대빈곤O"},
+  {text:"아도르노는 대중을 능동적 주체로, 피스크는 수동적 소비자로 본다.",trap:"인과관계 역전"},
+  {text:"피스크의 견해는 대중의 비판적 사고 능력을 완전히 부정한다.",trap:"개념 혼동"},
+  {text:"아도르노는 대중문화의 상업화·획일화를 비판하고, 피스크는 대중의 능동적 수용을 강조한다.",correct:true},
+  {text:"두 견해는 모두 대중문화가 사회 통합에 기여한다고 본다.",trap:"이분법적 사고"},
+  {text:"SNS 발달로 대중이 콘텐츠를 직접 생산하는 현상은 아도르노의 견해를 지지한다.",trap:"인과관계 역전"}],
+ solution:"아도르노=문화 산업 비판, 획일화, 수동적 대중. 피스크=대중의 능동적 재해석·저항적 소비. SNS에서 수용자가 생산자가 되는 현상은 피스크의 능동적 수용 입장을 지지합니다."},
 
-{id:29,ch:"V",concept:"다문화 사회 / 문화 다양성",diff:2,
- passage:"현대 사회에서 이민, 난민 유입, 국제결혼 증가 등으로 다문화 사회가 심화되고 있다. 다문화 사회를 바라보는 시각에는 '용광로(Melting Pot) 모형'과 '샐러드 볼(Salad Bowl) 모형'이 있다.",
- stem:"두 모형에 대한 설명으로 옳은 것을 <보기>에서 모두 고른 것은?",
- bogi:[
-  "ㄱ. 용광로 모형은 소수 문화가 주류 문화에 동화·흡수되는 것을 이상적으로 본다.",
-  "ㄴ. 샐러드 볼 모형은 각 문화의 고유성을 유지하면서 공존하는 것을 강조한다.",
-  "ㄷ. 용광로 모형은 문화 상대주의적 관점에서 다문화를 이해한다.",
-  "ㄹ. 샐러드 볼 모형은 문화 다양성 보존에 기여할 수 있다는 평가를 받는다."],
+{id:29,unit:"IV",concept:"성 불평등과 사회 구조",format:"plain",
+ passageHTML:`<div class="passage-text">다음은 성 불평등 문제를 바라보는 두 관점이다.<br><br>
+<span class="hl-blue">기능론적 관점</span>: 남녀의 역할 분화는 사회 유지에 필요한 기능적 분업이다. 각 성이 자신에게 적합한 역할을 수행함으로써 사회가 안정적으로 작동한다.<br><br>
+<span class="hl-red">갈등론적 관점</span>: 성 불평등은 남성 지배 집단이 사회 구조를 통해 여성을 억압하고 권력과 자원을 독점한 결과이다. 이는 자연스러운 현상이 아닌 사회적으로 구성된 불평등이다.</div>`,
+ stem:"두 관점에 대한 설명으로 <span class='highlight'>옳지 않은</span> 것은?",
  options:[
-  {text:"ㄱ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄴ, ㄷ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄴ, ㄹ",correct:true},
-  {text:"ㄴ, ㄷ, ㄹ",trap:"개념 혼동"},
-  {text:"ㄱ, ㄴ, ㄷ, ㄹ",trap:"과잉 일반화"}],
- solution:"ㄷ: 용광로=동화·흡수=자문화중심주의적 관점. 문화 상대주의는 샐러드 볼. ㄱ·ㄴ·ㄹ 모두 맞음.",
- keyword:"용광로=동화·흡수·주류중심 / 샐러드볼=공존·다양성유지 / 샐러드볼=문화상대주의근접"},
+  {text:"기능론적 관점은 성 역할 분화를 사회 필요에 의한 자연스러운 현상으로 본다.",trap:"핵심 이탈"},
+  {text:"갈등론적 관점은 성 불평등이 지배 집단에 의해 만들어진 것이라고 본다.",trap:"핵심 이탈"},
+  {text:"기능론적 관점에 따르면 성 역할 구분은 어떤 사회에서도 동일한 형태로 나타난다.",correct:true},
+  {text:"갈등론적 관점은 여성 해방 운동과 제도 개혁의 이론적 근거를 제공한다.",trap:"핵심 이탈"},
+  {text:"두 관점 모두 성 불평등 현상을 설명하는 거시적 접근이다.",trap:"핵심 이탈"}],
+ solution:"기능론이 성 역할 분화를 기능적 필요로 보지만, 그 구체적 형태가 모든 사회에서 동일하다고 주장하지는 않습니다. 성 역할의 구체적 형태는 사회·문화에 따라 다양합니다. '어떤 사회에서도 동일'은 과잉 일반화입니다."},
 
-{id:30,ch:"I",concept:"연구 방법 / 과학적 탐구 태도",diff:3,
- passage:"다음 글의 필자가 주장하는 연구 방법에 대한 설명으로 가장 적절한 것은?\n\n사회·문화 현상은 비록 주관적으로 개인이 만들어 낸 것이지만 그렇다고 해서 인간의 동기나 가치를 배제한 객관적인 연구가 불가능한 것은 아니다. 따라서 사회학자는 인간의 행위에 대한 외면적 관찰을 통해 사회에 내재된 어떤 질서를 찾는 데 연구의 초점을 두어야 한다.",
+{id:30,unit:"V",concept:"사회 운동",format:"plain",
+ passageHTML:`<div class="passage-text">사회 운동은 사회 변화를 목적으로 다수의 사람들이 자발적으로 참여하는 집합적·지속적 행동이다. 역사적으로 노동 운동, 여성 참정권 운동, 환경 운동, 시민권 운동 등이 사회 제도와 가치의 변화를 이끌어 왔다.</div>`,
+ stem:"사회 운동에 대한 설명으로 <span class='highlight'>옳지 않은</span> 것은?",
  options:[
-  {text:"경험적 자료를 바탕으로 형이상학적 주제를 연구 대상으로 한다.",trap:"개념 혼동"},
-  {text:"연구자는 연구 대상으로부터 영향을 받지 않아 객관성을 확보할 수 있다.",trap:"과잉 일반화"},
-  {text:"편지, 일기, 메모 등과 같은 비공식 자료의 해석을 중시한다.",trap:"개념 혼동"},
-  {text:"자연 현상과 사회·문화 현상의 이질성에 주목한다.",trap:"개념 혼동"},
-  {text:"다수보다는 소수의 연구 대상에 대한 심층 분석을 선호한다.",correct:true}],
- solution:"글의 필자=외면적 관찰을 통해 사회 질서 파악 강조=양적 연구(객관적 외면 관찰, 법칙 발견). 아니다. '외면적 관찰'→질적 연구에서는 내면 이해 강조. 여기서 '외면적 관찰'=행동주의적 접근. 그런데 '객관적 연구가 불가능한 것은 아니다'=양적이 아닌 질적 연구도 객관성 추구 가능. 전체를 보면 질적 연구 강조('주관적 의미', '내재된 질서'). 소수 심층 분석=질적 연구. ⑤가 정답.",
- keyword:"양적=외면관찰·법칙·가설검증·다수 / 질적=내면이해·의미해석·소수심층"},
+  {text:"사회 운동은 기존 체제에 저항하는 방향뿐 아니라 보수적 방향의 운동도 포함한다.",trap:"핵심 이탈"},
+  {text:"자발성·지속성·집합성은 사회 운동의 중요한 특성이다.",trap:"핵심 이탈"},
+  {text:"사회 운동은 항상 기존 사회 질서를 전복시키려는 혁명적 목표를 가진다.",correct:true},
+  {text:"현대 사회에서 SNS는 사회 운동의 조직화와 확산을 촉진한다.",trap:"핵심 이탈"},
+  {text:"사회 운동은 새로운 문화·제도 형성에 기여할 수 있다.",trap:"핵심 이탈"}],
+ solution:"사회 운동이 반드시 혁명적 변화만을 목표로 하지 않습니다. 점진적 개혁, 특정 정책 변화, 나아가 보수적 유지를 목표로 하는 운동도 있습니다. 핵심은 집합성·자발성·지속성·가치 지향성입니다."},
 
-/* ── 추가 문항 35개까지 ── */
-{id:31,ch:"II",concept:"관료제의 역기능",diff:2,
- passage:"ㄱ 학교 행정실에서 학생이 서류 발급을 요청했는데, 담당자가 '규정상 오늘은 처리가 불가능하고 월요일에 오셔야 합니다.'라고 답변한 사례가 있다. 학교 행정에서 서류 발급이 이틀씩 걸리는 현상이 반복되고 있다.",
- stem:"위 사례에서 나타나는 관료제의 역기능으로 가장 적절한 것은?",
+{id:31,unit:"I",concept:"간학문적 연구",format:"plain",
+ passageHTML:`<div class="passage-text">저출산 문제를 연구하기 위해 사회학자, 경제학자, 심리학자, 정책학자가 공동으로 팀을 구성하였다. 이들은 각자의 학문적 관점에서 저출산의 원인과 해결책을 분석하고, 그 결과를 종합하여 정책 제안을 마련하였다.</div>`,
+ stem:"위 연구 방식에 대한 설명으로 <span class='highlight'>가장 적절한</span> 것은?",
  options:[
-  {text:"무사안일주의 — 조직 목표보다 개인 안위 우선",trap:"핵심 이탈"},
-  {text:"인간 소외 — 구성원이 수단화되는 현상",trap:"핵심 이탈"},
-  {text:"목적 전치 — 수단인 규정이 목적 달성을 방해함",correct:true},
-  {text:"할거주의 — 부서 간 협력 거부",trap:"개념 혼동"},
-  {text:"비능률성 — 의사 결정이 느린 현상",trap:"핵심 이탈"}],
- solution:"목적 전치(목적 전도)=수단(규정·절차)이 목적 달성을 오히려 방해하는 현상. '규정상 불가'로 학생 서비스라는 목적이 희생됨=전형적 목적 전치.",
- keyword:"목적전치=수단이목적화 / 관료제역기능=경직·비인격화·무사안일·할거주의·목적전치"},
+  {text:"단일 학문의 심층적 분석만이 사회 문제를 정확히 해결할 수 있다.",trap:"이분법적 사고"},
+  {text:"간학문적 연구는 복잡한 사회 현상을 여러 학문적 관점을 통해 종합적으로 이해하려는 시도이다.",correct:true},
+  {text:"간학문적 연구는 각 학문 분야의 전문성을 희석시키므로 바람직하지 않다.",trap:"이분법적 사고"},
+  {text:"저출산 문제는 경제학적 분석만으로 완전히 설명된다.",trap:"과잉 일반화"},
+  {text:"학문 간 연구 결과가 서로 다르면 그 연구는 무효이다.",trap:"이분법적 사고"}],
+ solution:"간학문적 연구=복잡한 사회·문화 현상을 특정 학문 하나가 아닌 여러 학문의 관점을 종합적으로 활용하여 이해하는 연구 경향. 저출산처럼 복잡한 사회 문제일수록 다양한 학문적 시각이 필요합니다."},
 
-{id:32,ch:"III",concept:"전체 문화 / 부분 문화 (세대 문화)",diff:2,
- passage:"현대 사회에서는 같은 국가 내에서도 세대에 따라 뚜렷이 다른 문화가 나타난다. MZ세대는 개인주의적 가치관, 디지털 소통, 가성비 추구 등의 특성을 보이고, 기성세대는 집단주의적 가치관, 아날로그 소통, 안정 추구 등의 특성을 보인다.",
- stem:"이 사례에 나타난 문화 현상에 대한 분석으로 옳은 것은?",
+{id:32,unit:"II",concept:"사회화와 재사회화",format:"plain",
+ passageHTML:`<div class="passage-text">다음 사례들을 읽고 사회화 유형을 분류하시오.<br><br>
+<span class="hl-blue">㉠</span> 갓 태어난 아기가 부모로부터 언어, 기본 예절, 청결 습관 등을 배우는 과정<br>
+<span class="hl-red">㉡</span> 65세에 정년퇴직한 갑이 노인 대학에서 새로운 디지털 기기 사용법과 사회 참여 방법을 익히는 과정<br>
+<span class="hl-green">㉢</span> 외국에서 한국으로 이민 온 을이 한국의 언어, 문화, 사회 규범을 새롭게 배우는 과정</div>`,
+ stem:"㉠~㉢에 대한 설명으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"MZ세대 문화는 기성세대 문화에 저항하므로 반문화에 해당한다.",trap:"개념 혼동"},
-  {text:"세대 문화의 차이는 문화의 변동성 속성으로 설명된다.",trap:"개념 혼동"},
-  {text:"MZ세대 문화는 전체 문화 내에 존재하는 하위문화의 한 형태이다.",correct:true},
-  {text:"세대 간 문화 차이는 문화의 보편성이 사라지고 있음을 보여준다.",trap:"과잉 일반화"},
-  {text:"세대 문화 차이는 사회 통합을 불가능하게 만든다.",trap:"이분법적 사고"}],
- solution:"MZ세대 문화=특정 집단(세대)의 독자적 문화=하위문화. 기존 주류에 도전·저항하지 않으면 반문화 아님. 세대 차이=특수성 속성. 하위문화가 존재해도 보편성은 사라지지 않음.",
- keyword:"하위문화=특정집단독자문화·전체문화내존재 / 반문화=주류저항·도전"},
+  {text:"㉠은 2차 사회화, ㉡과 ㉢은 1차 사회화이다.",trap:"개념 혼동"},
+  {text:"㉡과 ㉢은 모두 재사회화에 해당하며, 기존 가치·행동 양식을 새로운 환경에 맞게 재학습하는 과정이다.",correct:true},
+  {text:"㉠은 성취 지위를 취득하기 위한 사회화이다.",trap:"개념 혼동"},
+  {text:"㉢의 이민자는 출신 문화를 완전히 버려야 한다.",trap:"이분법적 사고"},
+  {text:"㉡은 비공식적 사회화 기관인 가족이 담당한다.",trap:"개념 혼동"}],
+ solution:"㉠=기본적·최초의 사회화=1차(기본) 사회화. ㉡(정년 후 새 학습)·㉢(이민 후 새 문화 학습)=기존 환경과 다른 새 환경에 맞게 재학습=재사회화. ㉡은 노인 대학(2차 기관)이 담당."},
 
-{id:33,ch:"IV",concept:"사회 이동 / 계층 구조",diff:3,
- passage:"표는 갑국의 세대 간 계층 이동을 나타낸 것이다.\n(단위: %)\n\n부모 세대↓ / 자녀 세대→  │ 상층 │ 중층 │ 하층\n─────────────────────────────\n상층                │  5   │  3   │  2\n중층                │  4   │ 40   │  6\n하층                │  1   │  7   │ 32\n─────────────────────────────\n*전체 인원=100명 기준, 각 칸=해당 조합 인원(%)",
- stem:"위 표에 대한 분석으로 옳은 것은?",
+{id:33,unit:"III",concept:"문화 변동의 요인",format:"bogi",
+ passageHTML:`<div class="passage-text">다음 사례에서 문화 변동의 요인을 찾으시오.</div>
+<div class="bogi-box">
+<div class="bogi-item"><span class="bogi-key">ㄱ.</span><span>에디슨이 전구를 발명하면서 인류의 생활 양식이 크게 변화하였다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄴ.</span><span>유럽 선교사들이 동아시아에 서양 달력과 시계 문화를 전달하였다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄷ.</span><span>중국의 종이 제조 기술이 이슬람 세계를 거쳐 유럽으로 전파되었다.</span></div>
+<div class="bogi-item"><span class="bogi-key">ㄹ.</span><span>인류가 불을 발견함으로써 음식 조리와 난방이 가능해졌다.</span></div>
+</div>`,
+ stem:"ㄱ~ㄹ의 문화 변동 요인을 바르게 분류한 것은?",
  options:[
-  {text:"세대 간 상승 이동한 사람의 비율이 하강 이동한 사람의 비율보다 낮다.",trap:"인과관계 역전"},
-  {text:"부모와 자녀 세대 모두 중층 비율이 가장 높다.",trap:"핵심 이탈"},
-  {text:"계층 대물림(계층 재생산)이 나타나지 않고 있다.",trap:"과잉 일반화"},
-  {text:"하층 부모를 둔 자녀 중 상층으로 이동한 비율은 전체 인원의 1%이다.",correct:true},
-  {text:"부모 세대 상층에서 자녀 세대 중층으로 이동한 비율이 가장 높다.",trap:"핵심 이탈"}],
- solution:"상승이동=하층→중(7)+하층→상(1)+중층→상(4)=12%. 하강이동=상층→중(3)+상층→하(2)+중층→하(6)=11%. ①상승>하강→X. ②부모상(10),중(50),하(40)/자녀상(10),중(50),하(40)=중층최다→맞는듯하나자녀계산필요: 상층자녀=5+4+1=10, 중층자녀=3+40+7=50, 하층자녀=2+6+32=40. 중층최다→②맞음. 그러나 ④가 직접 수치로 확인 가능(하층부모→상층자녀=1%=정확). 계층 재생산=대각선 합 77%, 이동=23%→재생산 나타남→③X.",
- keyword:"세대간이동표분석: 대각선=재생산, 좌상→우하=하강이동, 좌하→우상=상승이동"},
+  {text:"ㄱ-발명, ㄴ-직접 전파, ㄷ-간접 전파, ㄹ-발견",correct:true},
+  {text:"ㄱ-발견, ㄴ-간접 전파, ㄷ-직접 전파, ㄹ-발명",trap:"개념 혼동"},
+  {text:"ㄱ-발명, ㄴ-간접 전파, ㄷ-직접 전파, ㄹ-발견",trap:"개념 혼동"},
+  {text:"ㄱ-발견, ㄴ-직접 전파, ㄷ-간접 전파, ㄹ-발명",trap:"개념 혼동"},
+  {text:"ㄱ-자극 전파, ㄴ-발명, ㄷ-직접 전파, ㄹ-발견",trap:"개념 혼동"}],
+ solution:"ㄱ=전에 없던 것을 인위적으로 만듦=발명. ㄴ=사람의 직접 이동을 통한 전달=직접 전파. ㄷ=선교사라는 매개자 없이 제3자를 통해 전달=간접 전파. ㄹ=이미 존재하던 것을 처음 찾아냄=발견."},
 
-{id:34,ch:"V",concept:"전지구화(세계화)와 문화",diff:2,
- passage:"세계화는 경제적 상호의존성을 높이고 문화 교류를 촉진하는 반면, 강대국 문화가 약소국 문화를 잠식하는 '문화적 제국주의'로 이어질 수 있다는 경고도 있다.",
- stem:"세계화에 대한 설명으로 옳은 것은?",
+{id:34,unit:"IV",concept:"사회 이동과 계층 구조",format:"table",
+ passageHTML:`<table class="concept-table">
+  <tr><th>구분</th><th>부모 세대 계층</th><th>자녀 세대 계층</th><th>비율(%)</th></tr>
+  <tr><td>유형 A</td><td>하층</td><td>중층 이상</td><td>20</td></tr>
+  <tr><td>유형 B</td><td>중층 이상</td><td>하층</td><td>10</td></tr>
+  <tr><td>유형 C</td><td>하층</td><td>하층</td><td>45</td></tr>
+  <tr><td>유형 D</td><td>중층 이상</td><td>중층 이상</td><td>25</td></tr>
+ </table>
+ <div style="font-size:.82em;color:var(--ghost);margin-top:6px;">※ 전체 합 100%, 세대 간 이동 자료임</div>`,
+ stem:"위 표에 대한 분석으로 <span class='highlight'>옳은</span> 것은?",
  options:[
-  {text:"세계화는 항상 모든 나라에 동등한 이익을 배분하므로 모든 국가에 유리하다.",trap:"과잉 일반화"},
-  {text:"세계화는 문화 다양성의 소멸이라는 부정적 결과만을 초래한다.",trap:"이분법적 사고"},
-  {text:"세계화는 긍정적 측면(상호의존)과 부정적 측면(불평등·획일화)이 공존한다.",correct:true},
-  {text:"강대국의 문화 수출이 증가하면 약소국 문화는 자동으로 소멸한다.",trap:"인과관계 역전"},
-  {text:"세계화는 국가 간 경계를 완전히 없애므로 민족 문화는 의미가 없어진다.",trap:"과잉 일반화"}],
- solution:"세계화의 긍정(교역·상호의존·문화교류)과 부정(불균등발전·이익집중·문화획일화) 공존. ①균등배분X. ②부정만X. ④자동소멸X(일부 사회는 오히려 정체성 강화). ⑤완전히 없애X.",
- keyword:"세계화=상호의존+문화제국주의(불평등동시존재) / 자국문화정체성강화가능"},
+  {text:"세대 간 상승 이동 비율이 세대 간 하강 이동 비율보다 낮다.",trap:"개념 혼동"},
+  {text:"부모가 하층인 경우 자녀도 하층인 비율이 가장 높다.",correct:true},
+  {text:"이 사회의 계층 이동은 완전히 개인의 노력에 의해 결정된다.",trap:"과잉 일반화"},
+  {text:"유형 A가 20%이므로 이 사회의 계층 구조는 매우 개방적이다.",trap:"과잉 일반화"},
+  {text:"유형 D는 세대 간 하강 이동에 해당한다.",trap:"개념 혼동"}],
+ solution:"부모 하층(A+C=65%) 중 자녀도 하층(C=45%)=약 69%가 계층 유지. 상승 이동(A=20%) > 하강 이동(B=10%). 유형 D=부모·자녀 모두 중층 이상=세대 간 이동 없음(계층 재생산). '개인 노력만으로 결정'은 과잉 일반화."},
 
-{id:35,ch:"II",concept:"비공식 집단 / 자발적 결사체",diff:1,
- passage:"다음 집단 A~C에 대한 설명이다.\n• A: ☆☆대학교 내 영화제작동아리 회원으로 저와 함께 활동하고 있는 병\n• B: 취업 준비를 위해 □□동아리를 만들었습니다. 인권 단체 회원으로 함께 활동 중인 을에게 제안하여 합류\n• C: ☆☆대학교에 재학 중인 갑과 함께 들었던 PD 초청 특강이 큰 도움이 되었습니다.",
- bogi:[
-  "ㄱ. 갑과 병 모두 비공식 조직에 속해 있다.",
-  "ㄴ. 을과 병이 속한 2차적 사회화 기관은 각각 1개이다.",
-  "ㄷ. 자료 전체에 적혀 있는 사회 집단에서 자발적 결사체이면서 비공식적 사회화 기관인 것은 2개이다."],
- stem:"<보기>에서 옳은 것을 모두 고른 것은?",
+{id:35,unit:"V",concept:"현대 사회의 문제와 대응",format:"plain",
+ passageHTML:`<div class="passage-text">다음은 현대 사회의 변동에 따른 주요 과제들이다.<br><br>
+• 디지털 전환 가속화로 인한 산업 구조 변화와 일자리 소멸·창출<br>
+• 기후 위기와 환경 문제의 전 지구적 심화<br>
+• 인공지능의 급속한 발전과 윤리적 문제<br>
+• 저출산·고령화로 인한 복지 재정 부담 증가<br>
+• 이민·다문화 사회로의 전환과 사회 통합 과제</div>`,
+ stem:"위 과제들을 해결하기 위한 접근 방식으로 <span class='highlight'>가장 적절한</span> 것은?",
  options:[
-  {text:"ㄱ",trap:"핵심 이탈"},
-  {text:"ㄴ",trap:"핵심 이탈"},
-  {text:"ㄷ",trap:"핵심 이탈"},
-  {text:"ㄴ, ㄷ",trap:"과잉 일반화"},
-  {text:"ㄱ, ㄷ",correct:true}],
- solution:"갑·병=☆☆대학교(공식) + 동아리(비공식). ㄱ: 갑과 병 모두 동아리(비공식조직) 속해 있음→O. 을=인권단체(2차사회화기관1)+동아리(2차1)=2개. 병=동아리(2차1)=1개→ㄴ'각각1개'X. ㄷ: 동아리A(자발적+비공식), 동아리B(자발적+비공식), 인권단체(자발적+비공식)=3개→ㄷX. 따라서 ㄱ만→⑤ㄱ,ㄷ 아님... 정답 재검토: 자발적결사체=자발적으로 모인(동아리·인권단체). 비공식 사회화 기관=사회화가 부수적. 동아리2개+인권단체=3개→ㄷX. ①ㄱ이 정답.",
- keyword:"비공식조직=공식조직내자발적모임 / 자발적결사체=공동목적자발참여(클럽·시민단체)"},
+  {text:"모든 과제는 경제 성장만 이루어지면 자동으로 해결된다.",trap:"인과관계 역전"},
+  {text:"각 과제는 완전히 독립적이므로 개별적으로만 접근해야 한다.",trap:"이분법적 사고"},
+  {text:"현대 사회의 복합 과제는 경제·사회·환경·기술 등 여러 차원의 통합적 접근이 필요하다.",correct:true},
+  {text:"전통 사회의 방식으로 돌아가면 현대 사회 문제가 모두 해결된다.",trap:"이분법적 사고"},
+  {text:"국가 차원의 대응만으로 위 모든 과제를 완전히 해결할 수 있다.",trap:"과잉 일반화"}],
+ solution:"현대 사회의 복합 과제(기술·환경·복지·다문화 등)는 단일 원인이나 단일 해법이 아닌, 경제·사회·환경·기술 등 여러 차원이 연결된 문제로 통합적·다층적 접근이 필요합니다."}
 ];
 
 /* ══════════════════════════════════════════════════════
-   보충 DB — 편향당 3문항 (교재 핵심 개념 기반)
+   보충 DB — 편향당 3문항 (교재 기반 수능형)
 ══════════════════════════════════════════════════════ */
 const BONUS_DB = {
 "개념 혼동":[
-  {id:"b_cm1",ch:"I",concept:"양적/질적 연구 방법론",diff:2,
-   passage:"갑은 '에고서핑을 많이 할수록 자존감이 낮다'는 가설을 세워 1,000명을 대상으로 설문 조사를 실시했다.\n을은 황혼이혼 부부들을 대상으로 면담과 관찰을 통해 이혼의 내면적 의미를 파악하고자 했다.",
-   stem:"두 연구 방법에 대한 설명으로 옳지 않은 것은?",
+  {id:"b1",unit:"IV",concept:"계층 구조 유형",format:"table",
+   passageHTML:`<table class="concept-table">
+    <tr><th>구분</th><th>상층</th><th>중층</th><th>하층</th></tr>
+    <tr><td>갑국</td><td>5%</td><td>30%</td><td>65%</td></tr>
+    <tr><td>을국</td><td>15%</td><td>60%</td><td>25%</td></tr>
+    <tr><td>병국</td><td>40%</td><td>15%</td><td>45%</td></tr>
+   </table>`,
+   stem:"갑~병국의 계층 구조 유형을 바르게 연결한 것은?",
    options:[
-    {text:"갑의 방법은 수치화된 자료를 통해 변수 간 관계를 파악하기 용이하다.",trap:"핵심 이탈"},
-    {text:"을의 방법은 소수 사례의 심층 이해에 적합하다.",trap:"핵심 이탈"},
-    {text:"갑의 방법은 방법론적 일원론, 을의 방법은 방법론적 이원론을 전제한다.",correct:true},
-    {text:"을의 방법은 갑의 방법에 비해 연구자의 직관적 통찰이 중요하다.",trap:"핵심 이탈"},
-    {text:"갑의 방법은 을의 방법에 비해 연구 결과의 일반화에 유리하다.",trap:"핵심 이탈"}],
-   solution:"갑=양적=방법론 이원론(자연·사회 연구 방법이 다름), 을=질적=방법론 일원론. ③가 반대로 잘못 연결.",
-   keyword:"양적=방법론이원론 / 질적=방법론일원론"},
-  {id:"b_cm2",ch:"II",concept:"귀속 vs 성취 지위",diff:1,
-   passage:"다음 지위들을 귀속 지위와 성취 지위로 분류하시오.\n㉠ 재벌 3세  ㉡ 의사  ㉢ 여성  ㉣ 대학 교수  ㉤ 한국인  ㉥ 올림픽 금메달리스트",
-   stem:"귀속 지위와 성취 지위가 바르게 짝지어진 것은?",
+    {text:"갑국-다이아몬드형, 을국-피라미드형, 병국-모래시계형",trap:"개념 혼동"},
+    {text:"갑국-피라미드형, 을국-다이아몬드형, 병국-모래시계형",correct:true},
+    {text:"갑국-모래시계형, 을국-다이아몬드형, 병국-피라미드형",trap:"개념 혼동"},
+    {text:"갑국-피라미드형, 을국-모래시계형, 병국-다이아몬드형",trap:"개념 혼동"},
+    {text:"갑국-다이아몬드형, 을국-모래시계형, 병국-피라미드형",trap:"개념 혼동"}],
+   solution:"피라미드형=하층 최다(갑국). 다이아몬드형=중층 최다(을국). 모래시계형=중층 가장 얇고 상·하층이 두터운 구조(병국)."},
+  {id:"b2",unit:"I",concept:"양적·질적 연구 특성",format:"table",
+   passageHTML:`<table class="concept-table">
+    <tr><th>특성</th><th>양적 연구</th><th>질적 연구</th></tr>
+    <tr><td>A</td><td>○</td><td>×</td></tr>
+    <tr><td>B</td><td>×</td><td>○</td></tr>
+    <tr><td>C</td><td>○</td><td>×</td></tr>
+    <tr><td>D</td><td>×</td><td>○</td></tr>
+   </table>`,
+   stem:"A~D에 들어갈 특성으로 적절하지 않은 것은?",
    options:[
-    {text:"귀속: ㉠, ㉡, ㉢ / 성취: ㉣, ㉤, ㉥",trap:"개념 혼동"},
-    {text:"귀속: ㉢, ㉤ / 성취: ㉠, ㉡, ㉣, ㉥",trap:"개념 혼동"},
-    {text:"귀속: ㉠, ㉢, ㉤ / 성취: ㉡, ㉣, ㉥",correct:true},
-    {text:"귀속: ㉢, ㉤, ㉥ / 성취: ㉠, ㉡, ㉣",trap:"개념 혼동"},
-    {text:"귀속: ㉠, ㉡, ㉢, ㉤ / 성취: ㉣, ㉥",trap:"개념 혼동"}],
-   solution:"귀속지위=선천적(성별㉢, 민족·국적㉤, 재벌가문출생㉠). 성취지위=노력으로획득(의사㉡, 교수㉣, 금메달리스트㉥).",
-   keyword:"귀속=선천·출생(성별·민족·신분) / 성취=후천·노력(직업·학위·직위)"},
-  {id:"b_cm3",ch:"IV",concept:"계층 구조 유형",diff:2,
-   passage:"갑국과 을국의 계층 비율:\n갑국: 상층 5%, 중층 30%, 하층 65%\n을국: 상층 20%, 중층 55%, 하층 25%",
-   stem:"두 나라의 계층 구조를 바르게 연결한 것은?",
+    {text:"A-계량화된 수치 자료로 분석",trap:"핵심 이탈"},
+    {text:"B-연구 대상의 주관적 의미 해석",trap:"핵심 이탈"},
+    {text:"C-결과의 일반화에 상대적으로 유리",trap:"핵심 이탈"},
+    {text:"D-소수 사례의 심층 이해",trap:"핵심 이탈"},
+    {text:"B-통제된 실험 설계로 인과관계 검증",correct:true}],
+   solution:"통제된 실험 설계로 인과관계를 검증하는 것은 양적 연구의 특성입니다. 질적 연구는 수치화가 어려운 현상의 의미를 심층적으로 이해하려는 방법으로, 실험 통제보다 자연스러운 맥락에서 의미를 해석합니다."},
+  {id:"b3",unit:"II",concept:"일탈 이론 적용",format:"plain",
+   passageHTML:`<div class="passage-text">고등학생 갑은 명문대 진학이라는 사회적으로 승인된 목표를 갖고 있지만, 경제적 어려움으로 인해 과외나 학원 등 합법적 수단을 이용하기 어렵다. 갑은 결국 시험에서 부정행위를 선택하였다.</div>`,
+   stem:"위 사례에 가장 적합한 일탈 이론은?",
    options:[
-    {text:"갑국-다이아몬드형, 을국-피라미드형",trap:"개념 혼동"},
-    {text:"갑국-다이아몬드형, 을국-모래시계형",trap:"개념 혼동"},
-    {text:"갑국-피라미드형, 을국-다이아몬드형",correct:true},
-    {text:"갑국-모래시계형, 을국-다이아몬드형",trap:"개념 혼동"},
-    {text:"갑국-피라미드형, 을국-모래시계형",trap:"개념 혼동"}],
-   solution:"피라미드=하층최다(갑국 하65>중30>상5). 다이아몬드=중층최다(을국 중55>하25>상20). 모래시계=상+하만 두텁고 중층 빈약.",
-   keyword:"피라미드=하층최다 / 다이아몬드=중층최다 / 모래시계=중층빈약"}
+    {text:"뒤르켐의 아노미 이론 — 사회 규범이 붕괴되었기 때문",trap:"개념 혼동"},
+    {text:"머튼의 긴장 이론 — 문화적 목표와 합법적 수단 간 괴리",correct:true},
+    {text:"낙인 이론 — 타인의 낙인으로 일탈이 강화됨",trap:"개념 혼동"},
+    {text:"차별적 교제 이론 — 부정행위하는 친구들과 교류해서",trap:"개념 혼동"},
+    {text:"사회 해체 이론 — 지역 사회 통제 기능 약화",trap:"핵심 이탈"}],
+   solution:"머튼의 긴장 이론=문화적 목표(명문대 진학)는 있으나 합법적 수단(과외·학원)에 대한 접근이 막혀 있을 때 일탈(부정행위)이 나타난다는 이론."}
 ],
 "인과관계 역전":[
-  {id:"b_cr1",ch:"I",concept:"상관관계와 인과관계",diff:2,
-   passage:"연구 결과, 도서관 방문 횟수가 많은 학생일수록 학업 성취도가 높은 것으로 나타났다.",
-   stem:"이 연구 결과를 해석할 때 가장 주의해야 할 점은?",
-   options:[
-    {text:"도서관 방문이 학업 성취도를 직접 높이므로 모든 학생에게 도서관 방문을 의무화해야 한다.",trap:"인과관계 역전"},
-    {text:"상관관계가 확인되었으므로 인과관계도 동시에 증명된다.",trap:"개념 혼동"},
-    {text:"학습 동기 등 제3 변수가 두 변수 모두에 영향을 줄 수 있으므로 인과관계를 단정할 수 없다.",correct:true},
-    {text:"이 연구는 양적 연구이므로 인과관계 검증에 원천적으로 부적합하다.",trap:"이분법적 사고"},
-    {text:"표본이 전국 학생이 아니므로 아무런 의미가 없다.",trap:"핵심 이탈"}],
-   solution:"상관관계≠인과관계. 학습 동기가 높을수록 도서관도 많이 가고 성적도 높을 수 있음(제3변수=혼재변수). 인과 방향 확정 불가.",
-   keyword:"상관관계=함께변화 / 인과관계=원인→결과 / 혼재변수=제3변수"},
-  {id:"b_cr2",ch:"V",concept:"사회 변동 원인",diff:2,
-   passage:"산업화가 진행될수록 도시화 비율이 높아진다는 주장과, 반대로 도시 인구가 증가할수록 산업화가 촉진된다는 주장이 있다.",
-   stem:"이 사례에서 논쟁의 핵심 쟁점은?",
-   options:[
-    {text:"산업화와 도시화 중 역사적으로 어느 것이 먼저 시작되었는가",trap:"핵심 이탈"},
-    {text:"인과관계의 방향성 — 산업화→도시화인지, 도시화→산업화인지, 상호 영향인지",correct:true},
-    {text:"산업화와 도시화 중 어느 현상이 사회적으로 더 중요한가",trap:"이분법적 사고"},
-    {text:"도시화는 산업화와 무관하다는 점을 증명하는 문제",trap:"개념 혼동"},
-    {text:"도시 인구 통계 수집 방법의 타당성",trap:"핵심 이탈"}],
-   solution:"상관관계가 있어도 인과 방향(A→B인지 B→A인지 상호인지)은 별개. 이 논쟁의 핵심은 인과 방향성 문제.",
-   keyword:"인과관계방향성=원인과결과중어느쪽이먼저인가"},
-  {id:"b_cr3",ch:"IV",concept:"사회 이동과 계층",diff:2,
-   passage:"'범죄율이 높은 지역에는 경찰 인력이 더 많이 배치되어 있다'는 데이터를 보고, '경찰이 많으면 범죄가 늘어난다'고 결론을 냈다.",
+  {id:"b4",unit:"I",concept:"상관관계와 인과관계",format:"plain",
+   passageHTML:`<div class="passage-text">연구 결과, 아이스크림 판매량이 증가할수록 익사 사고도 증가하는 통계적 상관관계가 발견되었다. 일부 연구자들은 이를 근거로 '아이스크림 판매를 규제하면 익사 사고를 줄일 수 있다'고 주장하였다.</div>`,
    stem:"위 주장이 범하는 논리적 오류는?",
    options:[
-    {text:"표본 수가 부족한 과소 표집 오류",trap:"핵심 이탈"},
-    {text:"범죄율→경찰 배치라는 인과 방향을 경찰 배치→범죄로 역전시킨 인과관계 역전 오류",correct:true},
-    {text:"경찰과 범죄는 관계없다는 이분법적 사고 오류",trap:"이분법적 사고"},
-    {text:"모든 지역에 동일 인력이 필요하다는 과잉 일반화 오류",trap:"과잉 일반화"},
-    {text:"경찰과 범죄의 개념을 혼동한 오류",trap:"개념 혼동"}],
-   solution:"실제 인과 방향=범죄율 높음→경찰 인력 증배. 이를 반대로 경찰 증가→범죄 증가로 해석=인과관계 역전 오류.",
-   keyword:"인과관계역전=실제인과방향과반대로해석"}
+    {text:"상관관계를 인과관계로 단정한 오류 — 여름(더위)이라는 제3 변수를 무시하였다.",correct:true},
+    {text:"표본이 적어 결론을 내릴 수 없는 과소 표집 오류",trap:"핵심 이탈"},
+    {text:"아이스크림과 익사 사고는 전혀 관련이 없다는 이분법적 오류",trap:"이분법적 사고"},
+    {text:"모든 식품 판매가 안전사고를 유발한다는 과잉 일반화",trap:"과잉 일반화"},
+    {text:"연구 방법론 자체가 잘못된 개념 혼동 오류",trap:"개념 혼동"}],
+   solution:"여름=아이스크림 판매 증가 + 수영 증가→익사 사고 증가. 즉 '여름'이라는 제3 변수(공통 원인)가 두 변수 모두에 영향을 미치는 것인데, 아이스크림→익사 사고라는 인과관계로 단정한 오류입니다."},
+  {id:"b5",unit:"IV",concept:"빈곤과 사회 구조",format:"plain",
+   passageHTML:`<div class="passage-text">'빈곤한 지역일수록 범죄율이 높다'는 데이터를 근거로 일부 논자들은 "가난하면 범죄를 저지른다"고 주장하며 빈곤층의 도덕성 문제를 강조한다.</div>`,
+   stem:"위 주장의 논리적 문제점으로 가장 적절한 것은?",
+   options:[
+    {text:"상관관계를 인과관계로 단정하고, 빈곤의 구조적 원인(실업, 교육 기회, 사회적 배제)을 무시하였다.",correct:true},
+    {text:"표본이 부족하여 통계적으로 유의미하지 않다.",trap:"핵심 이탈"},
+    {text:"빈곤과 범죄는 전혀 관련이 없다는 이분법적 사고",trap:"이분법적 사고"},
+    {text:"모든 빈곤층이 범죄를 저지른다는 결론은 옳다.",trap:"과잉 일반화"},
+    {text:"이것은 연구 방법론 문제이지 이론 문제가 아니다.",trap:"핵심 이탈"}],
+   solution:"빈곤-범죄 상관관계는 실업·교육 격차·사회적 배제 등 공통 원인이 있을 수 있으며, 빈곤→범죄라는 단순 인과로 환원하는 것은 개인의 도덕적 문제로 사회 구조를 은폐하는 인과 역전 오류입니다."},
+  {id:"b6",unit:"V",concept:"사회 변동과 인과",format:"plain",
+   passageHTML:`<div class="passage-text">역사적으로 도시화가 진행될수록 산업화가 심화된다는 주장과, 반대로 산업화가 도시화를 이끌었다는 주장이 대립한다. 한 논자는 도시 인구 증가 통계만으로 '도시화→산업화'를 확정하였다.</div>`,
+   stem:"이 논자가 범한 오류는?",
+   options:[
+    {text:"통계 수치가 부족하여 결론을 낼 수 없는 과소 표집 문제",trap:"핵심 이탈"},
+    {text:"도시화와 산업화 중 어느 것이 더 중요한가의 가치 판단 문제",trap:"이분법적 사고"},
+    {text:"인과관계 방향성을 확인하지 않고 상관관계만으로 인과 방향을 단정한 인과관계 역전 오류",correct:true},
+    {text:"산업화와 도시화는 완전히 무관하다는 개념 혼동",trap:"개념 혼동"},
+    {text:"모든 사회에서 도시화가 산업화를 이끈다는 과잉 일반화",trap:"과잉 일반화"}],
+   solution:"상관관계(도시화↔산업화)가 존재해도, 인과 방향(A→B인지, B→A인지, 상호 영향인지)은 별도로 분석해야 합니다. 단순 동반 변화를 특정 방향의 인과로 단정하는 것이 인과관계 역전 오류입니다."}
 ],
 "이분법적 사고":[
-  {id:"b_dt1",ch:"III",concept:"문화 이해 태도",diff:1,
-   passage:"'전통문화는 무조건 보존해야 하며, 외래 문화를 받아들이는 것은 문화 정체성을 해치는 일이다.'",
-   stem:"위 주장의 사고 오류와 적절한 반론을 연결한 것은?",
+  {id:"b7",unit:"III",concept:"전통과 변화",format:"plain",
+   passageHTML:`<div class="passage-text">"전통 문화를 지키려면 외래 문화를 완전히 거부해야 하고, 외래 문화를 받아들이면 우리 전통은 소멸된다."</div>`,
+   stem:"위 주장의 논리적 오류와 올바른 대안을 바르게 설명한 것은?",
    options:[
-    {text:"이분법적 사고 — 전통 보존과 외래 문화 수용은 실제로도 양립 불가능하다.",trap:"이분법적 사고"},
-    {text:"이분법적 사고 — 전통 유지와 새로운 문화 수용은 선택적·창의적으로 조화될 수 있다.",correct:true},
-    {text:"과잉 일반화 — 모든 전통문화는 보존 가치가 없다.",trap:"과잉 일반화"},
-    {text:"핵심 이탈 — 문화 정체성은 경제 발전과 무관하다.",trap:"핵심 이탈"},
-    {text:"인과관계 역전 — 외래 문화 수용이 전통문화 소멸의 원인이다.",trap:"인과관계 역전"}],
-   solution:"전통 보존 vs 외래 수용을 양자택일로 보는 것이 이분법적 사고. 실제로 선별적 계승+창의적 수용은 공존 가능.",
-   keyword:"이분법적사고=복잡한문제를양자택일로단순화"},
-  {id:"b_dt2",ch:"II",concept:"사회 실재론 vs 사회 명목론",diff:2,
-   passage:"(가) 사회 실재론: 사회는 개인을 초월한 독립적 실재이다.\n(나) 사회 명목론: 사회는 개인의 집합에 불과하다.",
-   stem:"두 관점의 한계를 모두 극복하는 균형 잡힌 설명은?",
+    {text:"이분법적 사고 — 전통 유지와 외래 문화 수용은 선택적·창의적으로 조화를 이룰 수 있다.",correct:true},
+    {text:"이분법적 사고이며 반박: 모든 외래 문화는 수용해야 한다.",trap:"이분법적 사고"},
+    {text:"과잉 일반화 — 모든 전통문화는 현대에 맞지 않는다.",trap:"과잉 일반화"},
+    {text:"인과관계 역전 — 외래 문화 수용이 전통 소멸의 직접 원인이다.",trap:"인과관계 역전"},
+    {text:"핵심 이탈 — 전통문화의 경제적 가치가 더 중요한 논점이다.",trap:"핵심 이탈"}],
+   solution:"'전통 보존 vs 외래 수용'을 양자택일로 보는 것이 이분법적 사고입니다. 실제로 대부분의 문화 변동은 전통을 선별·계승하면서 동시에 새 요소를 창의적으로 수용하는 방식으로 이루어집니다."},
+  {id:"b8",unit:"V",concept:"복지와 성장",format:"plain",
+   passageHTML:`<div class="passage-text">"복지를 확대하면 경제 성장이 불가능하고, 경제 성장을 추구하면 복지는 포기해야 한다."</div>`,
+   stem:"위 주장의 오류를 바르게 지적한 것은?",
    options:[
-    {text:"사회 실재론이 옳으므로 개인의 자유는 사회를 위해 완전히 희생되어야 한다.",trap:"이분법적 사고"},
-    {text:"사회 명목론이 옳으므로 사회 제도나 구조는 독립적 영향력이 없다.",trap:"이분법적 사고"},
-    {text:"개인과 사회는 상호작용하며, 개인이 사회를 만들고 사회가 개인을 형성하는 변증법적 관계이다.",correct:true},
-    {text:"두 관점은 완전히 양립 불가능하므로 하나만 선택해야 한다.",trap:"이분법적 사고"},
-    {text:"어느 관점이 옳은지는 연구 방법론이 결정한다.",trap:"핵심 이탈"}],
-   solution:"개인과 사회는 어느 한쪽만이 옳은 이분법이 아닌, 상호 구성·변증법적 관계.",
-   keyword:"개인과사회=상호구성·변증법적관계"},
-  {id:"b_dt3",ch:"V",concept:"사회 변동 이론",diff:2,
-   passage:"A는 '역사는 항상 더 나은 방향으로 발전하므로 사회 문제는 결국 해결될 것이다.'라고 주장하고, B는 '역사는 흥망성쇠를 반복할 뿐이어서 진보는 없다.'라고 주장한다.",
-   stem:"A와 B의 주장에 대한 평가로 옳은 것은?",
+    {text:"이분법적 사고 — 복지 확대와 경제 성장은 상호 보완적으로 설계될 수 있다.",correct:true},
+    {text:"과잉 일반화 — 모든 복지 정책은 경제 성장에 유익하다.",trap:"과잉 일반화"},
+    {text:"인과관계 역전 — 복지 때문에 성장이 되지 않는다.",trap:"인과관계 역전"},
+    {text:"핵심 이탈 — 이 논쟁의 핵심은 세율 결정이다.",trap:"핵심 이탈"},
+    {text:"개념 혼동 — 복지와 성장은 동일한 개념이다.",trap:"개념 혼동"}],
+   solution:"복지 확대와 경제 성장이 반드시 배타적이지 않습니다. 복지 제도의 설계(방식·대상·수준)에 따라 사회 안전망이 오히려 노동력 질을 높이고 소비 기반을 만들어 성장을 지원할 수도 있습니다."},
+  {id:"b9",unit:"IV",concept:"불평등과 공정성",format:"plain",
+   passageHTML:`<div class="passage-text">"사회 불평등이 존재하는 사회는 항상 불공정하고, 완전 평등한 사회만이 공정한 사회이다."</div>`,
+   stem:"위 주장의 논리적 오류는?",
    options:[
-    {text:"A의 주장은 사회 변동의 방향이 일정하지 않다는 점을 무시하고 있다.",correct:true},
-    {text:"B의 주장은 진화론적 관점으로 미래 사회 예측이 가능하다.",trap:"개념 혼동"},
-    {text:"A의 주장이 옳으므로 사회 문제는 시간만 지나면 자연히 해결된다.",trap:"이분법적 사고"},
-    {text:"B의 주장이 옳으므로 사회 운동이나 개혁은 의미가 없다.",trap:"이분법적 사고"},
-    {text:"A와 B 모두 사회 변동을 제대로 설명하므로 절충이 불가능하다.",trap:"이분법적 사고"}],
-   solution:"A=진화론(항상 더 나은 방향=단선적 진보). 진화론의 한계=퇴보·비선형 변동 무시, 서구 중심. B=순환론(흥망반복). ①A의 진화론적 주장이 변동 방향의 다양성을 무시함=정확한 비판.",
-   keyword:"진화론한계=단선적진보·서구중심·퇴보무시"}
+    {text:"이분법적 사고 — 공정성은 단순히 불평등 유무가 아닌 기회의 균등, 과정의 공정성 등 다차원적 개념이다.",correct:true},
+    {text:"과잉 일반화 — 모든 불평등은 해소되어야 한다.",trap:"과잉 일반화"},
+    {text:"인과관계 역전 — 불평등이 있어서 불공정한 것이 아니다.",trap:"인과관계 역전"},
+    {text:"개념 혼동 — 불평등과 불공정은 동일한 개념이다.",trap:"개념 혼동"},
+    {text:"핵심 이탈 — 이 주장의 핵심은 소득세율이다.",trap:"핵심 이탈"}],
+   solution:"공정성은 불평등 유무만으로 판단할 수 없습니다. 기회의 균등, 절차의 공정성, 최소 보장 수준 등 다양한 차원이 있으며, 결과의 완전 평등이 반드시 공정을 의미하지 않습니다."}
 ],
 "과잉 일반화":[
-  {id:"b_ge1",ch:"IV",concept:"빈곤의 원인",diff:1,
-   passage:"어떤 연구에서 실업자 중 상당수가 낮은 교육 수준을 가진 것으로 나타났다.",
-   stem:"이 연구 결과를 바탕으로 한 설명 중 과잉 일반화의 오류를 범하지 않은 것은?",
-   options:[
-    {text:"낮은 교육 수준이 모든 빈곤의 근본 원인이다.",trap:"과잉 일반화"},
-    {text:"모든 실업자는 낮은 교육 수준을 가지고 있다.",trap:"과잉 일반화"},
-    {text:"교육 수준이 실업과 관련 있을 수 있지만, 경기침체·산업 변화 등 구조적 요인도 고려해야 한다.",correct:true},
-    {text:"교육에만 투자하면 실업 문제가 완전히 해결된다.",trap:"과잉 일반화"},
-    {text:"이 연구는 표본이 작아 아무런 의미가 없다.",trap:"핵심 이탈"}],
-   solution:"한 연구의 상관관계를 '모든 경우·유일한 원인·완전한 해결책'으로 확대하는 것이 과잉 일반화.",
-   keyword:"과잉일반화=항상·모든·반드시·완전히 등 절대표현 경계"},
-  {id:"b_ge2",ch:"III",concept:"문화 전파",diff:2,
-   passage:"미국의 대중문화(영화, 음악, 패션)가 전 세계로 빠르게 확산되고 있다.",
+  {id:"b10",unit:"III",concept:"문화 전파와 영향",format:"plain",
+   passageHTML:`<div class="passage-text">미국의 대중문화(영화, 음악, 패션)가 전 세계적으로 확산되고 있다.</div>`,
    stem:"이 현상에 대한 설명 중 과잉 일반화의 오류를 피한 것은?",
    options:[
-    {text:"미국 문화 확산은 필연적으로 모든 나라의 전통문화를 소멸시킨다.",trap:"과잉 일반화"},
-    {text:"세계 모든 사람이 미국 대중문화를 동일하게 받아들인다.",trap:"과잉 일반화"},
-    {text:"미국 문화의 영향력이 크지만 수용 방식은 각 사회·집단의 맥락에 따라 다양하게 나타난다.",correct:true},
+    {text:"미국 문화 확산은 모든 나라의 전통문화를 소멸시킨다.",trap:"과잉 일반화"},
+    {text:"세계 모든 사람이 미국 대중문화를 동일하게 수용한다.",trap:"과잉 일반화"},
+    {text:"미국 문화의 영향력이 크지만 수용 방식은 각 사회의 맥락에 따라 다양하게 나타난다.",correct:true},
     {text:"문화 전파는 강대국에서 약소국으로만 일방적으로 진행된다.",trap:"이분법적 사고"},
     {text:"글로벌 문화 획일화는 이미 완성 단계에 도달했다.",trap:"과잉 일반화"}],
-   solution:"미국 문화 영향력이 크더라도 각 사회는 선택적·창의적으로 수용·재해석. '모든·동일하게·필연적으로'=과잉 일반화 신호.",
-   keyword:"과잉일반화신호어=모든·항상·반드시·필연적으로"},
-  {id:"b_ge3",ch:"V",concept:"사회 운동",diff:2,
-   passage:"1970~80년대 한국 민주화 운동이 성공적으로 민주주의 발전에 기여했다.",
+   solution:"미국 문화의 영향력이 크더라도 각 사회는 자신의 맥락에서 선택적으로 수용·재해석합니다. '모든', '동일하게', '필연적으로' 등이 과잉 일반화의 신호입니다."},
+  {id:"b11",unit:"I",concept:"연구 결과의 일반화",format:"plain",
+   passageHTML:`<div class="passage-text">연구자 A가 서울 강남 지역 고등학생 100명을 대상으로 조사한 결과, 주당 10시간 이상 스마트폰 사용자의 수면 시간이 그렇지 않은 학생보다 평균 1시간 짧은 것으로 나타났다.</div>`,
+   stem:"이 연구 결과를 바탕으로 한 설명 중 과잉 일반화의 오류를 범하지 않은 것은?",
+   options:[
+    {text:"모든 청소년은 스마트폰을 많이 사용할수록 수면이 부족해진다.",trap:"과잉 일반화"},
+    {text:"스마트폰 사용 시간을 줄이면 반드시 수면이 개선된다.",trap:"인과관계 역전"},
+    {text:"이 연구는 서울 강남 지역 고등학생을 대상으로 하여 결과를 모든 청소년에게 일반화하는 데 한계가 있다.",correct:true},
+    {text:"스마트폰 사용과 수면은 전혀 관련이 없다.",trap:"이분법적 사고"},
+    {text:"표본이 100명이므로 이 연구는 신뢰할 수 없다.",trap:"핵심 이탈"}],
+   solution:"특정 지역(강남)·특정 학교급(고등학생)·소표본(100명)의 결과를 '모든 청소년'에게 확대하는 것이 과잉 일반화입니다. 연구의 한계를 인정하고 일반화에 신중해야 합니다."},
+  {id:"b12",unit:"V",concept:"사회 운동과 결과",format:"plain",
+   passageHTML:`<div class="passage-text">1970~80년대 한국의 민주화 운동은 권위주의 정권에 맞선 시민 저항으로, 이후 민주주의 발전의 중요한 토대가 되었다.</div>`,
    stem:"위 사례를 근거로 한 설명 중 과잉 일반화의 오류를 범하지 않은 것은?",
    options:[
     {text:"모든 사회 운동은 반드시 민주주의 발전으로 이어진다.",trap:"과잉 일반화"},
-    {text:"사회 운동이 성공하려면 반드시 폭력적 방법이 수반되어야 한다.",trap:"과잉 일반화"},
+    {text:"사회 운동이 성공하려면 반드시 폭력적 방법이 필요하다.",trap:"과잉 일반화"},
     {text:"사회 운동은 특정 조건에서 민주주의 발전의 중요한 동력이 될 수 있다.",correct:true},
-    {text:"한국의 민주화 방식이 다른 모든 나라의 최선의 모델이다.",trap:"과잉 일반화"},
+    {text:"한국의 민주화 방식이 다른 모든 나라의 최선 모델이다.",trap:"과잉 일반화"},
     {text:"민주화 운동이 없는 나라는 민주주의가 불가능하다.",trap:"이분법적 사고"}],
-   solution:"한 사례의 성공을 '모든 사회 운동·모든 나라·반드시'로 확대하는 것이 과잉 일반화.",
-   keyword:"과잉일반화=한사례에서보편법칙도출오류"}
+   solution:"한국 민주화 운동의 성공 사례가 '모든 사회 운동이 반드시 민주화로 이어진다'는 결론을 자동 뒷받침하지 않습니다. '특정 조건에서 가능하다'는 표현이 과잉 일반화를 피한 적절한 진술입니다."}
 ],
 "핵심 이탈":[
-  {id:"b_ki1",ch:"I",concept:"연구 결론의 범위",diff:2,
-   passage:"연구자 D는 '대도시 청소년의 스트레스 요인'을 연구하여 학업 부담이 가장 큰 스트레스 요인으로 나타났다고 발표했다.",
-   stem:"이 연구의 결론으로 가장 적절하지 않은 것(핵심 이탈)은?",
+  {id:"b13",unit:"I",concept:"연구 결론의 범위",format:"plain",
+   passageHTML:`<div class="passage-text">연구자 D가 '대도시 청소년의 학업 스트레스 요인'을 연구하여 학업 부담이 가장 큰 스트레스 요인이라는 결과를 발표하였다.</div>`,
+   stem:"이 연구 결과를 바탕으로 한 설명 중 핵심 이탈의 오류를 범한 것은?",
    options:[
     {text:"대도시 청소년에게 학업 부담이 주요 스트레스 요인이다.",trap:"핵심 이탈"},
-    {text:"청소년 정신 건강을 위해 학업 부담 완화 정책이 필요할 수 있다.",trap:"핵심 이탈"},
     {text:"이 연구 결과는 전국 모든 연령대의 스트레스 원인을 설명해준다.",correct:true},
-    {text:"대도시와 농촌 청소년 간 스트레스 요인 차이 분석이 후속 연구로 필요하다.",trap:"핵심 이탈"},
-    {text:"결과를 일반화할 때 표본의 대표성을 확인해야 한다.",trap:"핵심 이탈"}],
-   solution:"'대도시 청소년' 대상 연구 결과를 '전국 모든 연령대'로 확대 적용하는 것은 연구 범위를 벗어난 핵심 이탈+과잉 일반화.",
-   keyword:"핵심이탈=연구범위벗어나거나주변내용에집중"},
-  {id:"b_ki2",ch:"III",concept:"문화의 이해",diff:2,
-   passage:"국제결혼 가정 자녀들이 두 가지 언어와 문화를 동시에 접하며 성장한다. 연구에 따르면 이들은 높은 문화 감수성과 언어적 유연성을 발달시키는 경향이 있다.",
-   stem:"위 지문의 핵심 내용으로 가장 적절한 것은?",
+    {text:"청소년 정신 건강을 위해 학업 부담 완화 정책이 필요할 수 있다.",trap:"핵심 이탈"},
+    {text:"연구 결과를 일반화할 때 표본의 대표성을 확인해야 한다.",trap:"핵심 이탈"},
+    {text:"후속 연구로 농촌 청소년과의 비교 분석이 필요할 수 있다.",trap:"핵심 이탈"}],
+   solution:"'대도시 청소년' 대상 연구를 '전국 모든 연령대'로 확대 적용하는 것은 연구 범위를 벗어난 핵심 이탈(+과잉 일반화)입니다."},
+  {id:"b14",unit:"III",concept:"대중문화의 특성",format:"plain",
+   passageHTML:`<div class="passage-text">오늘날 SNS의 발달로 일반인도 콘텐츠를 제작·배포할 수 있게 되면서, 수용자와 생산자의 경계가 흐려지고 있다. 이는 대중문화의 생산 방식을 근본적으로 변화시키고 있다.</div>`,
+   stem:"위 지문의 핵심 내용으로 <span class='highlight'>가장 적절한</span> 것은?",
    options:[
-    {text:"국제결혼이 사회 통합에 미치는 부정적 영향",trap:"핵심 이탈"},
-    {text:"이중 언어 교육이 학업 성취도에 미치는 영향",trap:"핵심 이탈"},
-    {text:"이중 문화 환경이 문화 감수성과 언어 유연성 발달에 긍정적으로 작용할 수 있다.",correct:true},
-    {text:"단일 문화 환경에서 성장한 아이들의 언어 발달 과정",trap:"핵심 이탈"},
-    {text:"국제결혼 증가가 사회 양극화를 심화시키는 메커니즘",trap:"핵심 이탈"}],
-   solution:"지문의 핵심='이중 문화 환경→문화 감수성·언어 유연성 발달'. 나머지 선지는 모두 지문 밖 내용.",
-   keyword:"핵심이탈방지=선지선택전지문핵심한문장으로요약"},
-  {id:"b_ki3",ch:"V",concept:"사회 변동 / 사회 운동",diff:2,
-   passage:"1970년대 한국의 민주화 운동은 권위주의 정권에 맞선 시민들의 저항으로, 이후 민주주의 발전의 중요한 토대가 되었다.",
-   stem:"위 지문의 핵심 내용으로 가장 적절한 것은?",
+    {text:"SNS 발달이 청소년에게 미치는 부정적 영향",trap:"핵심 이탈"},
+    {text:"디지털 기술이 경제 불평등을 심화시키는 메커니즘",trap:"핵심 이탈"},
+    {text:"SNS로 인한 수용자-생산자 경계 해체와 대중문화 생산 방식의 변화",correct:true},
+    {text:"대중문화가 고급 예술보다 열등한 이유",trap:"핵심 이탈"},
+    {text:"SNS 기업의 독점 문제와 규제 필요성",trap:"핵심 이탈"}],
+   solution:"지문의 핵심='SNS 발달→수용자·생산자 경계 해체→대중문화 생산 방식 변화'. 청소년 영향, 불평등, 예술 우열, 기업 독점은 지문에서 다루지 않는 핵심 이탈입니다."},
+  {id:"b15",unit:"II",concept:"사회 집단과 소속감",format:"plain",
+   passageHTML:`<div class="passage-text">외집단(out-group)은 자신이 속하지 않은 집단으로, 구성원들이 이질감이나 경쟁 의식을 느끼는 집단이다. 내집단(in-group)에 대한 강한 소속감은 종종 외집단에 대한 편견을 강화하기도 한다.</div>`,
+   stem:"위 지문의 핵심 내용으로 <span class='highlight'>가장 적절한</span> 것은?",
    options:[
-    {text:"1970년대 한국 경제 성장의 주요 원인",trap:"핵심 이탈"},
-    {text:"권위주의 정권의 탄생 배경",trap:"핵심 이탈"},
-    {text:"시민 사회 운동이 민주주의 발전의 토대가 된 사례",correct:true},
-    {text:"한국 민주주의의 현재 문제점",trap:"핵심 이탈"},
-    {text:"한국 노동 운동의 역사",trap:"핵심 이탈"}],
-   solution:"핵심='시민 저항(사회 운동)→민주주의 발전의 토대'. 경제 성장·정권 탄생·현재 문제·노동 운동은 모두 지문 밖 핵심 이탈.",
-   keyword:"핵심이탈=지문에없는내용으로답변"}
+    {text:"사회 집단의 분류와 내·외집단 개념, 그리고 내집단 소속감과 외집단 편견의 관계",correct:true},
+    {text:"외집단 구성원들이 우리 사회에 기여하는 방식",trap:"핵심 이탈"},
+    {text:"내집단의 경제적 이익을 극대화하는 방법",trap:"핵심 이탈"},
+    {text:"다문화 사회에서 문화 융합의 가능성",trap:"핵심 이탈"},
+    {text:"이민자 집단이 사회에 미치는 경제적 영향",trap:"핵심 이탈"}],
+   solution:"지문의 핵심=내·외집단 개념 + 내집단 소속감 강화→외집단 편견 강화 관계. 나머지는 지문의 핵심에서 벗어난 핵심 이탈 선지입니다."}
 ]};
 
 /* ══════════════════════════════════════════════════════
-   STATE & CONSTANTS
+   STATE
 ══════════════════════════════════════════════════════ */
-let questionCount=20,timeLimitMin=20,timerInterval=null,explainMode=true,diffMode='mix';
+let questionCount=20,timeLimitMin=20,timerInterval=null,explainMode=true,decoyMode=true;
 let currentIdx=0,score=0,answered=false,prevCorrectPos=null;
 let quizSet=[],currentShuffledOptions=[];
 let biasStats={"개념 혼동":0,"인과관계 역전":0,"이분법적 사고":0,"과잉 일반화":0,"핵심 이탈":0};
 let consecutiveBias={"개념 혼동":0,"인과관계 역전":0,"이분법적 사고":0,"과잉 일반화":0,"핵심 이탈":0};
 let biasChartInstance=null;
 let bonusSet=[],bonusIdx=0,bonusScore=0,bonusAnswered=false,bonusShuffled=[],bonusActive=false;
-let activeChapters=new Set(["I","II","III","IV","V"]);
+let activeUnits=new Set(["I","II","III","IV","V"]);
 
+const UNIT_NAME={"I":"I. 사회문화 탐구","II":"II. 개인과 사회","III":"III. 문화","IV":"IV. 사회 계층","V":"V. 현대 변동"};
+const UNIT_COLOR={"I":"var(--c1)","II":"var(--c2)","III":"var(--c3)","IV":"var(--c4)","V":"var(--c5)"};
 const BIAS_EMOJI={"개념 혼동":"📘","인과관계 역전":"🔄","이분법적 사고":"⚖️","과잉 일반화":"🔭","핵심 이탈":"🎯"};
-const BIAS_ADVICE={"개념 혼동":"개념 카드에서 유사 개념 쌍을 정확히 구분해 외우세요.","인과관계 역전":"상관관계 발견 시 항상 제3 변수 가능성을 먼저 검토하세요.","이분법적 사고":"'A 아니면 B' 선지를 볼 때 중간 스펙트럼 가능성을 먼저 탐색하세요.","과잉 일반화":"'항상·반드시·모든' 등의 절대 표현이 포함된 선지를 경계하세요.","핵심 이탈":"선지 선택 전 지문의 핵심 문장을 한 줄로 요약해보세요."};
-const CH_NAMES={"I":"사회·문화 현상의 탐구","II":"개인과 사회 구조","III":"문화와 일상생활","IV":"사회 계층과 불평등","V":"현대 사회와 사회 변동"};
-const CH_COLORS={"I":"var(--blue)","II":"var(--green)","III":"var(--amber)","IV":"var(--purple)","V":"var(--teal)"};
-const DIFF_LABEL={1:"기본",2:"중급",3:"고난도"};
-const DIFF_CLASS={1:"diff-1",2:"diff-2",3:"diff-3"};
+const BIAS_ADVICE={"개념 혼동":"개념 정의와 예시를 키워드 카드로 정리해 혼동 패턴을 의식적으로 구분하세요.",
+  "인과관계 역전":"상관관계 발견 시 제3 변수와 인과 방향을 항상 검토하는 습관을 기르세요.",
+  "이분법적 사고":"'A 아니면 B' 선택지를 볼 때 중간 스펙트럼을 먼저 탐색하세요.",
+  "과잉 일반화":"'항상·반드시·모든' 등 절대 표현이 포함된 선지를 경계하세요.",
+  "핵심 이탈":"선지를 고르기 전 제시문의 핵심 논지를 한 문장으로 요약해보세요."};
 
-/* ══════════════════════════════════════════════════════
-   UTILS
-══════════════════════════════════════════════════════ */
+const FMT_LABEL={"plain":"서술형","table":"표 분석","bogi":"보기 선택","diagram":"도식 분석"};
+
+/* ── UTILS ── */
 function shuffle(a){let b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
-function shuffleNC(opts,prevPos){let tries=0;while(tries<20){const s=shuffle(opts);const np=s.findIndex(o=>o.correct);if(prevPos===null||np!==prevPos)return s;tries++;}return shuffle(opts);}
-function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
-function gradeLabel(s,t){const p=s/t;if(p>=.9)return"🏆 탁월한 분석력";if(p>=.7)return"✅ 우수한 개념 이해력";if(p>=.5)return"📊 보통 — 핵심 개념 재정리 필요";return"🔄 집중 훈련 필요";}
+function shuffleNC(opts,prev){let t=0;while(t<20){const s=shuffle(opts);const np=s.findIndex(o=>o.correct);if(prev===null||np!==prev)return s;t++;}return shuffle(opts);}
 
-/* ══════════════════════════════════════════════════════
-   SETTINGS
-══════════════════════════════════════════════════════ */
-window.stepCount=function(d){questionCount=Math.min(35,Math.max(5,questionCount+d));document.getElementById('count-val').innerText=questionCount+'문항';};
+/* ── SETTINGS ── */
+window.stepCount=function(d){questionCount=Math.min(30,Math.max(5,questionCount+d));document.getElementById('count-val').innerText=questionCount+'문항';};
 window.stepTime=function(d){timeLimitMin=Math.min(60,Math.max(0,timeLimitMin+d));document.getElementById('time-val').innerText=timeLimitMin===0?'무제한':timeLimitMin+'분';};
-window.setExplain=function(v){explainMode=v;document.getElementById('ex-on').classList.toggle('active',v);document.getElementById('ex-off').classList.toggle('active',!v);};
-window.setDiff=function(v){diffMode=v;document.getElementById('diff-mix').classList.toggle('active',v==='mix');document.getElementById('diff-hard').classList.toggle('active',v==='hard');};
+window.setExplain=function(v){explainMode=v;document.getElementById('explain-on').classList.toggle('active',v);document.getElementById('explain-off').classList.toggle('active',!v);};
+window.setDecoy=function(v){decoyMode=v;document.getElementById('decoy-on').classList.toggle('active',v);document.getElementById('decoy-off').classList.toggle('active',!v);};
 
-document.getElementById('chapter-grid').addEventListener('click',e=>{
-  const card=e.target.closest('.chapter-card');if(!card)return;
-  const ch=card.dataset.ch;
-  if(activeChapters.has(ch)){if(activeChapters.size===1)return;activeChapters.delete(ch);card.classList.remove('on');}
-  else{activeChapters.add(ch);card.classList.add('on');}
+document.getElementById('type-filter').addEventListener('click',e=>{
+  const chip=e.target.closest('.type-chip');if(!chip)return;
+  const t=chip.dataset.type;
+  if(activeUnits.has(t)){if(activeUnits.size===1)return;activeUnits.delete(t);chip.classList.remove('on');}
+  else{activeUnits.add(t);chip.classList.add('on');}
 });
 
-/* ══════════════════════════════════════════════════════
-   QUIZ FLOW
-══════════════════════════════════════════════════════ */
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+function gradeLabel(s,t){const p=s/t;
+  if(p>=.9)return"🏆 S급 — 사고 편향에 거의 흔들리지 않는 탁월한 분석력";
+  if(p>=.7)return"✅ A급 — 우수한 개념 이해력, 몇 가지 편향 패턴 보완 필요";
+  if(p>=.5)return"📊 B급 — 보통 수준, 핵심 개념 재정리와 편향 훈련 필요";
+  return"🔄 C급 — 기본 개념부터 재점검, 집중 훈련 필요";}
+
+/* ── QUIZ ── */
 window.startQuiz=function(mode){
   closeRetryModal();
   currentIdx=0;score=0;answered=false;prevCorrectPos=null;
   biasStats={"개념 혼동":0,"인과관계 역전":0,"이분법적 사고":0,"과잉 일반화":0,"핵심 이탈":0};
   consecutiveBias={"개념 혼동":0,"인과관계 역전":0,"이분법적 사고":0,"과잉 일반화":0,"핵심 이탈":0};
 
-  let pool=DB.filter(q=>activeChapters.has(q.ch));
-  if(pool.length===0)pool=DB;
-
-  if(diffMode==='hard'){
-    const hard=pool.filter(q=>q.diff===3);
-    const rest=pool.filter(q=>q.diff<3);
-    pool=[...hard,...hard,...rest]; // 고난도 2배 가중
-  }
-
+  const pool=DB.filter(q=>activeUnits.has(q.unit));
+  const base=pool.length===0?DB:pool;
   const target=questionCount;
+
   if(mode==='wrong'){
     const w=quizSet.filter(q=>q._wrong);
-    let base=w.length>0?shuffle(w):shuffle(pool);
-    let set=[];while(set.length<target)set.push(...shuffle(base));
-    quizSet=set.slice(0,target).map(q=>({...q,_wrong:false,_chosen:undefined}));
+    let b=w.length>0?shuffle(w):shuffle(base);
+    let s=[];while(s.length<target)s.push(...shuffle(b));
+    quizSet=s.slice(0,target).map(q=>({...q,_wrong:false,_chosen:undefined}));
   }else if(mode==='same'){
     quizSet=quizSet.map(q=>({...q,_wrong:false,_chosen:undefined}));
   }else{
-    let set=[];while(set.length<target)set.push(...shuffle(pool));
-    quizSet=set.slice(0,target).map(q=>({...q,_wrong:false,_chosen:undefined}));
+    let s=[];while(s.length<target)s.push(...shuffle(base));
+    quizSet=s.slice(0,target).map(q=>({...q,_wrong:false,_chosen:undefined}));
   }
 
   document.getElementById('stat-score').innerText='0';
   document.getElementById('stat-bias').innerText='0';
   document.getElementById('stat-time').innerText=timeLimitMin===0?'∞':timeLimitMin+':00';
   document.getElementById('progress-fill').style.width='0%';
-  show('quiz-screen');window.scrollTo({top:0,behavior:'smooth'});
+  show('quiz-screen');
+  window.scrollTo({top:0,behavior:'smooth'});
   startTimer();renderQuestion();
 };
 
 function startTimer(){
   clearInterval(timerInterval);
   const el=document.getElementById('stat-time');
-  if(timeLimitMin===0){el.style.color='var(--ghost)';let e=0;timerInterval=setInterval(()=>{e++;const m=Math.floor(e/60),s=e%60;el.innerText=`${m}:${s<10?'0'+s:s}`;},1000);return;}
-  let t=timeLimitMin*60;
-  timerInterval=setInterval(()=>{t--;const m=Math.floor(t/60),s=t%60;el.innerText=`${m}:${s<10?'0'+s:s}`;
-    if(t<=60)el.style.color='#ff3333';else if(t<=180)el.style.color='var(--red)';else el.style.color='';
-    if(t<=0){clearInterval(timerInterval);showReport();}},1000);
+  if(timeLimitMin===0){el.style.color='var(--ghost)';let e=0;
+    timerInterval=setInterval(()=>{e++;const m=Math.floor(e/60),s=e%60;el.innerText=`${m}:${s<10?'0'+s:s}`;},1000);return;}
+  let time=timeLimitMin*60;
+  timerInterval=setInterval(()=>{time--;const m=Math.floor(time/60),s=time%60;
+    el.innerText=`${m}:${s<10?'0'+s:s}`;
+    if(time<=60)el.style.color='#ff3333';else if(time<=180)el.style.color='var(--red)';else el.style.color='';
+    if(time<=0){clearInterval(timerInterval);showReport();}
+  },1000);
 }
 
 function renderQuestion(){
-  const q=quizSet[currentIdx];const total=quizSet.length;
+  const q=quizSet[currentIdx],total=quizSet.length;
   answered=false;
   document.getElementById('stat-prog').innerText=`${currentIdx+1}/${total}`;
   document.getElementById('progress-fill').style.width=`${(currentIdx/total)*100}%`;
   currentShuffledOptions=shuffleNC(q.options,prevCorrectPos);
-
-  // 지문 줄바꿈 + 표 감지
-  const passageHTML=q.passage.split('\n').map(l=>l.trim()?`<span>${l}</span>`:'').join('<br>');
-
-  // 보기 박스 렌더
-  let bogiHTML='';
-  if(q.bogi&&q.bogi.length){
-    bogiHTML=`<div class="bogi-box"><div class="bogi-title">〈 보기 〉</div>${q.bogi.map(b=>`<div class="bogi-item">${b}</div>`).join('')}</div>`;
-  }
+  const fmtLabel=FMT_LABEL[q.format]||'서술형';
 
   document.getElementById('quiz-content').innerHTML=`
     <div class="q-card">
       <div class="q-header">
-        <span class="chapter-badge">단원 ${q.ch}. ${CH_NAMES[q.ch]}</span>
-        <span class="diff-badge ${DIFF_CLASS[q.diff||1]}">${DIFF_LABEL[q.diff||1]}</span>
+        <span class="unit-badge unit-${q.unit}">${UNIT_NAME[q.unit]}</span>
+        <span class="fmt-badge">${fmtLabel}</span>
         <span class="concept-tag" id="ctag"></span>
         <span class="q-number">Q${currentIdx+1}/${total}</span>
       </div>
       <div class="passage-wrap">
         <div class="passage-label">제시문</div>
-        <div class="passage-box"><div class="passage-text">${passageHTML}</div></div>
-        ${bogiHTML}
+        <div class="passage-box">${q.passageHTML}</div>
       </div>
       <div class="q-stem">${q.stem}</div>
       <div class="options-list">
@@ -1285,15 +1340,14 @@ function attachOpts(){
 
 function selectOpt(idx){
   if(answered)return;answered=true;
-  const q=quizSet[currentIdx];const opt=currentShuffledOptions[idx];
+  const q=quizSet[currentIdx],opt=currentShuffledOptions[idx];
   const items=document.querySelectorAll('.option-item');
-  const feedback=document.getElementById('feedback');const btnNext=document.getElementById('btn-next');
-
+  const fb=document.getElementById('feedback'),btnNext=document.getElementById('btn-next');
   items.forEach(i=>{i.classList.add('disabled');i.style.pointerEvents='none';});
-  feedback.style.display='block';btnNext.style.display='block';
+  fb.style.display='block';btnNext.style.display='block';
   prevCorrectPos=currentShuffledOptions.findIndex(o=>o.correct);
 
-  // concept tag revealed
+  // 개념 태그 공개
   const ctag=document.getElementById('ctag');
   if(ctag){ctag.textContent=q.concept;ctag.classList.add('revealed');}
 
@@ -1301,29 +1355,26 @@ function selectOpt(idx){
     score++;document.getElementById('stat-score').innerText=score;
     items[idx].classList.add('correct');
     Object.keys(consecutiveBias).forEach(k=>consecutiveBias[k]=0);
-    feedback.className='feedback-area correct-fb';
-    feedback.innerHTML=`<span class="fb-tag ok">CORRECT</span>
-      <div class="clue-box"><strong>🔑 핵심 단서 :</strong> ${q.solution}</div>
-      ${q.keyword?`<div class="keyword-box"><strong>📌 키워드 :</strong> ${q.keyword}</div>`:''}`;
+    fb.className='feedback-area correct-fb';
+    fb.innerHTML=`<span class="fb-tag ok">CORRECT</span>
+      <div class="concept-check"><strong>🔑 핵심 단서 :</strong> ${q.solution}</div>`;
   }else{
     quizSet[currentIdx]._wrong=true;quizSet[currentIdx]._chosen=opt.text;
     biasStats[opt.trap]++;consecutiveBias[opt.trap]++;
     document.getElementById('stat-bias').innerText=Object.values(biasStats).reduce((a,b)=>a+b,0);
     items[idx].classList.add('wrong');
     currentShuffledOptions.forEach((o,i)=>{if(o.correct)items[i].classList.add('correct');});
-    const ct=currentShuffledOptions.find(o=>o.correct)?.text||'';
+    const correctText=currentShuffledOptions.find(o=>o.correct)?.text||'';
+    fb.className='feedback-area wrong-fb';
     const streak=consecutiveBias[opt.trap];
-    const streakNote=streak>=2?`<span class="bias-streak">연속 ${streak}회 ⚠</span>`:'';
-
-    feedback.className='feedback-area wrong-fb';
-    feedback.innerHTML=`<span class="fb-tag err">WRONG</span>
-      <div class="bias-alert">
-        <span class="bias-name">${BIAS_EMOJI[opt.trap]} ${opt.trap} ${streakNote}</span>
-        <span class="bias-desc">${BIAS_ADVICE[opt.trap]}</span>
-      </div>
-      <div class="answer-box"><strong>정답 :</strong> ${ct}</div>
-      ${explainMode?`<div class="sol-box"><strong>💡 해설 :</strong> ${q.solution}</div>
-      ${q.keyword?`<div class="keyword-box"><strong>📌 키워드 :</strong> ${q.keyword}</div>`:''}`:'' }`;
+    const streakNote=streak>=2?`<span class="trap-streak">연속 ${streak}회 ⚠</span>`:'';
+    fb.innerHTML=`<span class="fb-tag err">WRONG</span>
+      ${decoyMode?`<div class="trap-box">
+        <div class="trap-name">${BIAS_EMOJI[opt.trap]} ${opt.trap} ${streakNote}</div>
+        <div class="trap-desc">${BIAS_ADVICE[opt.trap]}</div>
+      </div>`:'<div class="trap-box"><div class="trap-name">'+BIAS_EMOJI[opt.trap]+' '+opt.trap+' '+streakNote+'</div></div>'}
+      <div class="answer-box"><strong>정답 :</strong> ${correctText}</div>
+      ${explainMode?`<div class="solution-box"><strong>💡 해설 :</strong> ${q.solution}</div>`:''}`;
   }
 }
 
@@ -1332,161 +1383,165 @@ window.nextQuestion=function(){currentIdx++;if(currentIdx<quizSet.length)renderQ
 /* ── END MODAL ── */
 window.openEndModal=function(){document.getElementById('end-modal').classList.add('open');};
 window.closeEndModal=function(){document.getElementById('end-modal').classList.remove('open');};
-window.closeEndBg=function(e){if(e.target===document.getElementById('end-modal'))closeEndModal();};
+window.closeEndModalBg=function(e){if(e.target===document.getElementById('end-modal'))closeEndModal();};
 window.forceEnd=function(){closeEndModal();clearInterval(timerInterval);showReport();};
 
-/* ══════════════════════════════════════════════════════
-   REPORT
-══════════════════════════════════════════════════════ */
+/* ── REPORT ── */
 function showReport(){
-  clearInterval(timerInterval);show('report-screen');window.scrollTo({top:0,behavior:'smooth'});
-  const aq=quizSet.slice(0,currentIdx+(answered?1:0));
-  const total=aq.length||1;
-  const fs=aq.filter(q=>!q._wrong).length;
-  document.getElementById('report-score').innerText=fs;
+  clearInterval(timerInterval);show('report-screen');
+  window.scrollTo({top:0,behavior:'smooth'});
+  const answeredQs=quizSet.slice(0,currentIdx+(answered?1:0));
+  const total=answeredQs.length;
+  const finalScore=answeredQs.filter(q=>!q._wrong).length;
+
+  document.getElementById('report-score').innerText=finalScore;
   document.getElementById('report-total').innerText=total;
-  document.getElementById('report-grade').innerText=gradeLabel(fs,total);
-  document.getElementById('wrong-count-label').innerText=aq.filter(q=>q._wrong).length>0?`틀린 ${aq.filter(q=>q._wrong).length}문항만 다시 도전`:'오답 없음 (새 세트)';
+  document.getElementById('report-grade').innerHTML=total>0?gradeLabel(finalScore,total):'문항을 풀지 않았습니다.';
 
-  const maxB=Math.max(...Object.values(biasStats),0);
-  const topBCands=Object.keys(biasStats).filter(k=>biasStats[k]===maxB&&maxB>0);
-  const topBias=topBCands.length>0?topBCands[Math.floor(Math.random()*topBCands.length)]:'개념 혼동';
+  const wrongCount=answeredQs.filter(q=>q._wrong).length;
+  document.getElementById('wrong-count-label').innerText=wrongCount>0?`틀린 ${wrongCount}문항만 재도전`:'오답 없음 (새 세트)';
+
+  const maxBias=Math.max(...Object.values(biasStats),0);
+  const topBias=Object.keys(biasStats).filter(k=>biasStats[k]===maxBias&&maxBias>0);
+  const topB=topBias.length>0?topBias[Math.floor(Math.random()*topBias.length)]:'개념 혼동';
   const totalBias=Object.values(biasStats).reduce((a,b)=>a+b,0);
+  const chartMax=Math.max(5,Math.ceil(maxBias*1.25));
 
-  // 레이더 차트
   if(biasChartInstance)biasChartInstance.destroy();
   const ctx=document.getElementById('biasChart').getContext('2d');
-  biasChartInstance=new Chart(ctx,{type:'radar',
+  biasChartInstance=new Chart(ctx,{
+    type:'radar',
     data:{labels:Object.keys(biasStats),datasets:[{label:'편향 지수',data:Object.values(biasStats),
-      backgroundColor:'rgba(91,141,238,.1)',borderColor:'rgba(91,141,238,.75)',
+      backgroundColor:'rgba(91,141,238,.1)',borderColor:'rgba(91,141,238,.7)',
       pointBackgroundColor:'rgba(91,141,238,1)',pointBorderColor:'transparent',borderWidth:1.5}]},
-    options:{scales:{r:{beginAtZero:true,max:Math.max(5,Math.ceil(maxB*1.2)),
+    options:{scales:{r:{beginAtZero:true,max:chartMax,
       grid:{color:'rgba(255,255,255,.05)'},angleLines:{color:'rgba(255,255,255,.05)'},
-      ticks:{display:false},pointLabels:{color:'#7878a0',font:{size:11,family:"'Noto Sans KR',sans-serif"}}
-    }},plugins:{legend:{display:false}}}});
+      ticks:{display:false},pointLabels:{color:'#8080a0',font:{size:11,family:"'Noto Sans KR',sans-serif"}}
+    }},plugins:{legend:{display:false}}}
+  });
 
   document.getElementById('analysis-text').innerHTML=totalBias===0
     ?`<p>모든 편향 함정을 완벽히 피했습니다. <strong>탁월한 분석적 사고력</strong>입니다.</p>`
-    :`<p>총 <strong>${total}문항</strong> 중 <strong>${fs}문항 정답</strong>.</p>
-      <p>핵심 약점 : <strong style="color:var(--blue)">${BIAS_EMOJI[topBias]} ${topBias}</strong> (${biasStats[topBias]}회)<br>
-      <span style="font-size:.84em;color:var(--ghost);">${BIAS_ADVICE[topBias]}</span></p>`;
+    :`<p>총 <strong>${total}문항</strong> 중 <strong>${finalScore}문항 정답</strong>.</p>
+      <p>핵심 약점 : <strong style="color:var(--blue)">${BIAS_EMOJI[topB]} ${topB}</strong> (${biasStats[topB]}회)<br>
+      <span style="font-size:.85em;color:var(--ghost);">${BIAS_ADVICE[topB]}</span></p>`;
 
-  document.getElementById('bias-breakdown').innerHTML=Object.entries(biasStats).map(([name,cnt])=>`
+  document.getElementById('bias-breakdown').innerHTML=Object.entries(biasStats).map(([nm,cnt])=>`
     <div class="bias-row">
-      <span class="bias-name-r">${BIAS_EMOJI[name]} ${name}</span>
-      <div class="bias-bar-track"><div class="bias-bar-fill${name===topBias?' top':''}" style="width:${maxB>0?Math.round(cnt/maxB*100):0}%"></div></div>
-      <span class="bias-cnt">${cnt}</span>
+      <span class="bias-name">${BIAS_EMOJI[nm]} ${nm}</span>
+      <div class="bias-bar-track"><div class="bias-bar-fill${nm===topB?' top':''}" style="width:${maxBias>0?Math.round(cnt/maxBias*100):0}%"></div></div>
+      <span class="bias-count">${cnt}</span>
     </div>`).join('');
 
   // 단원별 정답률
-  const unitRows=document.getElementById('unit-rows');
-  unitRows.innerHTML=['I','II','III','IV','V'].map(ch=>{
-    const uqs=aq.filter(q=>q.ch===ch);if(!uqs.length)return'';
+  const unitGrid=document.getElementById('unit-grid');
+  unitGrid.innerHTML=["I","II","III","IV","V"].map(u=>{
+    const uqs=answeredQs.filter(q=>q.unit===u);
+    if(!uqs.length)return'';
     const uc=uqs.filter(q=>!q._wrong).length;
     const up=Math.round(uc/uqs.length*100);
-    const warn=up<50?`<span class="unit-warn">⚠ 집중 필요</span>`:'';
-    const color=CH_COLORS[ch];
-    const textColor=up>=70?'var(--green)':up>=50?'var(--amber)':'var(--red)';
+    const warn=up<50?`<span class="unit-warn">집중 필요</span>`:'';
+    const pctColor=up>=70?'var(--green)':up>=50?'var(--amber)':'var(--red)';
     return`<div class="unit-row">
-      <span class="unit-nm">Ⅰ~Ⅴ 순으로<br>${CH_NAMES[ch].substring(0,6)}…${warn}</span>
-      <div class="unit-bar-track"><div class="unit-bar-fill" style="width:${up}%;background:${color};"></div></div>
-      <span class="unit-pct-label" style="color:${textColor};">${up}%</span>
+      <div class="unit-dot" style="background:${UNIT_COLOR[u]};"></div>
+      <span class="unit-name">${UNIT_NAME[u]}${warn}</span>
+      <div class="unit-bar-track"><div class="unit-bar-fill" style="width:${up}%;background:${UNIT_COLOR[u]};"></div></div>
+      <span class="unit-pct-val" style="color:${pctColor};">${up}%</span>
     </div>`;
   }).join('');
 
   // 해설 카드 (오답 자동 펼침)
-  document.getElementById('sol-list').innerHTML=aq.map((q,i)=>{
-    const isW=q._wrong;const ct=q.options.find(o=>o.correct)?.text||'';
-    const choTrap=q.options.find(o=>o.text===q._chosen)?.trap||'';
-    return`<div class="sol-card ${isW?'sol-wrong':'sol-correct'}">
+  document.getElementById('sol-list').innerHTML=answeredQs.map((q,i)=>{
+    const isWrong=q._wrong;
+    const correctText=q.options.find(o=>o.correct)?.text||'';
+    const chosenTrap=q.options.find(o=>o.text===q._chosen)?.trap||'';
+    return`<div class="sol-card ${isWrong?'sol-wrong':'sol-correct'}">
       <div class="sol-header" onclick="toggleSol(${i})">
         <span class="sol-qnum">Q${i+1}</span>
-        <span class="sol-result-tag ${isW?'err':'ok'}">${isW?'오답':'정답'}</span>
-        <span class="sol-preview">[${CH_NAMES[q.ch]}] ${q.concept}</span>
-        <span class="sol-chev${isW?' open':''}" id="sc-${i}">▾</span>
+        <span class="sol-result-tag ${isWrong?'err':'ok'}">${isWrong?'오답':'정답'}</span>
+        <span class="sol-preview">[${UNIT_NAME[q.unit]}] ${q.concept}</span>
+        <span class="sol-chevron${isWrong?' open':''}" id="chev-${i}">▾</span>
       </div>
-      <div class="sol-body${isW?' open':''}" id="sb-${i}">
-        <div class="sol-passage-full">${q.passage}</div>
-        <div class="q-stem" style="padding:0 0 12px;">${q.stem}</div>
-        ${isW?`
-          <div class="sol-chosen"><strong>내 선택 :</strong> ${q._chosen||'(미선택)'}</div>
-          <div class="sol-answer"><strong>정답 :</strong> ${ct}</div>
-          ${choTrap?`<div class="sol-hint"><strong>${BIAS_EMOJI[choTrap]} 편향 유형 :</strong> ${choTrap} — ${BIAS_ADVICE[choTrap]}</div>`:''}
-        `:`<div class="sol-answer"><strong>정답 :</strong> ${ct}</div>`}
+      <div class="sol-body${isWrong?' open':''}" id="sbody-${i}">
+        <div class="sol-passage-full">${q.passageHTML.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim().slice(0,200)}...</div>
+        <div class="q-stem" style="padding:0 0 14px;">${q.stem}</div>
+        ${isWrong?`<div class="sol-chosen"><strong>내 선택 :</strong> ${q._chosen||'(미선택)'}</div>
+          <div class="sol-answer"><strong>정답 :</strong> ${correctText}</div>
+          ${chosenTrap?`<div class="sol-hint"><strong>${BIAS_EMOJI[chosenTrap]} 편향 유형 :</strong> ${chosenTrap} — ${BIAS_ADVICE[chosenTrap]}</div>`:''}
+        `:`<div class="sol-answer"><strong>정답 :</strong> ${correctText}</div>`}
         <div class="sol-analysis"><strong>해설 :</strong> ${q.solution}</div>
-        ${q.keyword?`<div class="sol-keyword"><strong>📌 키워드 :</strong> ${q.keyword}</div>`:''}
       </div>
     </div>`;
   }).join('');
 
-  initBonus(topBias,totalBias);
+  initBonus(topB,totalBias);
 }
 
 window.toggleSol=function(i){
-  const b=document.getElementById(`sb-${i}`);const c=document.getElementById(`sc-${i}`);
-  const o=b.classList.contains('open');b.classList.toggle('open',!o);c.classList.toggle('open',!o);
+  const b=document.getElementById(`sbody-${i}`),c=document.getElementById(`chev-${i}`);
+  const open=b.classList.contains('open');
+  b.classList.toggle('open',!open);c.classList.toggle('open',!open);
 };
 
-/* ══════════════════════════════════════════════════════
-   BONUS
-══════════════════════════════════════════════════════ */
+/* ── BONUS ── */
 function initBonus(topBias,totalBias){
   bonusActive=true;bonusIdx=0;bonusScore=0;bonusAnswered=false;
   document.getElementById('bonus-result-wrap').style.display='none';
   document.getElementById('bonus-quiz-wrap').innerHTML='';
 
-  let pool=(BONUS_DB[topBias]||[]).slice();
-  if(pool.length===0||totalBias===0){const all=Object.values(BONUS_DB).flat();pool=shuffle(all);}
-  else{const extras=Object.entries(BONUS_DB).filter(([k])=>k!==topBias).flatMap(([,v])=>v);
-    if(pool.length<6)pool=pool.concat(shuffle(extras).slice(0,6-pool.length));}
-  bonusSet=shuffle(pool).slice(0,6);
+  let pool=BONUS_DB[topBias]||[];
+  if(!pool.length||!totalBias){const all=Object.values(BONUS_DB).flat();bonusSet=shuffle(all).slice(0,6);}
+  else{
+    bonusSet=shuffle(pool);
+    const extras=Object.entries(BONUS_DB).filter(([k])=>k!==topBias).flatMap(([,v])=>v);
+    const need=Math.max(0,6-bonusSet.length);
+    if(need>0)bonusSet=bonusSet.concat(shuffle(extras).slice(0,need));
+    bonusSet=bonusSet.slice(0,6);
+  }
 
   document.getElementById('bonus-sub-label').innerText=`약점 편향(${topBias}) 집중 훈련 ${bonusSet.length}문항`;
   document.getElementById('bonus-intro-text').innerHTML=
-    `<strong>${BIAS_EMOJI[topBias]} 약점 편향 : ${topBias}</strong><br>
-    이형수T 개념완성 교재 핵심 개념 기반 보충 문항입니다.<br>
-    <span style="color:var(--amber);font-size:.88em;">💡 대응 전략 : ${BIAS_ADVICE[topBias]}</span>`;
+    `<strong>${BIAS_EMOJI[topBias]} 핵심 약점 : ${topBias}</strong><br>
+    진단에서 가장 많이 발생한 편향 유형의 보충 문항입니다.<br>
+    <span style="color:var(--amber);font-size:.9em;">💡 대응 전략 : ${BIAS_ADVICE[topBias]}</span>`;
   renderBonus();
 }
 
 function renderBonus(){
   if(!bonusActive||bonusIdx>=bonusSet.length)return;
-  const q=bonusSet[bonusIdx];const total=bonusSet.length;
+  const q=bonusSet[bonusIdx],total=bonusSet.length;
   bonusAnswered=false;bonusShuffled=shuffle(q.options);
   const wrap=document.getElementById('bonus-quiz-wrap');
-  const ph=q.passage.split('\n').map(l=>l.trim()?`<span>${l}</span>`:'').join('<br>');
-  let bh='';if(q.bogi&&q.bogi.length)bh=`<div class="bogi-box"><div class="bogi-title">〈 보기 〉</div>${q.bogi.map(b=>`<div class="bogi-item">${b}</div>`).join('')}</div>`;
 
   wrap.innerHTML=`
-    <div style="font-family:'DM Mono',monospace;font-size:.7em;color:var(--muted);letter-spacing:.1em;margin-bottom:10px;">
+    <div style="font-family:'DM Mono',monospace;font-size:.7em;color:var(--muted);margin-bottom:12px;">
       보충 ${bonusIdx+1}/${total} &nbsp;·&nbsp; <span style="color:var(--green);">정답 ${bonusScore}</span>
     </div>
-    <div style="height:3px;background:var(--line);border-radius:10px;margin-bottom:16px;overflow:hidden;">
-      <div style="height:100%;width:${(bonusIdx/total)*100}%;background:var(--purple);border-radius:10px;"></div>
+    <div style="height:3px;background:var(--line);border-radius:10px;margin-bottom:18px;overflow:hidden;">
+      <div style="height:100%;width:${(bonusIdx/total)*100}%;background:var(--purple);border-radius:10px;transition:width .4s;"></div>
     </div>
     <div class="q-card">
       <div class="q-header">
-        <span class="chapter-badge" style="background:var(--purple-dim);color:var(--purple);border-color:rgba(160,110,232,.25);">단원 ${q.ch}</span>
-        <span class="diff-badge ${DIFF_CLASS[q.diff||1]}">${DIFF_LABEL[q.diff||1]}</span>
+        <span class="unit-badge unit-${q.unit}">${UNIT_NAME[q.unit]||q.unit}</span>
+        <span class="fmt-badge">${FMT_LABEL[q.format]||'서술형'}</span>
         <span class="q-number">B${bonusIdx+1}/${total}</span>
       </div>
       <div class="passage-wrap">
         <div class="passage-label">제시문</div>
-        <div class="passage-box"><div class="passage-text">${ph}</div></div>
-        ${bh}
+        <div class="passage-box">${q.passageHTML}</div>
       </div>
       <div class="q-stem">${q.stem}</div>
-      <div class="options-list" id="bonus-opts">
-        ${bonusShuffled.map((o,i)=>`<div class="option-item" id="bo-${i}" data-idx="${i}">
+      <div class="options-list" id="bopts">
+        ${bonusShuffled.map((o,i)=>`<div class="option-item" id="bopt-${i}" data-idx="${i}">
           <div class="opt-num">${i+1}</div><div class="opt-text">${o.text}</div></div>`).join('')}
       </div>
-      <div id="bonus-fb" class="feedback-area"></div>
-      <button id="bonus-btn-next" class="btn-next" style="display:none;" onclick="nextBonus()">
+      <div id="bfb" class="feedback-area"></div>
+      <button id="bbtnnext" class="btn-next" style="display:none;" onclick="nextBonus()">
         ${bonusIdx+1<total?'다음 보충 문항 →':'보충 완료 ✓'}
       </button>
     </div>`;
 
-  document.querySelectorAll('#bonus-opts .option-item').forEach(item=>{
+  document.querySelectorAll('#bopts .option-item').forEach(item=>{
     let sy=0;
     item.addEventListener('mousedown',e=>{sy=e.clientY;});
     item.addEventListener('touchstart',e=>{sy=e.touches[0].clientY;},{passive:true});
@@ -1497,48 +1552,49 @@ function renderBonus(){
 
 function selectBonus(idx){
   if(bonusAnswered)return;bonusAnswered=true;
-  const q=bonusSet[bonusIdx];const opt=bonusShuffled[idx];
-  const items=document.querySelectorAll('#bonus-opts .option-item');
-  const fb=document.getElementById('bonus-fb');const btn=document.getElementById('bonus-btn-next');
+  const q=bonusSet[bonusIdx],opt=bonusShuffled[idx];
+  const items=document.querySelectorAll('#bopts .option-item');
+  const fb=document.getElementById('bfb'),btn=document.getElementById('bbtnnext');
   items.forEach(i=>{i.classList.add('disabled');i.style.pointerEvents='none';});
   fb.style.display='block';btn.style.display='block';
-
-  if(opt.correct){
-    bonusScore++;items[idx].classList.add('correct');fb.className='feedback-area correct-fb';
-    fb.innerHTML=`<span class="fb-tag ok">CORRECT</span><div class="clue-box"><strong>🔑 핵심 단서 :</strong> ${q.solution}</div>${q.keyword?`<div class="keyword-box"><strong>📌 키워드 :</strong> ${q.keyword}</div>`:''}`;
+  if(opt.correct){bonusScore++;items[idx].classList.add('correct');
+    fb.className='feedback-area correct-fb';
+    fb.innerHTML=`<span class="fb-tag ok">CORRECT</span><div class="concept-check"><strong>🔑 핵심 단서 :</strong> ${q.solution}</div>`;
   }else{
     items[idx].classList.add('wrong');bonusShuffled.forEach((o,i)=>{if(o.correct)items[i].classList.add('correct');});
-    const ct=bonusShuffled.find(o=>o.correct)?.text||'';fb.className='feedback-area wrong-fb';
+    const ct=bonusShuffled.find(o=>o.correct)?.text||'';
+    fb.className='feedback-area wrong-fb';
     fb.innerHTML=`<span class="fb-tag err">WRONG</span>
-      <div class="bias-alert"><span class="bias-name">${BIAS_EMOJI[opt.trap]} ${opt.trap}</span><span class="bias-desc">${BIAS_ADVICE[opt.trap]}</span></div>
+      <div class="trap-box"><div class="trap-name">${BIAS_EMOJI[opt.trap]} ${opt.trap}</div>
+      <div class="trap-desc">${BIAS_ADVICE[opt.trap]}</div></div>
       <div class="answer-box"><strong>정답 :</strong> ${ct}</div>
-      <div class="sol-box"><strong>💡 해설 :</strong> ${q.solution}</div>
-      ${q.keyword?`<div class="keyword-box"><strong>📌 키워드 :</strong> ${q.keyword}</div>`:''}`;
+      <div class="solution-box"><strong>💡 해설 :</strong> ${q.solution}</div>`;
   }
 }
 
 window.nextBonus=function(){bonusIdx++;if(bonusIdx<bonusSet.length)renderBonus();else finishBonus();};
-
 function finishBonus(){
   bonusActive=false;document.getElementById('bonus-quiz-wrap').innerHTML='';
-  const pct=bonusScore/bonusSet.length;
-  const msg=pct>=.9?"완벽합니다! 약점 편향을 완전히 극복했습니다.":pct>=.7?"우수합니다. 조금만 더 훈련하면 확실히 극복됩니다.":pct>=.5?"절반 이상 맞혔습니다. 동일 유형을 반복 훈련하세요.":"아직 취약합니다. 해설과 키워드를 꼼꼼히 검토하고 재도전하세요.";
+  const p=bonusScore/bonusSet.length;
+  const msg=p>=.9?"완벽합니다! 약점 편향을 완전히 극복했습니다."
+    :p>=.7?"우수합니다. 조금만 더 훈련하면 극복됩니다."
+    :p>=.5?"절반 이상 맞혔습니다. 동일 유형을 반복 훈련하세요."
+    :"아직 해당 편향에 취약합니다. 해설을 꼼꼼히 검토하고 재도전하세요.";
   const el=document.getElementById('bonus-result-wrap');el.style.display='flex';
   document.getElementById('bonus-score-num').innerText=`${bonusScore}/${bonusSet.length}`;
   document.getElementById('bonus-score-label-text').innerText=msg;
   setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'center'}),100);
 }
 
-/* ── RETRY ── */
+/* ── RETRY/MODAL ── */
 window.openRetryModal=function(){
-  const wc=quizSet.filter(q=>q._wrong).length;
-  document.getElementById('wrong-count-label').innerText=wc>0?`틀린 ${wc}문항만 다시 도전`:'오답 없음 (새 세트)';
+  document.getElementById('wrong-count-label').innerText=
+    quizSet.filter(q=>q._wrong).length>0?`틀린 ${quizSet.filter(q=>q._wrong).length}문항만 재도전`:'오답 없음 (새 세트)';
   document.getElementById('retry-modal').classList.add('open');
 };
 window.closeRetryModal=function(){document.getElementById('retry-modal').classList.remove('open');};
-window.closeRetryBg=function(e){if(e.target===document.getElementById('retry-modal'))closeRetryModal();};
+window.closeRetryModalBg=function(e){if(e.target===document.getElementById('retry-modal'))closeRetryModal();};
 </script>
 
 
-완료
 </body></html>
