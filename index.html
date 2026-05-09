@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0081)file:///C:/Users/user/Downloads/online_viewer_net%20-%202026-05-08T144635.640.htm -->
-<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>수능 사회·문화 사고 편향 진단 v3.0</title>
-<link href="./사회 문화 (교재반영) 버전 편향 풀이 진단기 v3.1_files/css2" rel="stylesheet">
-<script src="./사회 문화 (교재반영) 버전 편향 풀이 진단기 v3.1_files/chart.umd.min.js.다운로드"></script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
 :root{
   --ink:#0a0a12;--ink-mid:#14141f;--ink-soft:#1c1c2a;--line:#252535;
@@ -320,20 +320,20 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
 
 <!-- ════ INTRO ════ -->
 <div id="intro-screen" class="screen active">
-  <div class="wordmark">사회문화 사고 편향 진단 <span class="version-pill">v3.0</span></div>
+  <div class="wordmark">이형수 개념완성 기반 · 사고 편향 진단 <span class="version-pill">v3.0</span></div>
   <h1 class="intro-title">수능 사회·문화<br><em>정밀 사고 편향 진단</em></h1>
-  <p class="intro-sub">2027 수능대비 — 수능 실전 5지선다 문제 형식으로 오답 선택 패턴을 분석해 사고 편향을 정밀 진단합니다</p>
+  <p class="intro-sub">2027 이형수 개념완성 교재 완전 학습 기반 — 수능 실전 5지선다 문제 형식으로 오답 선택 패턴을 분석해 사고 편향을 정밀 진단합니다</p>
 
   <div class="info-card">
     <strong>📚 5대 사고 편향 진단 (Cognitive Bias Diagnosis)</strong><br>
     각 오답 선택지는 수능에서 빈출되는 특정 사고 오류를 유도하도록 설계됩니다. 진단 후 단원별 정답률 · 편향 레이더 · 문항별 해설 · 맞춤 보충 문항이 제공됩니다.
     <table class="bias-table">
-      <tbody><tr><td>📘 개념 혼동</td><td>유사 개념을 혼동하거나 이론·정의를 잘못 대응하는 경향 (기능론↔갈등론, 양적↔질적 등)</td></tr>
+      <tr><td>📘 개념 혼동</td><td>유사 개념을 혼동하거나 이론·정의를 잘못 대응하는 경향 (기능론↔갈등론, 양적↔질적 등)</td></tr>
       <tr><td>🔄 인과관계 역전</td><td>상관관계를 인과관계로 단정하거나 원인과 결과의 방향을 혼동하는 경향</td></tr>
       <tr><td>⚖️ 이분법적 사고</td><td>복잡한 사회 현상을 양자택일로 단순화하는 경향 (항상 A 아니면 B)</td></tr>
       <tr><td>🔭 과잉 일반화</td><td>제한된 사례를 모든 경우에 적용하거나 '항상·반드시·모든' 등 절대 표현 수용</td></tr>
       <tr><td>🎯 핵심 이탈</td><td>제시문의 핵심 논지에서 벗어나 지엽적·관련 없는 내용에 집중하는 경향</td></tr>
-    </tbody></table>
+    </table>
   </div>
 
   <div class="settings-panel">
@@ -367,19 +367,19 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     <div class="setting-row">
       <div class="setting-label"><strong>해설 표시</strong><span>오답 시 즉시 해설 여부</span></div>
       <div class="toggle-wrap">
-        <button class="toggle-btn active" id="explain-on" onclick="setExplain(true)">즉시</button>
-        <button class="toggle-btn" id="explain-off" onclick="setExplain(false)">결과 후</button>
+        <button class="toggle-btn active" id="explain-on"  onclick="setExplain(true)">즉시</button>
+        <button class="toggle-btn"        id="explain-off" onclick="setExplain(false)">결과 후</button>
       </div>
     </div>
     <div class="setting-row">
       <div class="setting-label"><strong>함정 분석 모드</strong><span>오답 선택 시 함정 유형 강조</span></div>
       <div class="toggle-wrap">
-        <button class="toggle-btn active" id="decoy-on" onclick="setDecoy(true)">ON</button>
-        <button class="toggle-btn" id="decoy-off" onclick="setDecoy(false)">OFF</button>
+        <button class="toggle-btn active" id="decoy-on"  onclick="setDecoy(true)">ON</button>
+        <button class="toggle-btn"        id="decoy-off" onclick="setDecoy(false)">OFF</button>
       </div>
     </div>
   </div>
-  <button class="btn btn-primary" onclick="startQuiz(&#39;new&#39;)">진단 시작 →</button>
+  <button class="btn btn-primary" onclick="startQuiz('new')">진단 시작 →</button>
 </div>
 
 <!-- ════ QUIZ ════ -->
@@ -451,15 +451,15 @@ body::after{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
     <div class="modal-title">다시 풀기</div>
     <p class="modal-sub">어떤 방식으로 다시 시작할까요?</p>
     <div class="modal-options">
-      <div class="modal-opt" onclick="startQuiz(&#39;new&#39;)">
+      <div class="modal-opt" onclick="startQuiz('new')">
         <div class="modal-opt-icon">🔀</div>
         <div><div class="opt-title">새 문항 세트</div><div class="opt-desc">문제를 새로 섞어서 시작</div></div>
       </div>
-      <div class="modal-opt" onclick="startQuiz(&#39;wrong&#39;)">
+      <div class="modal-opt" onclick="startQuiz('wrong')">
         <div class="modal-opt-icon">🎯</div>
         <div><div class="opt-title">틀린 문항만</div><div class="opt-desc" id="wrong-count-label">오답 문항만 재도전</div></div>
       </div>
-      <div class="modal-opt" onclick="startQuiz(&#39;same&#39;)">
+      <div class="modal-opt" onclick="startQuiz('same')">
         <div class="modal-opt-icon">↩️</div>
         <div><div class="opt-title">같은 순서로</div><div class="opt-desc">동일 세트 처음부터</div></div>
       </div>
@@ -1595,6 +1595,5 @@ window.openRetryModal=function(){
 window.closeRetryModal=function(){document.getElementById('retry-modal').classList.remove('open');};
 window.closeRetryModalBg=function(e){if(e.target===document.getElementById('retry-modal'))closeRetryModal();};
 </script>
-
-
-</body></html>
+</body>
+</html>
